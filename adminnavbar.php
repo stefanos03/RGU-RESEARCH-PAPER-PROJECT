@@ -51,7 +51,7 @@
             
             
             <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" href="help.php">
+              <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" href="AboutUs.php">
                   <img src="<?php echo $myPhoto; ?>" class="img-circle" width="30px" height="30px" hspace="2px" align="left" > <b class="caret"></b>
               </a>
                 <ul class="dropdown-menu">                  

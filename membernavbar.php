@@ -88,7 +88,7 @@
             <li><a style='color:#800080;' href="notifications.php"><span class="fa fa-bell-o"></span><strong> Notification</strong> <span class="badge badge-notify" <?php echo $notificationClass; ?> ><?php echo $totalNotifications; ?></span> </a></li>
             
             <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" href="help.php">
+              <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" href="AboutUs.php">
                   <img src="<?php echo $myPhoto; ?>" class="img-circle" width="30px" height="30px" hspace="2px" align="left" > <b class="caret"></b>
               </a>
                 <ul class="dropdown-menu">                  

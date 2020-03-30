@@ -21,7 +21,7 @@ class DATABASE{
 		return $mysqli;		
 	}
 
-
+//hi test
 }
 
 ?>

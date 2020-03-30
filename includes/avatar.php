@@ -1,15 +1,15 @@
 <?php
 
-    $myPhoto = "";
+    $ProfilPic = "";
     if ($_SESSION["myPhoto"]!="")
     {
-    	$myPhoto = $_SESSION["myPhoto"];
+    	$ProfilPic = $_SESSION["myPhoto"];
     }
     else
     {
-    	$myPhoto = "avatar200.png";
+    	$ProfilPic = "avatar200.png";
     }
 
-    $myPhoto = "users photos/".$myPhoto;
+    $ProfilPic = "users photos/".$ProfilPic;
 
 ?>

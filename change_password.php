@@ -61,7 +61,7 @@
 	</div>
 	<div class="row">
 	   	<div class="col-sm-3" style="text-align:center;border-radius:15px;">
-	   		<img src="<?php echo $myPhoto; ?>" id="userphoto" class="img-circle" width=150px" hspace="2px" align="center" style="margin-bottom:5px;" ><br>
+	   		<img src="<?php echo $ProfilPic; ?>" id="userphoto" class="img-circle" width=150px" hspace="2px" align="center" style="margin-bottom:5px;" ><br>
 	   		
 	   	</div>
 	   	<div class="col-sm-9" ><!-- column 1 //-->

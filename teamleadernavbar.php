@@ -61,7 +61,7 @@
             
             <li class="dropdown">
               <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" href="AboutUs.php">
-                  <img src="<?php echo $myPhoto; ?>" class="img-circle" width="30px" height="30px" hspace="2px" align="left" > <b class="caret"></b>
+                  <img src="<?php echo $ProfilPic; ?>" class="img-circle" width="30px" height="30px" hspace="2px" align="left" > <b class="caret"></b>
               </a>
                 <ul class="dropdown-menu">                  
                   <li><a style="padding-top:8px;padding-bottom:8px;color:#800080;" href="profile.php">Profile</a></li>                 

@@ -9,9 +9,9 @@ class DATABASE{
 			$_results,
 			$_count=0; 
 
-	private $server = 'csdm-webdev';
-	private $username = '1909248';
-	private $password = '1909248';
+	private $server = 'localhost';
+	private $username = 'root';
+	private $password = '';
 	private $dbname = 'db1909248_research';
 
 	public function connect()

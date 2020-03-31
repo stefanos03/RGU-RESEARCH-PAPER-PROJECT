@@ -41,6 +41,8 @@ ini_set('display_errors', 1);
 
 
         <br/>
+<br>
+<br>
         <div class="container">
             <div class="col-xs-12 text-right">
                   <?php
@@ -58,19 +60,18 @@ ini_set('display_errors', 1);
                               $userRole = 'Member';
                            }
 
-                           echo "<strong>Welcome ".$_SESSION['myLastname'].' '.$_SESSION['myFirstname']."</strong>,<br>";
-                           echo $userRole;
+                           echo "<strong style='margin-right: 350px; font-size: 40px; color: purple '>Welcome ".$userRole."</strong>,<br>";
+
                     ?>
                 </div>
-            <div class="row">
-                <div class="col-xs-12">
-                    <h3 class="text-center price-headline " style="color:purple;">Assign User to Project</h3>
-                </div>
-            </div>
-                  <hr>
+            <br>
+            <br>
+            <br>
              <form name="assign_user_toproject" action="assignuser.php" method="post" style="border: 4px solid purple;padding: 100px; margin-right: 30px; background: wheat">
+                 <h3 class="text-center price-headline " style="color:purple;">Assign User to Project</h3>
+                 <br> <br>
               <div class="form-group row">
-                  <label for="Project Short Name"  class="col-xs-12 col-sm-2 col-form-label text-center" style="border: 2px solid purple; padding:3px; margin-right: 10px">Project</label>
+                  <label for="Project Short Name"  class="col-xs-12 col-sm-2 col-form-label text-center" style="border: 2px solid purple; padding:3px; margin-right: 10px;color: purple">Project</label>
                   <div class="form-group col-xs-12 col-sm-5">
                       <select class="form-control" name="project" style="margin-left: 150px">
                             <option></option>
@@ -96,7 +97,7 @@ ini_set('display_errors', 1);
 
               <div class="form-group row">
                   
-                  <label for="Project Short Name"  class="col-xs-12 col-sm-2 col-form-label text-center " style="border: 2px solid purple; padding: 3px; margin-right: 10px">User</label>
+                  <label for="Project Short Name"  class="col-xs-12 col-sm-2 col-form-label text-center " style="border: 2px solid purple; padding: 3px; margin-right: 10px; color: purple">User</label>
                   
                   <div class="form-group col-xs-12 col-sm-5">
                       <select class="form-control" name="user" style="margin-left: 150px">
@@ -139,13 +140,13 @@ ini_set('display_errors', 1);
               <?php
                 $project = new Project();
                 $list = $project->getAllProjectsUsers();
-                $ProjectUsers = $list->num_rows;
+                $NumberProjectUsers = $list->num_rows;
               ?>
 
               <br/><br/>
-              <div class="row" style="border: solid 3px purple">
+              <div class="row" style="border: solid 3px purple;  margin-right: 30px; margin-left: 2px">
                   <div class="col-xs-12">
-                    <h4 class="text-center price-headline" style="color:purple;">Assigned  User to Project (<?php echo $ProjectUsers; ?>)</h4>
+                    <h4 class="text-center " style="color:purple;"> <strong>Assigned  User to Project </strong>(<?php echo $NumberProjectUsers; ?>)</h4>
                 </div>
 
               </div>
@@ -161,10 +162,11 @@ ini_set('display_errors', 1);
                       $role= "Member";
                     }
               ?>
-              <div class="row" style="text-decoration:purple underline; color: purple" >
+              <div class="row" style="text-decoration:underline; margin-left: 150px" >
                   <div class="col-xs-4">
                         <?php echo "<i class='fa fa-folder-open'></i> <a href='manageprojects.php'>".$row['name']."</a>"; ?>
                   </div>
+
                   <div class="col-xs-3">
                         <?php  
                           echo "<i class='fa fa-user'></i> <a href='#'>".$row['lastname'].' '.$row['firstname']."</a>";

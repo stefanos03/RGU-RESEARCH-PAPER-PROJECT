@@ -41,9 +41,10 @@ ini_set('display_errors', 1);
 
 
         <br/>
-<br>
-<br>
-        <div class="container">
+<div style="background-image: url('images/background3.jpeg'); background-size: 2000px">
+
+
+        <div class="container" >
             <div class="col-xs-12 text-right">
                   <?php
                            $userRole = '';
@@ -188,9 +189,9 @@ ini_set('display_errors', 1);
               ?>
                           
     </div><!-- end of container //-->
+</div>    <!--end of background //-->
 
 <!--space from the  fixed footer-->
-<br>
 <br>
 <br>
 

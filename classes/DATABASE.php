@@ -12,7 +12,11 @@ class DATABASE{
 	private $server = 'localhost';
 	private $username = 'root';
 	private $password = '';
+<<<<<<< HEAD
 	private $dbname = 'db_research';
+=======
+	private $dbname = 'db1909248_research';
+>>>>>>> 3c4efdbe0c05e72037a36cacc193856959ea2081
 
 	public function connect()
 	{

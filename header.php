@@ -9,7 +9,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title> research paper app <?php echo $pageTitle; ?></title>
+    <title> research paper app <?php echo $webtittle; ?></title>
 
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/base.css">
@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker3.min.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap-clockpicker.min.css">
     <link rel=icon" type="image/png" href="images/favicon.png"/>
-    
+
 
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -30,7 +30,7 @@
             box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
             transition: 0.8s;
             width: 100%;
-            border-radius: 5px;            
+            border-radius: 5px;
         }
 
         .card:hover {
@@ -52,26 +52,26 @@
 
         a.dropdown-toggle:hover
         {
-          color:green;
+          color:purple;
         }
 
 
         .navbar-default .navbar-nav > li > a:hover
         {
-          
-          color:yellow;
+
+          color:purple;
         }
 
         .navbar-default .navbar-nav > li > a:hover
         {
-          color: blue;
+          color: purple;
 
         }
 
-        .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus 
+        .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus
         {
-          
-          
+
+
         }
 
 </style>
@@ -82,14 +82,14 @@
   <?php
   if (isset($_SESSION['memberLogin']) && $_SESSION['memberLogin'] == 'mtabernacle2019' && $_SESSION['myRole']=='admin')
   {
-     require_once("adminnavbar.php");
+     include("adminheader.php");
   }
   else if (isset($_SESSION['memberLogin']) && $_SESSION['memberLogin'] == 'mtabernacle2019' && $_SESSION['myRole']=='teamleader')
   {
-     require_once("teamleadernavbar.php");
+     include("teamleadernavbar.php");
   }else if (isset($_SESSION['memberLogin']) && $_SESSION['memberLogin'] == 'mtabernacle2019' && $_SESSION['myRole']=='')
   {
-      require_once("studentnavbar.php");
+      include("studentheader.php");
   }
 
   ?>

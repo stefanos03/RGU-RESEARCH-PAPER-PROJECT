@@ -1,5 +1,5 @@
 
- <footer style="background: purple;">
+ <footer style="background: purple; position: fixed; bottom: 0; margin-top: 200px">
 
 
      <div class="container-fluid container-fixed-bottom">
@@ -7,7 +7,7 @@
              <div class="col-sm-12" >
                  <br>
                  <dvi>
-                     <p style="position: absolute; color: white; ">&copy<?php echo Date('Y'); ?> PreshApp. All rights reserved. </p>
+                     <p style="position: absolute; color: white; ">&copy<?php echo Date('Y'); ?> RGU Project Paper Research. All rights reserved. </p>
                  </dvi>
                  <div>
                      <p style="position: absolute; margin-left: 800px; color: white;"><a href="https://www.rgu.ac.uk/privacy-and-cookie-statement"target="_blank" style="color: white">Privacy and Cookie Statement</a></p>

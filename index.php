@@ -67,7 +67,7 @@ function loginFunction($username,$password)
             $_SESSION["myEmail"] = $Results["email"];
             $_SESSION["myCountry"] = $Results["country"];
             $_SESSION["myPhoto"] = $Results["photo"];
-            $_SESSION['myAboutme'] = $Results['aboutme'];
+//            $_SESSION['myAboutme'] = $Results['aboutme'];
             $_SESSION['myRole'] = $Results['role'];
 
             header("location:browsepapers.php");
@@ -76,6 +76,7 @@ function loginFunction($username,$password)
         {
             $status = $Results["status"];
             $message = $Results["message"];
+            echo "Username and password is required to login!!!";
         }
 
 }//end of loginFunction

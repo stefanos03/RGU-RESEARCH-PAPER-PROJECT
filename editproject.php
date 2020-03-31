@@ -6,7 +6,7 @@ ini_set('display_errors', 1);
    $pageTitle = "Edit Project";  
    require_once("classes/Conf.php");
    require_once("header.php");    
-   require_once("adminnavbar.php");
+   require_once("adminheader.php");
    
    if (!isset($_GET['id']) && $_GET['id']!='')
    {

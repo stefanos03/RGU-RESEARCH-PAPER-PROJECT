@@ -46,7 +46,7 @@
 	</div>
 	<div class="row">
 	   	<div class="col-sm-3" style="text-align:center;border-radius:15px;">
-	   		<img src="<?php echo $myPhoto; ?>" id="userphoto" class="img-circle" width=150px" hspace="2px" align="center" style="margin-bottom:5px;" ><br>
+	   		<img src="<?php echo $ProfilPic; ?>" id="userphoto" class="img-circle" width=150px" hspace="2px" align="center" style="margin-bottom:5px;" ><br>
 	   		<label for="file">
 	   				<input type="file" name="file" id="file" style="display:none;"/>
 	   				<div class="btn btn-primary" ><i class="fa fa-camera"></i> Change Photo</div>

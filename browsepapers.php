@@ -2,11 +2,11 @@
 
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
-   require_once("includes/login_module.php");
-   $pageTitle = "Manage Users";  
-   require_once("classes/Conf.php");
-   require_once("header.php");    
-   
+   include("includes/login_module.php");
+   $webtittle = "Manage Users";
+  include("classes/Conf.php");
+  include("header.php");
+
 
    
    
@@ -73,6 +73,7 @@ ini_set('display_errors', 1);
                            echo $userRole;
                     ?>
                 </div>
+<!--                Start the container-->
                 <div class="col-xs-12">
                     <h3 class="text-left price-headline" style="color:purple;">Browse Papers</h3>
                 </div>
@@ -147,7 +148,7 @@ ini_set('display_errors', 1);
 
 
 
-
+<!--hi dafasdasd-->
 
                               </div>
                               <div role="tabpanel" class="tab-pane" id="profile">
@@ -274,10 +275,12 @@ ini_set('display_errors', 1);
              
             
                           
-    </div><!-- end of container //--> 
+    </div><!-- end of container //-->
 
-     
-  
+
+<br>
+<br>
+<br>
 
     
 

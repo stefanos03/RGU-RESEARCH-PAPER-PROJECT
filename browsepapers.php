@@ -235,7 +235,7 @@ ini_set('display_errors', 1);
                                           $photo = 'users photos/'.$row['photo'];
                                         }
                                         else{
-                                          $photo = "users photos/avatar200.png";
+                                          $photo = "users photos/photoprofil.png";
                                         }
                                         $code1 = 'oDdpnVaWwgdsjhMFiyIeLjJjSUCThpJUxfUVwTGnNSGeMLToTq';
                                         $code2 = 'FoltjKlLKnBdPvQfPQi!oLU!lStPXzTyZomFgktMQluhRbCDHe';

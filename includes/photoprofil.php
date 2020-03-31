@@ -7,7 +7,7 @@
     }
     else
     {
-    	$ProfilPic = "avatar200.png";
+    	$ProfilPic = "photoprofil.png";
     }
 
     $ProfilPic = "users photos/".$ProfilPic;

@@ -42,7 +42,7 @@
     {	
     	$memberPhoto = 'users photos/'.$memberInfo->photo;
     }else{
-    	$memberPhoto = 'users photos/avatar200.png';
+    	$memberPhoto = 'users photos/photoprofil.png';
     }
 
 

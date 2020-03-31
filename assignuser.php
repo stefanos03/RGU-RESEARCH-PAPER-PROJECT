@@ -68,11 +68,11 @@ ini_set('display_errors', 1);
             <br>
             <br>
             <br>
-             <form name="assign_user_toproject" action="assignuser.php" method="post" style="border: 4px solid purple;padding: 100px; margin-right: 30px; background: wheat">
-                 <h3 class="text-center price-headline " style="color:purple;">Assign User to Project</h3>
+             <form name="assign_user_toproject" action="assignuser.php" method="post" style="border: 4px solid purple;padding: 80px; margin-right: 30px; background: purple">
+                 <h3 class="text-center price-headline w3-display-topmiddle" style="color:white;">Assign User to Project</h3>
                  <br> <br>
               <div class="form-group row">
-                  <label for="Project Short Name"  class="col-xs-12 col-sm-2 col-form-label text-center" style="border: 2px solid purple; padding:3px; margin-right: 10px;color: purple">Project</label>
+                  <label for="Project Short Name"  class="col-xs-12 col-sm-2 col-form-label text-center" style="border: 2px solid white; padding:3px; margin-right: 10px;color: white">Project</label>
                   <div class="form-group col-xs-12 col-sm-5">
                       <select class="form-control" name="project" style="margin-left: 150px">
                             <option></option>
@@ -80,10 +80,10 @@ ini_set('display_errors', 1);
                             <?php
                               $project = new Project();
                               $result = $project->getAllProject();
-                              foreach ($result as $row)
+                              foreach ($result as $type)
                               {
-                                $id = $row['id'];
-                                $name =  $row['name'];
+                                $id = $type['id'];
+                                $name =  $type['name'];
                             ?>
                             <option value="<?php echo $id; ?>"><?php echo $name; ?></option>
                             <?php
@@ -98,7 +98,7 @@ ini_set('display_errors', 1);
 
               <div class="form-group row">
                   
-                  <label for="Project Short Name"  class="col-xs-12 col-sm-2 col-form-label text-center " style="border: 2px solid purple; padding: 3px; margin-right: 10px; color: purple">User</label>
+                  <label for="Project Short Name"  class="col-xs-12 col-sm-2 col-form-label text-center " style="border: 2px solid white; padding: 3px; margin-right: 10px; color: white">User</label>
                   
                   <div class="form-group col-xs-12 col-sm-5">
                       <select class="form-control" name="user" style="margin-left: 150px">
@@ -110,9 +110,9 @@ ini_set('display_errors', 1);
 
                               $project = new User();
                               $result = $project->getAllUsers();
-                              foreach ($result as $row) {
-                                  $id = $row['id'];
-                                  $name = $row['lastname'] . ' ' . $row['firstname'];
+                              foreach ($result as $type) {
+                                  $id = $type['id'];
+                                  $name = $type['lastname'] . ' ' . $type['firstname'];
 
 
 
@@ -154,33 +154,33 @@ ini_set('display_errors', 1);
               <br/>
               <?php
                   
-                  foreach($list as $row)
+                  foreach($list as $type)
                   {
 
-                    $role = $row['role'];
+                    $role = $type['role'];
                     if ($role=='')
                     {
                       $role= "Member";
                     }
               ?>
-              <div class="row" style="text-decoration:underline; margin-left: 150px" >
-                  <div class="col-xs-4">
-                        <?php echo "<i class='fa fa-folder-open'></i> <a href='manageprojects.php'>".$row['name']."</a>"; ?>
+              <div class="row" style="text-decoration:underline; margin-left: 150px; color: purple"  >
+                  <div class="col-xs-4" style="text-decoration: underline; color: purple">
+                        <?php echo "<i class='fa fa-folder-open'></i> <a href='manageprojects.php'>".$type['name']."</a>"; ?>
                   </div>
 
-                  <div class="col-xs-3">
+                  <div class="col-xs-3" style="text-decoration: underline; color: purple">
                         <?php  
-                          echo "<i class='fa fa-user'></i> <a href='#'>".$row['lastname'].' '.$row['firstname']."</a>";
+                          echo "<i class='fa fa-user'></i> <a href='#'>".$type['lastname'].' '.$type['firstname']."</a>";
                         ?>
                   </div>
-                  <div class="col-x3-5">
+                  <div class="col-x3-5" style="text-decoration: underline;color: purple">
                       <?php
                           echo "<i class='fa fa-users'></i> <a href='#'>".$role."</a>";
                       ?>
                   </div>
 
               </div>
-              <hr>
+                      <hr style=" border-top: 1px dotted purple;">
 
 
 

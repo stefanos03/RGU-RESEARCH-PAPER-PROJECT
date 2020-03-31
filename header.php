@@ -25,69 +25,69 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-  <style>
-        .card {
-            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-            transition: 0.8s;
-            width: 100%;
-            border-radius: 5px;
-        }
-
-        .card:hover {
-            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-        }
-
-        img {
-            border-radius: 5px 5px 0 0;
-        }
-
-        .container {
-            padding: 2px 16px;
-        }
-
-        a.dropdown-toggle
-        {
-
-        }
-
-        a.dropdown-toggle:hover
-        {
-          color:purple;
-        }
-
-
-        .navbar-default .navbar-nav > li > a:hover
-        {
-
-          color:purple;
-        }
-
-        .navbar-default .navbar-nav > li > a:hover
-        {
-          color: purple;
-
-        }
-
-        .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus
-        {
-
-
-        }
-
-</style>
+<!--  <style>-->
+<!--        .card {-->
+<!--            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);-->
+<!--            transition: 0.8s;-->
+<!--            width: 100%;-->
+<!--            border-radius: 5px;-->
+<!--        }-->
+<!---->
+<!--        .card:hover {-->
+<!--            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);-->
+<!--        }-->
+<!---->
+<!--        img {-->
+<!--            border-radius: 5px 5px 0 0;-->
+<!--        }-->
+<!---->
+<!--        .container {-->
+<!--            padding: 2px 16px;-->
+<!--        }-->
+<!---->
+<!--        a.dropdown-toggle-->
+<!--        {-->
+<!---->
+<!--        }-->
+<!---->
+<!--        a.dropdown-toggle:hover-->
+<!--        {-->
+<!--          color:purple;-->
+<!--        }-->
+<!---->
+<!---->
+<!--        .navbar-default .navbar-nav > li > a:hover-->
+<!--        {-->
+<!---->
+<!--          color:purple;-->
+<!--        }-->
+<!---->
+<!--        .navbar-default .navbar-nav > li > a:hover-->
+<!--        {-->
+<!--          color: purple;-->
+<!---->
+<!--        }-->
+<!---->
+<!--        .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus-->
+<!--        {-->
+<!---->
+<!---->
+<!--        }-->
+<!---->
+<!--</style>-->
 
   </head>
   <body>
   
   <?php
-  if (isset($_SESSION['memberLogin']) && $_SESSION['memberLogin'] == 'mtabernacle2019' && $_SESSION['myRole']=='admin')
+  if (isset($_SESSION['memberLogin']) && $_SESSION['memberLogin'] == 'stefanos2020' && $_SESSION['myRole']=='admin')
   {
      include("adminheader.php");
   }
-  else if (isset($_SESSION['memberLogin']) && $_SESSION['memberLogin'] == 'mtabernacle2019' && $_SESSION['myRole']=='teamleader')
+  else if (isset($_SESSION['memberLogin']) && $_SESSION['memberLogin'] == 'stefanos2020' && $_SESSION['myRole']=='teamleader')
   {
-     include("teamleadernavbar.php");
-  }else if (isset($_SESSION['memberLogin']) && $_SESSION['memberLogin'] == 'mtabernacle2019' && $_SESSION['myRole']=='')
+     include("teamleaderheader.php");
+  }else if (isset($_SESSION['memberLogin']) && $_SESSION['memberLogin'] == 'stefanos2020' && $_SESSION['myRole']=='')
   {
       include("studentheader.php");
   }

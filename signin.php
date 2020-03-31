@@ -24,7 +24,7 @@ if (isset($_POST['submitForm']))
         if ($result['status']=="success")
         {
             session_start();
-            $_SESSION['memberLogin'] = 'mtabernacle2019';
+            $_SESSION['memberLogin'] = 'stefanos2020';
             $_SESSION['myUserId'] = $result["id"];
             $_SESSION['myLastname'] = $result["lastname"];
             $_SESSION['myFirstname'] = $result["firstname"];

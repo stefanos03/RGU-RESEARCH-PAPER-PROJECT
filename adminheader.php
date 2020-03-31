@@ -29,7 +29,7 @@
 
               <li class="nav navbar-nav"><a style="color:#ffffff;" href="createuser.php"><span class="fa fa-user-plus"></span><strong> Create User </strong></a> </li>
               <li class="nav navbar-nav"><a style="color:#ffffff;" href="manageusers.php"><span class="fa fa-user-times"></span><strong> Manage User </strong></a> </li>
-              <li class="nav navbar-nav"><a style="color:#ffffff;" href="assignusertoproject.php"><span class="fa fa-users"></span><strong> Assign User </strong></a> </li>
+              <li class="nav navbar-nav"><a style="color:#ffffff;" href="assignuser.php"><span class="fa fa-users"></span><strong> Assign User </strong></a> </li>
                   
                 </li>
 

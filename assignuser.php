@@ -66,24 +66,11 @@ ini_set('display_errors', 1);
                 <div class="col-xs-12">
                     <h3 class="text-center price-headline " style="color:purple;">Assign User to Project</h3>
                 </div>
-
-                
             </div>
-                  
-
                   <hr>
-             
-
-           
-
              <form name="assign_user_toproject" action="assignuser.php" method="post" style="border: 4px solid purple;padding: 100px; margin-right: 30px; background: wheat">
-              
-              
-
               <div class="form-group row">
-                  
                   <label for="Project Short Name"  class="col-xs-12 col-sm-2 col-form-label text-center" style="border: 2px solid purple; padding:3px; margin-right: 10px">Project</label>
-                  
                   <div class="form-group col-xs-12 col-sm-5">
                       <select class="form-control" name="project" style="margin-left: 150px">
                             <option></option>
@@ -95,12 +82,8 @@ ini_set('display_errors', 1);
                               {
                                 $id = $row['id'];
                                 $name =  $row['name'];
-
-                          
                             ?>
                             <option value="<?php echo $id; ?>"><?php echo $name; ?></option>
-                             
-
                             <?php
 
                               }
@@ -156,13 +139,13 @@ ini_set('display_errors', 1);
               <?php
                 $project = new Project();
                 $list = $project->getAllProjectsUsers();
-                $totalProjectUsers = $list->num_rows;
+                $ProjectUsers = $list->num_rows;
               ?>
 
               <br/><br/>
-              <div class="row">
+              <div class="row" style="border: solid 3px purple">
                   <div class="col-xs-12">
-                    <h4 class="text-center price-headline" style="color:purple;">Assigned  User to Project (<?php echo $totalProjectUsers; ?>)</h4>
+                    <h4 class="text-center price-headline" style="color:purple;">Assigned  User to Project (<?php echo $ProjectUsers; ?>)</h4>
                 </div>
 
               </div>
@@ -178,18 +161,18 @@ ini_set('display_errors', 1);
                       $role= "Member";
                     }
               ?>
-              <div class="row" >
+              <div class="row" style="text-decoration:purple underline; color: purple" >
                   <div class="col-xs-4">
-                        <?php echo "<i class='fa fa-folder-o'></i> <a href='manageprojects.php'>".$row['name']."</a>"; ?>
+                        <?php echo "<i class='fa fa-folder-open'></i> <a href='manageprojects.php'>".$row['name']."</a>"; ?>
                   </div>
                   <div class="col-xs-3">
                         <?php  
-                          echo "<i class='fa fa-user-o'></i> <a href='#'>".$row['lastname'].' '.$row['firstname']."</a>";
+                          echo "<i class='fa fa-user'></i> <a href='#'>".$row['lastname'].' '.$row['firstname']."</a>";
                         ?>
                   </div>
                   <div class="col-x3-5">
                       <?php
-                          echo "<i class='fa fa-tasks'></i> <a href='#'>".$role."</a>";
+                          echo "<i class='fa fa-users'></i> <a href='#'>".$role."</a>";
                       ?>
                   </div>
 

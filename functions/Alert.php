@@ -1,4 +1,5 @@
  <?php
+ $message=$status;
                   if (isset($_POST['submitForm']))
                   {
                      if ($status=='success')

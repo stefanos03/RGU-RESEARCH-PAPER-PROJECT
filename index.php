@@ -58,7 +58,7 @@ function loginFunction($username,$password)
         if ($Results['status']=="success")
         {
             session_start();
-            $_SESSION['memberLogin'] = 'mtabernacle2019';
+            $_SESSION['memberLogin'] = 'stefanos2020';
             $_SESSION['myUserId'] = $Results["id"];
             $_SESSION['myLastname'] = $Results["lastname"];
             $_SESSION['myFirstname'] = $Results["firstname"];
@@ -220,6 +220,9 @@ include("guestnavbar.php");
     
     
 <!---->
+<br>
+<br>
+<br>
 <?php
    require_once("footer2.php");
 ?>

@@ -10,8 +10,8 @@ ini_set('display_errors', 1);
 ?>
 
         <br/>
-   <div class="container">
-        <div class="">
+   <div  style="background-image: url('images/background9.jpeg')">
+        <div class="container">
             <div class="col-xs-12 text-right">
                   <?php
                            $userRole = '';
@@ -28,21 +28,20 @@ ini_set('display_errors', 1);
                               $userRole = 'Member';
                            }
 
-                           echo "<strong>Welcome ".$_SESSION['myLastname'].' '.$_SESSION['myFirstname']."</strong>,<br>";
-                           echo $userRole;
+                  echo "<strong style='margin-right: 350px; font-size: 40px; color: purple '>Welcome ".$userRole."</strong>,<br>";
                     ?>
                 </div>
 
             <div class="row">
                 <div class="col-xs-12">
-                    <h3 class="text-left price-headline" style="color:purple; margin-left: 500px">Manage Project</h3>
+                    <h3 class="text-left price-headline" style="color:purple; margin-left: 500px"><strong>Manage Project</strong></h3>
                 </div>
 
                 
             </div>
                   
                   
-            <hr>
+
             <div class="row" style="border: solid 3px purple; padding: 30px; background: purple;">
                 <h3 class="text-left price-headline container-fixed-top" style="color:white; margin-left: 500px;">Manage Project</h3>
                 <?php
@@ -65,11 +64,11 @@ ini_set('display_errors', 1);
                           <div class="col-xs-12">
                               <?php
                                 echo "<strong style='color: white'><i class='fa fa-folder-open' style='color: white'></i> ".$name."</strong>
-                                <br/><small><i class='fa fa-edit'></i> ".$editUrl." &nbsp; &nbsp;| &nbsp;&nbsp; <i class='fa fa-trash-o'></i> ".$deleteUrl."</small>";
+                                <br/><small><i class='fa fa-edit' style='color: white'></i> ".$editUrl." &nbsp; &nbsp;| &nbsp;&nbsp; <i class='fa fa-trash' style='color: white'></i> ".$deleteUrl."</small>";
                               ?>
                           </div>
                       </div>
-                      <hr>
+                      <hr style=" border-top: 1px dotted white;">
 
                 <?php
 
@@ -85,7 +84,7 @@ ini_set('display_errors', 1);
 
 <!--     users-->
 <br/>
-<div class="w3-display-right">
+<div class="container">
     <div class="col-xs-12 text-right">
         <?php
         $userRole = '';
@@ -102,22 +101,22 @@ ini_set('display_errors', 1);
             $userRole = 'Member';
         }
 
-        echo "<strong>Welcome ".$_SESSION['myLastname'].' '.$_SESSION['myFirstname']."</strong>,<br>";
-        echo $userRole;
         ?>
     </div>
-
+    <hr style=" border-top: 1px dashed purple;" >
     <div class="row">
         <div class="col-xs-12">
-            <h3 class="text-left price-headline" style="color:purple;">Manage Users</h3>
+
         </div>
 
 
     </div>
 
 
-    <hr>
-    <div class="row">
+
+    <div class="row" style="border: solid 3px purple; padding: 30px; background: purple; margin-bottom: 30px">
+        <h3 class="text-left price-headline container-fixed-top" style="color:white; margin-left: 500px;">Manage User</h3>
+        <br>
         <?php
         $user = new User();
         $allUsers = $user->getAllUsers();

@@ -54,8 +54,6 @@ ini_set('display_errors', 1);
                       $code = $row['code'];
                       $datecreated = new DateTime($row['datecreated']);
                       $datecreated = $datecreated->format('l jS F, Y');
-
-                      $editUrl="<a href='editproject.php?id=".$id."' style='color: white'>Edit</a>";
                       $deleteUrl = "<a href='deleteproject.php?id=".$id."'style='color: white'>Delete</a>";
 
 
@@ -64,7 +62,7 @@ ini_set('display_errors', 1);
                           <div class="col-xs-12">
                               <?php
                                 echo "<strong style='color: white'><i class='fa fa-folder-open' style='color: white'></i> ".$name."</strong>
-                                <br/><small><i class='fa fa-edit' style='color: white'></i> ".$editUrl." &nbsp; &nbsp;| &nbsp;&nbsp; <i class='fa fa-trash' style='color: white'></i> ".$deleteUrl."</small>";
+                                <br/><small> <i class='fa fa-trash' style='color: white'></i> ".$deleteUrl."</small>";
                               ?>
                           </div>
                       </div>
@@ -76,13 +74,9 @@ ini_set('display_errors', 1);
                 ?>
 
             </div>
-
-             
-            
-                          
     </div><!-- end of container //-->
 
-<!--Start Manage users-->
+<!--Start Manage Users-->
 <br/>
 <div class="container">
     <div class="col-xs-12 text-right">
@@ -133,7 +127,7 @@ ini_set('display_errors', 1);
             $datecreated = new DateTime($row['datecreated']);
             $datecreated = $datecreated->format('l jS F, Y');
 
-            $editUrl="<a href='editproject.php?id=".$id."'>Edit</a>";
+
             $deleteUrl = "<a href='deleteproject.php?id=".$id."'>Delete</a>";
             if ($role=='')
             {
@@ -161,12 +155,12 @@ ini_set('display_errors', 1);
                 </div>
                 <div class="col-xs-4">
                     <?php
-                    echo "<small><i class='fa fa-calendar-o'></i> ".$datecreated."</small>";
+                    echo "<small style='color: white'><i class='fa fa-calendar-o'></i> ".$datecreated."</small>";
                     ?>
                 </div>
 
             </div>
-            <hr>
+            <hr  style=" border-top: 1px dashed white;">
 
             <?php
 
@@ -174,10 +168,6 @@ ini_set('display_errors', 1);
         ?>
 
     </div>
-
-
-
-
 </div><!-- end of container //-->
    </div>
 <br>

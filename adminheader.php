@@ -23,12 +23,11 @@
 
             <li class=" nav navbar-nav"><a class="w3-button w3-hover-yellow" style='color:#ffffff; 'href="browsepapers.php"><span class="fa fa-home" ></span><strong> Back To Main</strong></a></li>
 
-                <li class="nav navbar-nav"><a style="color:#ffffff;" href="createproject.php"><span class="fa fa-folder-open"></span><strong> Create Project  </strong></a></li>
+                <li class="nav navbar-nav"><a style="color:#ffffff;" href="createproject.php"><span class="fa fa-plus-square"></span><strong> Create Project & Users  </strong></a></li>
 
-              <li class="nav navbar-nav"><a style="color:#ffffff;" href="manageprojects.php"><span class="fa fa-tasks"></span><strong> Manage Project </strong></a> </li>
+              <li class="nav navbar-nav"><a style="color:#ffffff;" href="manageprojects.php"><span class="fa fa-tasks"></span><strong> Manage Project & Users </strong></a> </li>
 
               <li class="nav navbar-nav"><a style="color:#ffffff;" href="createuser.php"><span class="fa fa-user-plus"></span><strong> Create User </strong></a> </li>
-              <li class="nav navbar-nav"><a style="color:#ffffff;" href="manageusers.php"><span class="fa fa-user-times"></span><strong> Manage User </strong></a> </li>
               <li class="nav navbar-nav"><a style="color:#ffffff;" href="assignuser.php"><span class="fa fa-users"></span><strong> Assign User </strong></a> </li>
                   
                 </li>

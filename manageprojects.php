@@ -28,13 +28,13 @@ ini_set('display_errors', 1);
                               $userRole = 'Member';
                            }
 
-                  echo "<strong style='margin-right: 350px; font-size: 40px; color: purple '>Welcome ".$userRole."</strong>,<br>";
+                  echo "<strong style='margin-right: 300px; font-size: 40px; color: purple '>Welcome ".$userRole."</strong>,<br>";
                     ?>
                 </div>
 
             <div class="row">
                 <div class="col-xs-12">
-                    <h3 class="text-left price-headline" style="color:purple; margin-left: 500px"><strong>Manage Project</strong></h3>
+                    <h3 class="text-left price-headline" style="color:purple; margin-left: 450px"><strong>Manage Project and Users</strong></h3>
                 </div>
 
                 
@@ -80,9 +80,9 @@ ini_set('display_errors', 1);
              
             
                           
-    </div><!-- end of container //--> 
+    </div><!-- end of container //-->
 
-<!--     users-->
+<!--Start Manage users-->
 <br/>
 <div class="container">
     <div class="col-xs-12 text-right">

@@ -9,7 +9,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title> research paper app <?php echo $webtittle; ?></title>
+    <title> research paper app <?php echo $pageTitle; ?></title>
 
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/base.css">
@@ -25,56 +25,56 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-<!--  <style>-->
-<!--        .card {-->
-<!--            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);-->
-<!--            transition: 0.8s;-->
-<!--            width: 100%;-->
-<!--            border-radius: 5px;-->
-<!--        }-->
-<!---->
-<!--        .card:hover {-->
-<!--            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);-->
-<!--        }-->
-<!---->
-<!--        img {-->
-<!--            border-radius: 5px 5px 0 0;-->
-<!--        }-->
-<!---->
-<!--        .container {-->
-<!--            padding: 2px 16px;-->
-<!--        }-->
-<!---->
-<!--        a.dropdown-toggle-->
-<!--        {-->
-<!---->
-<!--        }-->
-<!---->
-<!--        a.dropdown-toggle:hover-->
-<!--        {-->
-<!--          color:purple;-->
-<!--        }-->
-<!---->
-<!---->
-<!--        .navbar-default .navbar-nav > li > a:hover-->
-<!--        {-->
-<!---->
-<!--          color:purple;-->
-<!--        }-->
-<!---->
-<!--        .navbar-default .navbar-nav > li > a:hover-->
-<!--        {-->
-<!--          color: purple;-->
-<!---->
-<!--        }-->
-<!---->
-<!--        .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus-->
-<!--        {-->
-<!---->
-<!---->
-<!--        }-->
-<!---->
-<!--</style>-->
+  <style>
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            transition: 0.8s;
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        }
+
+        img {
+            border-radius: 5px 5px 0 0;
+        }
+
+        .container {
+            padding: 2px 16px;
+        }
+
+        a.dropdown-toggle
+        {
+
+        }
+
+        a.dropdown-toggle:hover
+        {
+          color:purple;
+        }
+
+
+        .navbar-default .navbar-nav > li > a:hover
+        {
+
+          color:purple;
+        }
+
+        .navbar-default .navbar-nav > li > a:hover
+        {
+          color: purple;
+
+        }
+
+        .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus
+        {
+
+
+        }
+
+</style>
 
   </head>
   <body>

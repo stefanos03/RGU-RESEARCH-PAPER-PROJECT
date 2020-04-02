@@ -4,7 +4,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
    require_once("includes/login_module.php");
    $pageTitle = "Assign User to Project";  
-   require_once("classes/Conf.php");
+   require_once("classes/Config.php");
    require_once("header.php");    
    
    
@@ -74,7 +74,7 @@ ini_set('display_errors', 1);
               <div class="row" >
                   <div class="col-xs-4" style='background-color: #f1f1f1;border-radius:5px;padding-top:10px;padding-bottom:15px;'>
                         <?php 
-                            echo "<strong><big>Project</big></strong><br/><i class='fa fa-folder-o'></i> <a href='manageprojects.php'>".$row['name']."</a><br/>"; 
+                            echo "<strong><big>Project</big></strong><br/><i class='fa fa-folder-o'></i> <a href='createAndManageProject.php'>" .$row['name']."</a><br/>";
                             echo "<small>Submitted on ".$datesubmitted."</small><br/>";
                         ?>
                         <br/>

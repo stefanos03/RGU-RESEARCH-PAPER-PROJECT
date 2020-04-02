@@ -26,7 +26,7 @@
           <ul class="nav navbar-nav">
               <li class=" nav navbar-nav"><a class="w3-button w3-hover-yellow" style='color:white; 'href="browsepapers.php"><span class="fa fa-home" ></span><strong> Back To Main</strong></a></li>
 
-              <li class=" nav navbar-nav"><a class="w3-button w3-hover-yellow" style='color:white; 'href="submitpaper_by_member.php"><span class="fa fa-paper-plane" ></span><strong> Submit Paper</strong></a></li>
+              <li class=" nav navbar-nav"><a class="w3-button w3-hover-yellow" style='color:white; 'href="submitpaper_by_member1.php"><span class="fa fa-paper-plane" ></span><strong> Submit Paper</strong></a></li>
               <li class=" nav navbar-nav"><a class="w3-button w3-hover-yellow" style='color:white; 'href="my_submissions.php"> <span class="fa fa-paperclip" ></span><strong> My Submissions</strong></a></li>
               <li class=" nav navbar-nav"><a class="w3-button w3-hover-yellow" style='color:white; 'href="papers_awaiting_review.php"><span class="fa fa-search" ></span><strong> Review Paper</strong></a></li>
               <li class=" nav navbar-nav"><a class="w3-button w3-hover-yellow" style='color:white; 'href="my_papers_reviewed.php"><span class="fa fa-search-plus" ></span><strong> Papers Reviewed</strong></a></li>

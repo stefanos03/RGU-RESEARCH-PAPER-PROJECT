@@ -4,7 +4,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
    require_once("includes/login_module.php");
    $pageTitle = "Assign User to Project";  
-   require_once("classes/Conf.php");
+   require_once("classes/Config.php");
    require_once("header.php");    
       
    $status='';
@@ -33,17 +33,12 @@ ini_set('display_errors', 1);
     
 
 ?>
-    
-
-   
-
-    
 
 
         <br/>
 <div style="background-image: url('images/background3.jpeg'); background-size: 2000px">
 
-
+    <br>
         <div class="container" >
             <div class="col-xs-12 text-right">
                   <?php
@@ -61,14 +56,17 @@ ini_set('display_errors', 1);
                               $userRole = 'Member';
                            }
 
-                           echo "<strong style='margin-right: 350px; font-size: 40px; color: purple '>Welcome ".$userRole."</strong>,<br>";
+                           echo "<strong style='margin-right: 350px; font-size: 40px; color: purple '>Welcome ".$userRole."</strong>";
+
 
                     ?>
                 </div>
             <br>
             <br>
             <br>
-             <form name="assign_user_toproject" action="assignuser.php" method="post" style="border: 4px solid purple;padding: 80px; margin-right: 30px; background: purple">
+
+
+             <form name="assign_user_toproject" action="assignUsertoProject.php" method="post" style="border: 4px solid purple;padding: 80px; margin-right: 30px; background: purple">
                  <h3 class="text-center price-headline w3-display-topmiddle" style="color:white;">Assign User to Project</h3>
                  <br> <br>
               <div class="form-group row">
@@ -133,7 +131,7 @@ ini_set('display_errors', 1);
                   
                   <div class="col-xs-2 col-sm-2">&nbsp;</div>
                   <div class="col-xs-10 col-sm-10">
-                      <input  class="btn btn-primary " type="submit" name="submitForm" value="Create" style="margin-left: 500px; background: purple"/>
+                      <input  class="btn btn-primary " type="submit" name="submitForm" value="Create" style="margin-left: 500px; background: white; color: purple"/>
                   </div>
               </div>
               </form>
@@ -163,22 +161,24 @@ ini_set('display_errors', 1);
                       $role= "Member";
                     }
               ?>
+
+
               <div class="row" style="text-decoration:underline; margin-left: 150px; color: purple"  >
                   <div class="col-xs-4" style="text-decoration: underline; color: purple">
-                        <?php echo "<i class='fa fa-folder-open'></i> <a href='manageprojects.php'>".$type['name']."</a>"; ?>
+                        <?php echo "<i class='fa fa-folder-open'></i> <a href='createAndManageProject.php'>" .$type['name']."</a>"; ?>
                   </div>
 
                   <div class="col-xs-3" style="text-decoration: underline; color: purple">
                         <?php  
-                          echo "<i class='fa fa-user'></i> <a href='#'>".$type['lastname'].' '.$type['firstname']."</a>";
+                          echo "<i class='fa fa-user'></i> <a href='createAndManageProject.php'>" .$type['lastname'].' '.$type['firstname']."</a>";
                         ?>
                   </div>
                   <div class="col-x3-5" style="text-decoration: underline;color: purple">
                       <?php
-                          echo "<i class='fa fa-users'></i> <a href='#'>".$role."</a>";
+                          echo "<i class='fa fa-users'></i> <a href='createAndManageProject.php'>" .$role."</a>";
                       ?>
                   </div>
-                  
+
 
               </div>
                       <hr style=" border-top: 1px dotted purple;">
@@ -188,14 +188,16 @@ ini_set('display_errors', 1);
               <?php
                   }
               ?>
-                          
+
     </div><!-- end of container //-->
+
 </div>    <!--end of background //-->
 
 <!--space from the  fixed footer-->
 <br>
 <br>
-
+<br>
+<br>
 
 <?php
    require_once("footer.php");

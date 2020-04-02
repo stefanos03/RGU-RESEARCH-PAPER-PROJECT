@@ -1,7 +1,7 @@
 <?php
     require_once("includes/login_module.php");
 	$pageTitle = "Member";
-	require_once("classes/Conf.php");
+	require_once("classes/Config.php");
     
     
     if (!(isset($_GET['mp']) &&  $_GET['mp']!=''))

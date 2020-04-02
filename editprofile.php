@@ -2,7 +2,7 @@
 	require_once("includes/login_module.php");
 	$pageTitle = "Profile Edit Profile";
     require_once("header.php");    
-    require_once("classes/Conf.php");
+    require_once("classes/Config.php");
 
   $msg =  "";
   $status = "";

@@ -1,7 +1,7 @@
 <?php
 	require_once("includes/login_module.php");
 	$pageTitle = "Profile";
-	require_once("classes/Conf.php");
+	require_once("classes/Config.php");
     require_once("header.php");
  
     

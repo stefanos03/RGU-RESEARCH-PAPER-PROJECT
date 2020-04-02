@@ -4,7 +4,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
    require_once("includes/login_module.php");
    $pageTitle = "Assign User to Project";  
-   require_once("classes/Conf.php");
+   require_once("classes/Config.php");
    require_once("header.php");    
    
    
@@ -89,7 +89,7 @@ ini_set('display_errors', 1);
             ?>
            
 
-             <form name="uploadpaper" action="submitpaper_by_member.php" method="post" enctype="multipart/form-data">     
+             <form name="uploadpaper" action="submitpaper_by_member1.php" method="post" enctype="multipart/form-data">
               
               <div class="form-group row">
                   
@@ -152,7 +152,7 @@ ini_set('display_errors', 1);
                           if (isset($_POST['uploadFile']))
                           {
                             echo "<strong>";
-                            require_once("uploadFile.php");
+                            require_once("uploadfile.php");
                             echo "</strong><br/><br/>";
 
                           }                  
@@ -218,7 +218,7 @@ ini_set('display_errors', 1);
               <div class="row" >
                   <div class="col-xs-4">
                         <?php 
-                            echo "<i class='fa fa-folder-o'></i> <a href='manageprojects.php'>".$row['name']."</a><br/>"; 
+                            echo "<i class='fa fa-folder-o'></i> <a href='createAndManageProject.php'>" .$row['name']."</a><br/>";
                             echo "<small>Submitted on ".$datesubmitted."</small>";
                         ?>
                   </div>

@@ -18,19 +18,21 @@
 
 
 
-      <div id="nav-menu" class="collapse navbar-collapse" style="margin-left: 400px; margin-top: 10px">
+      <div id="nav-menu" class="collapse navbar-collapse" style="margin-left: 510px; margin-top: 10px">
           <ul class="nav navbar-nav">
 
             <li class=" nav navbar-nav"><a class="w3-button w3-hover-yellow" style='color:#ffffff; 'href="browsepapers.php"><span class="fa fa-home" ></span><strong> Back To Main</strong></a></li>
 
-                <li class="nav navbar-nav"><a style="color:#ffffff;" href="createproject.php"><span class="fa fa-plus-square"></span><strong> Create Project & Users  </strong></a></li>
+                <li class="nav navbar-nav"><a style="color:#ffffff;" href="createAndManageUser.php"><span class="fa fa-users"></span><strong> Create & Manage Users  </strong></a></li>
 
-              <li class="nav navbar-nav"><a style="color:#ffffff;" href="manageprojects.php"><span class="fa fa-tasks"></span><strong> Manage Project & Users </strong></a> </li>
+              <li class="nav navbar-nav"><a style="color:#ffffff;" href="createAndManageProject.php"><span class="fa fa-tasks"></span><strong>  Create & Manage Project </strong></a> </li>
 
-              <li class="nav navbar-nav"><a style="color:#ffffff;" href="createuser.php"><span class="fa fa-user-plus"></span><strong> Create User </strong></a> </li>
-              <li class="nav navbar-nav"><a style="color:#ffffff;" href="assignuser.php"><span class="fa fa-users"></span><strong> Assign User </strong></a> </li>
-                  
-                </li>
+              <li class="nav navbar-nav"><a style="color:#ffffff;" href="assignUsertoProject.php"><span class="fa fa-user"></span><strong> Assign User to Project </strong></a> </li>
+
+
+
+
+              </li>
 
             </li>
 

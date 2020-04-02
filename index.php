@@ -5,7 +5,7 @@ ini_set('display_errors', 1);
 session_start();
 session_destroy();
 $pageTitle = "Home_Page";
-require_once("classes/Conf.php");
+require_once("classes/Config.php");
 
 $message = "";
 $status = "";

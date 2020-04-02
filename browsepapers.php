@@ -3,8 +3,8 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
    include("includes/login_module.php");
-   $webtittle = "Manage Users";
-  include("classes/Conf.php");
+   $pageTitle = "Manage Users";
+  include("classes/Config.php");
   include("header.php");
 
 

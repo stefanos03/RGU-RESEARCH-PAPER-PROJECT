@@ -8,7 +8,7 @@
 
  $activationcode  = trim(stripslashes(htmlspecialchars($_GET['activationcode'])));
  
-  require_once("classes/Conf.php");
+  require_once("classes/Config.php");
 
  $member = new Member();
  $result = $member->activateMembershipAccount($activationcode);
@@ -31,7 +31,7 @@
  }
  else if ($status=="success")
  {
- 	$_SESSION['memberLogin'] = 'mtabernacle2018';
+ 	$_SESSION['memberLogin'] = 'stefanos2021';
  	header("location:".$nextPage);
 
  }

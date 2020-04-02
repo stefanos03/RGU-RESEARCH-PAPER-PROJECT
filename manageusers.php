@@ -4,7 +4,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
    require_once("includes/login_module.php");
    $pageTitle = "Manage Users";  
-   require_once("classes/Conf.php");
+   require_once("classes/Config.php");
    require_once("header.php");    
      
 
@@ -63,7 +63,7 @@ ini_set('display_errors', 1);
                       $datecreated = $datecreated->format('l jS F, Y');
 
                       $editUrl="<a href='editproject.php?id=".$id."'>Edit</a>";
-                      $deleteUrl = "<a href='deleteproject.php?id=".$id."'>Delete</a>";
+                      $deleteUrl = "<a href='deleteProject.php?id=".$id."'>Delete</a>";
                       if ($role=='')
                       {
                         $role = 'member';

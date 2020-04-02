@@ -10,7 +10,7 @@ else
 	//echo "Already set";
 }
 
-if (!isset($_SESSION['memberLogin']) && ($_SESSION['memberLogin']!='mtabernacle2018'))
+if (!isset($_SESSION['memberLogin']) && ($_SESSION['memberLogin']!='stefanos2021'))
 {
 	header("location:index.php");	
 }

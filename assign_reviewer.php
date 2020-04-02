@@ -8,7 +8,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
    require_once("includes/login_module.php");
    $pageTitle = "Assign User to Project";  
-   require_once("classes/Conf.php");
+   require_once("classes/Config.php");
    require_once("header.php");    
    
    
@@ -195,7 +195,7 @@ ini_set('display_errors', 1);
                   <div class="col-xs-12">
                       <strong>Project Group</strong>
                         <?php 
-                            echo "<br/><i class='fa fa-folder-o'></i> <a href='manageprojects.php'>".$paperProject."</a><br/></br>"; 
+                            echo "<br/><i class='fa fa-folder-o'></i> <a href='createAndManageProject.php'>" .$paperProject."</a><br/></br>";
                            
                         ?>
                   </div>

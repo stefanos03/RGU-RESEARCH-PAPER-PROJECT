@@ -491,7 +491,13 @@
          $result = $QueryExecutor::customQuery($sqlQuery);
          return $result;
       }
+      public function deleteUser($memberid)
+      {
+          $sqlQuery = "Delete from members where id=".$memberid;
+          $QueryExecutor = new ExecuteQuery();
+          $result = $QueryExecutor::customQuery($sqlQuery);
 
+      }
  
 
  }//end of class

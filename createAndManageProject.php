@@ -205,7 +205,7 @@ require_once("functions/Alert.php");
                 <div class="col-xs-12">
                     <?php
                     echo "<strong style='color: white'><i class='fa fa-folder-open' style='color: white'></i> ".$name."</strong>
-                                <br/><small> <i class='fa fa-trash' style='color: white'></i> ".$deleteUrl."</small>";
+                                <br/><small> <i  class='fa fa-trash' style='color: white'></i> ".$deleteUrl."</small>";
                     ?>
                 </div>
             </div>

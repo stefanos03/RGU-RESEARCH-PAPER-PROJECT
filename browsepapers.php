@@ -49,7 +49,8 @@ ini_set('display_errors', 1);
     
 
 
-        <br/><br/>
+        <br/>
+<div style="background-image: url('images/background8.jpeg')">
         <div class="container">
 
             <div class="row">
@@ -68,49 +69,49 @@ ini_set('display_errors', 1);
                            {
                               $userRole = 'Member';
                            }
-
-                           echo "<strong>Welcome ".$_SESSION['myLastname'].' '.$_SESSION['myFirstname']."</strong>,<br>";
-                           echo $userRole;
+                  echo "<strong style='margin-right: 350px; font-size: 40px; color: purple '>Welcome ".$userRole.",</strong>,<br>";
+                  echo "<strong style='margin-right: 350px;font-size: 40px;color: purple'>".$_SESSION['myLastname'].' '.$_SESSION['myFirstname']."</strong>,<br>";
                     ?>
                 </div>
+
 <!--                Start the container-->
-                <div class="col-xs-12">
-                    <h3 class="text-left price-headline" style="color:purple;">Browse Papers</h3>
+                <div class="col-xs-12" style="border: 5px solid mediumpurple;background: purple;">
+                    <h2 class="text-center price-headline" style="color:white; ">Browse Papers</h2>
                 </div>
 
                 
             </div>
-                  
-                  
-            <br/>
-            <div class="row">
+
+            <hr style=" border: 1px solid purple;">
+
+            <div class="column">
                <div class='col-xs-12'>
                     <div>
 
                             <!-- Nav tabs -->
-                            <ul class="nav nav-tabs" role="tablist">
-                              <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab"><strong>Submissions (<?php echo $totalSubmissions; ?>)</strong></a></li>
-                              <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab"><strong>Reviews (<?php echo $totalPapersInReview; ?>)</strong></a></li>
-                              <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab"><strong>Archives (<?php echo $totalInArchive; ?>)</strong></a></li>
+                            <ul id="color" class="nav nav-tabs" role="tablist" style="border: 5px solid mediumpurple; padding: 10px; background: purple">
+                              <li id="color" role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab"><strong>Submissions (<?php echo $totalSubmissions; ?>)</strong></a></li>
+                              <li id="color" role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab"><strong>Reviews (<?php echo $totalPapersInReview; ?>)</strong></a></li>
+                              <li id="color" role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab"><strong>Archives (<?php echo $totalInArchive; ?>)</strong></a></li>
                               
                             </ul>
 
                             <!-- Tab panes -->
-                            <div class="tab-content">
+                            <div class="tab-content" style="border: 5px solid  mediumpurple; background:purple;padding: 10px">
                               <div role="tabpanel" class="tab-pane active" id="home">
                               <br/>
                                   <div class='row'>
                                       <div class='col-xs-4'>
-                                          <strong><big>Project Group</big></strong>    
+                                          <strong style="color: white"><big>Project Group</big></strong>
                                       </div>
                                       <div class='col-xs-4'>
-                                          <strong><big>Title</big></strong>
+                                          <strong style="color: white"><big>Title</big></strong>
                                       </div>
                                       <div class='col-xs-4'>
-                                          <strong><big>File</big></strong>
+                                          <strong style="color: white"><big>File</big></strong>
                                       </div>
                                   </div>
-                                  <hr>
+                                  <hr style="border: 1px solid mediumpurple;">
                                   <?php
 
                                        
@@ -122,33 +123,31 @@ ini_set('display_errors', 1);
                                       <div class='row'>
                                           <div class='col-xs-4'>
                                               <?php 
-                                                  echo "<i class='fa fa-folder-o'></i> <a href='#'>".$row['name']."</a><br/>";
-                                                  echo "<small>Submitted on ".$datesubmitted."</small>"
+                                                  echo "<i class='fa fa-folder-open-o' style='color: white'></i> <a href='#' style='color: white'>".$row['name']."</a><br/>";
+                                                  echo "<small style='color: white;  '>Submitted on ".$datesubmitted."</small>"
                                               ?>
                                           </div>
                                           <div class='col-xs-4'>
                                                 <?php
-                                                    echo "<i class='fa fa-file-o'></i> <a href='submited_paper_info.php?pid=".$row['id']."'>".$row['title']."</a>";
+                                                    echo "<i class='fa fa-file-pdf-o' style='color: white'></i> <a style='color: white' href='submited_paper_info.php?pid=".$row['id']."'>".$row['title']."</a>";
 
                                                 ?>
                                           </div>
                                           <div class='col-xs-4'>
                                                 <?php
-                                                    echo "<i class='fa fa-paperclip'></i> <a href='uploads/".$row['file']."'>".$row['title']."</a>";
+                                                    echo "<i style='color: white' class='fa fa-upload'></i> <a style='color: white' href='uploads/".$row['file']."'>".$row['title']."</a>";
 
                                                   ?>
                                           </div>
                                       </div>
-                                      <hr>
-                                  <?php 
+                                      <hr style="border-top: 1px dashed mediumpurple;">
+                                  <?php
 
                                         }
 
                                   ?>
 
 
-
-<!--hi dafasdasd-->
 
                               </div>
                               <div role="tabpanel" class="tab-pane" id="profile">
@@ -276,11 +275,14 @@ ini_set('display_errors', 1);
             
                           
     </div><!-- end of container //-->
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</div><!--end of the background-->
 
 
-<br>
-<br>
-<br>
 
     
 

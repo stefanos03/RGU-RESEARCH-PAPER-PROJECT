@@ -60,11 +60,14 @@
         {
 
           color:purple;
+            background: mediumpurple;
         }
+
 
         .navbar-default .navbar-nav > li > a:hover
         {
           color: purple;
+            background-color: mediumpurple;
 
         }
 
@@ -74,6 +77,15 @@
 
         }
 
+       a:hover {
+             background-color: yellow;
+         }
+     #color>a:hover{
+         background: yellow;
+         background-color: yellow;
+         list-style-type: circle;
+
+     }
 </style>
 
   </head>

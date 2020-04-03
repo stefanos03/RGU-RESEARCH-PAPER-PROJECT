@@ -86,10 +86,10 @@ ini_set('display_errors', 1);
 
             <div class="column">
                <div class='col-xs-12'>
-                    <div>
+                    <div id="color">
 
                             <!-- Nav tabs -->
-                            <ul id="color" class="nav nav-tabs" role="tablist" style="border: 5px solid mediumpurple; padding: 10px; background: purple">
+                            <ul id="color" class="nav nav-tabs" role="tablist" style="border: 5px solid mediumpurple; padding: 10px; color: purple; background: purple">
                               <li id="color" role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab"><strong>Submissions (<?php echo $totalSubmissions; ?>)</strong></a></li>
                               <li id="color" role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab"><strong>Reviews (<?php echo $totalPapersInReview; ?>)</strong></a></li>
                               <li id="color" role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab"><strong>Archives (<?php echo $totalInArchive; ?>)</strong></a></li>
@@ -150,15 +150,15 @@ ini_set('display_errors', 1);
 
 
                               </div>
-                              <div role="tabpanel" class="tab-pane" id="profile">
-                              <!-- In Reviews //-->
+                              <div role="tabpanel" class="tab-pane" id="profile" style="color: white">
+                              <!--Reviews starts //-->
                               <br/>
                                   <div class="row">
                                       <div class="col-xs-4">
-                                          <strong><big>Project Group</big></strong>
+                                          <strong style="color: white"><big>Project Group</big></strong>
                                       </div>
                                       <div class="col-xs-5">
-                                              <strong><big>Paper</big></strong>
+                                              <strong style="color: white"><big>Paper</big></strong>
                                       </div>
                                   </div>
               
@@ -175,19 +175,19 @@ ini_set('display_errors', 1);
                                       <div class="row">
                                           <div class="col-xs-4">
                                                 <i class='fa fa-folder-o'></i>
-                                                <?php echo "<a href='projects.php'>".$res['name']."</a>";  ?>
+                                                <?php echo "<a style='color: white' href='projects.php'>".$res['name']."</a>";  ?>
 
                                           </div>
                                           <div class="col-xs-5">
-                                                  <i class='fa fa-file-o'></i>
-                                                  <?php echo "<a href='submited_paper_info.php?pid=".$res['id']."'>".$res['title']."</a>";
+                                                  <i class='fa fa-file-pdf-o'></i>
+                                                  <?php echo "<a style='color:white' href='submited_paper_info.php?pid=".$res['id']."'>".$res['title']."</a>";
                                                   ?>
                                           </div>
                                           <div class="col-xs-3">
                                                 
                                                   <?php
                                                      echo "<strong><big>
-                                                              <a href='reviewpaper.php?pid=".$res['id']."'>Review this Paper</a>
+                                                              <a style='color: white' href='reviewpaper.php?pid=".$res['id']."'>Review this Paper</a>
                                                            </big></strong>";
                                                   ?>
                                           </div>
@@ -210,7 +210,7 @@ ini_set('display_errors', 1);
 
                                           </div>
                                       </div>
-                                      <hr>
+                                      <hr style="border-top: 1px dashed mediumpurple;">
                                 <?php 
 
                                       }
@@ -219,9 +219,10 @@ ini_set('display_errors', 1);
 
 
 
-                              <!-- end of reviews //-->
+                              <!-- end reviews //-->
                               </div>
-                              <div role="tabpanel" class="tab-pane" id="messages">
+<!-- Archives-->
+                              <div role="tabpanel" class="tab-pane" id="messages" style="color: white">
                                 <br/>
                                 <?php
                                       foreach($archive as $row)
@@ -243,16 +244,16 @@ ini_set('display_errors', 1);
                                     <div class='row'>
                                         <div class='col-xs-12'>
                                             <?php
-                                                echo "<div ><strong><i class='fa fa-file-o'></i> <a href='submited_paper_info.php?pid=".$row['paperid']."'>".$row['title']."</a></strong><div style='padding-top:10px;'>".nl2br($row['comment'])."</div></div>";
-                                                echo "<div><i class='fa fa-paperclip'></i> <a href='uploads/".$row['reviewedfile']."'>".$row['reviewedfile']."</a></div>";
-                                                echo "<div style='text-align:right;background-color:#f1f1f1;'><a href='member.php?mp=".$code1.'-'.$row['memberid'].'-'.$code2."'>".$row['lastname'].' '.$row['firstname']."</a> <img class='img-circle' style='width:50px;height:50px;' src='".$photo."'><br/></div>"
+                                                echo "<div ><strong><i class='fa fa-file-pdf-o'></i> <a style='color: white' href='submited_paper_info.php?pid=".$row['paperid']."'>".$row['title']."</a></strong><div style='padding-top:10px;'>".nl2br($row['comment'])."</div></div>";
+                                                echo "<div><i class='fa fa-upload'></i> <a style='color: white' href='uploads/".$row['reviewedfile']."'>".$row['reviewedfile']."</a></div>";
+                                                echo "<div style='text-align:right;'><a style='color: white' href='member.php?mp=".$code1.'-'.$row['memberid'].'-'.$code2."'>".$row['lastname'].' '.$row['firstname']."</a> <img class='img-rounded' style='width:50px;height:50px;' src='".$photo."'><br/></div>"
                                              ?>
 
 
                                         </div>
 
                                     </div>
-                                    <hr>
+                                    <hr style="border-top: 1px dashed mediumpurple;">
 
                                 <?php
                                       }

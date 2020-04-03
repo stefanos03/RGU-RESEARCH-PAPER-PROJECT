@@ -78,14 +78,21 @@
         }
 
        a:hover {
-             background-color: yellow;
+             background-color: rebeccapurple;
          }
      #color>a:hover{
-         background: yellow;
-         background-color: yellow;
-         list-style-type: circle;
+         background: rebeccapurple;
 
+         list-style-type: circle;
      }
+      #color>ul>li a.active{
+          background-color:rebeccapurple ;
+          color: rebeccapurple;
+      }
+      /*#color  a:hover:not(.active) {*/
+      /*    background-color: yellow;*/
+      /*    color: white;*/
+      /*}*/
 </style>
 
   </head>

@@ -69,8 +69,8 @@ ini_set('display_errors', 1);
                            {
                               $userRole = 'Member';
                            }
-                  echo "<strong style='margin-right: 350px; font-size: 40px; color: purple '>Welcome ".$userRole.",</strong>,<br>";
-                  echo "<strong style='margin-right: 350px;font-size: 40px;color: purple'>".$_SESSION['myLastname'].' '.$_SESSION['myFirstname']."</strong>,<br>";
+                  echo "<strong style='margin-right: 350px; font-size: 40px; color: purple '>Welcome ".$userRole."</strong>,<br>";
+                  echo "<strong style='margin-right: 400px;font-size: 40px;color: purple'>".$_SESSION['myLastname'].' '.$_SESSION['myFirstname']."</strong>,<br>";
                     ?>
                 </div>
 

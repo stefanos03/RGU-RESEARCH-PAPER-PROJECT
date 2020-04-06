@@ -18,41 +18,41 @@ ini_set('display_errors', 1);
                 $totalPapers = $list->num_rows;
     
 
-?>  
+?>
+
         <br/>
-  
-        <div class="container">
+  <div style="background-image: url('images/background2.jpeg')">
+      <?php
+      $userRole = '';
+      if ($_SESSION['myRole']=='admin')
+      {
+          $userRole = 'Administrator';
+      }
+      else if ($_SESSION['myRole']=='teamleader')
+      {
+          $userRole = 'Team Leader';
+
+      }else if ($_SESSION['myRole']=='member' || $_SESSION['myRole']=='')
+      {
+          $userRole = 'Member';
+      }
+      echo "<strong style='margin-left: 800px; font-size: 40px; color: purple '>Welcome ".$userRole."</strong>";
+      echo "<h4 style='margin-left: 800px; font-size: 40px; color: purple '>My Papers Reviewed</h4>";
+      ?>
+        <div class="container" style="border: solid 5px mediumpurple; background: purple">
             <div class="col-xs-12 text-right">
-                  <?php
-                           $userRole = '';
-                           if ($_SESSION['myRole']=='admin')
-                           {
-                              $userRole = 'Administrator';
-                           }
-                           else if ($_SESSION['myRole']=='teamleader')
-                           {
-                              $userRole = 'Team Leader';
 
-                           }else if ($_SESSION['myRole']=='member' || $_SESSION['myRole']=='')
-                           {
-                              $userRole = 'Member';
-                           }
-
-                           echo "<strong>Welcome ".$_SESSION['myLastname'].' '.$_SESSION['myFirstname']."</strong>,<br>";
-                           echo $userRole;
-                    ?>
                 </div>
 
             <div class="row">
                 <div class="col-xs-12">
-                    <h3 class="text-left price-headline" style="color:purple;">My Reviews (<?php echo $totalPapers; ?>)</h3>
+                    <h3 class="text-center price-headline" style="color:white;">My Reviews (<?php echo $totalPapers; ?>)</h3>
                 </div>
 
                 
             </div>
                   
-                  <!-- row 1 //-->
-                  <hr>
+
            
                            
               
@@ -71,21 +71,21 @@ ini_set('display_errors', 1);
                     }
                     
               ?>
-              <div class="row" >
-                  <div class="col-xs-4" style='background-color: #f1f1f1;border-radius:5px;padding-top:10px;padding-bottom:15px;'>
+              <div class="row" style="color: white">
+                  <div class="col-xs-4" style='background-color: mediumpurple;border-radius:5px;padding-top:10px;padding-bottom:15px;'>
                         <?php 
-                            echo "<strong><big>Project</big></strong><br/><i class='fa fa-folder-o'></i> <a href='createAndManageProject.php'>" .$row['name']."</a><br/>";
+                            echo "<strong><big>Project</big></strong><br/><i class='fa fa-folder-o'></i> <a style='color: white' href='createAndManageProject.php'>" .$row['name']."</a><br/>";
                             echo "<small>Submitted on ".$datesubmitted."</small><br/>";
                         ?>
                         <br/>
                         <?php  
-                            echo "<strong><big>Paper Title</big></strong><br/><i class='fa fa-comment-o'></i> <a href='submited_paper_info.php?pid=".$row['paperid']."'><strong>".$row['title']."</strong></a><br/>";
+                            echo "<strong><big>Paper Title</big></strong><br/><i class='fa fa-comment-o'></i> <a style='color: white' href='submited_paper_info.php?pid=".$row['paperid']."'><strong>".$row['title']."</strong></a><br/>";
                         ?>
                        <br/>
                        <?php
-                            echo "<strong><big>File</big></strong><br/><i class='fa fa-file-o'></i> <a target='_blank' href='uploads/".$row['file']."'>".$row['file']."</a><br/><br/>"; 
+                            echo "<strong><big>File</big></strong><br/><i class='fa fa-file-o'></i> <a style='color: white' target='_blank' href='uploads/".$row['file']."'>".$row['file']."</a><br/><br/>";
 
-                            echo "<div style='text-align:right;'><a href='reviewpaper.php?pid=".$row['paperid']."'><strong>Review this Paper</strong></a></div>";
+                            echo "<div style='text-align:right;'><a href='reviewpaper.php?pid=".$row['paperid']."'><strong style='color: white'>Review this Paper</strong></a></div>";
 
                        ?>
                   </div>
@@ -107,7 +107,7 @@ ini_set('display_errors', 1);
                                       echo "<small>".$datecreated."</small>";
 
 
-                                        echo "<div style='margin-top:10px;margin-bottom:10px;'>".nl2br($comment)."<br><i class='fa fa-paperclip'></i> <a href='uploads/".$rec['file']."'>".$rec['file']."</a></div><hr>";
+                                        echo "<div style='margin-top:10px;margin-bottom:10px;'>".nl2br($comment)."<br><i class='fa fa-paperclip'></i> <a href='uploads/".$rec['file']."'>".$rec['file']."</a></div>";
 
                                     ?>
                                 </div>
@@ -132,12 +132,15 @@ ini_set('display_errors', 1);
                   }
               ?>
                           
-    </div><!-- end of container //--> 
+    </div><!-- end of container //-->
 
-     
-  
+<br>
+<br>
+<br>
+      <br>
+      <br>
 
-    
+  </div><!--Background ends-->
 
 <?php
    require_once("footer.php");

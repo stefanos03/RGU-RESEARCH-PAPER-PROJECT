@@ -49,7 +49,7 @@ ini_set('display_errors', 1);
 
 ?>
         <br/>
-
+<div style="background-image: url('images/background1.jpeg')">
         <div class="container">
             <div class="col-xs-12 text-right">
                   <?php
@@ -64,24 +64,29 @@ ini_set('display_errors', 1);
 
                            }else if ($_SESSION['myRole']=='member' || $_SESSION['myRole']=='')
                            {
-                              $userRole = 'Member';
+                              $userRole = 'Student';
                            }
 
-                           echo "<strong>Welcome ".$_SESSION['myLastname'].' '.$_SESSION['myFirstname']."</strong>,<br>";
-                           echo $userRole;
+                  echo "<strong style='margin-right: 350px; font-size: 40px; color: purple '>Welcome ".$userRole."</strong>";
+                  echo "<h4 style='margin-right: 350px; font-size: 40px; color: purple '>Submit Your Paper</h4>";
                     ?>
                 </div>
-
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="container" style="border: solid 5px mediumpurple; background: purple">
             <div class="row">
                 <div class="col-xs-12">
-                    <h3 class="text-left price-headline" style="color:purple;">Paper Submission <small>(Upload a research paper)</small></h3>
+                    <h3 class="text-center price-headline" style="color:white;">Paper Submission </h3>
                 </div>
 
 
             </div>
 
-                  <!-- row 1 //-->
-                  <hr>
+                <br>
 
             <?php
                   require_once("functions/Alert.php");
@@ -91,7 +96,7 @@ ini_set('display_errors', 1);
 
              <form name="uploadpaper" action="submitpaper_by_member1.php" method="post" enctype="multipart/form-data">
 
-              <div class="form-group row">
+              <div class="form-group row" style="margin-left: 200px; color: white">
 
                   <label for="Project Name"  class="col-xs-12 col-sm-2 col-form-label text-right">Project</label>
 
@@ -126,26 +131,26 @@ ini_set('display_errors', 1);
                   </div>
               </div>
 
-              <div class="form-group row">
+              <div class="form-group row" style="margin-left: 200px; color: white">
 
                    <label for="Project Name" class="col-xs-12 col-sm-2 col-form-label text-right">Title</label>
 
-                    <div class="col-xs-12 col-sm-10">
+                    <div class="col-xs-12 col-sm-5">
 
                             <input class="form-control" type="text" name="title" value="<?php echo $title; ?>"/>
                     </div>
 
               </div>
-              <div class="form-group row">
+              <div class="form-group row" style="margin-left: 200px; color: white">
 
                   <label for="Project Short Name"  class="col-xs-12 col-sm-2 col-form-label text-right">Description</label>
 
-                  <div class="col-xs-12 col-sm-8">
+                  <div class="col-xs-12 col-sm-5">
                       <textarea class="form-control" cols="80" rows="5" name="description"><?php echo  $description; ?></textarea>
                   </div>
               </div>
 
-              <div class="row">
+              <div class="row" style="margin-left: 200px; color: white">
                   <div class="col-xs-3"></div>
                   <div class="col-xs-9">
                       <?php
@@ -160,9 +165,9 @@ ini_set('display_errors', 1);
                   </div>
               </div>
 
-              <div class="form-group row">
+              <div class="form-group row" style="margin-left: 200px; ">
 
-                  <label for="Project Short Name"  class="col-xs-12 col-sm-2 col-form-label text-right">File</label>
+                  <label for="Project Short Name"  class="col-xs-12 col-sm-2 col-form-label text-right" style="color: white">File</label>
 
                   <div class="col-xs-7 col-sm-5">
                       <input type="file" name="fileToUpload" >
@@ -171,11 +176,11 @@ ini_set('display_errors', 1);
 
               </div>
 
-              <div class="row" style="margin-top:10px;">
+              <div class="row" style="margin-top:10px; margin-left: 500px; ">
 
                   <div class="col-xs-2 col-sm-2">&nbsp;</div>
-                  <div class="col-xs-10 col-sm-10">
-                      <input  class="btn btn-primary" type="submit" name="submitForm" value="Submit Paper"/>
+                  <div class="col-xs-10 col-sm-5">
+                      <input  class="btn btn-primary" type="submit" name="submitForm" value="Submit Paper" style="background: white; color: purple"/>
                   </div>
               </div>
 
@@ -188,20 +193,25 @@ ini_set('display_errors', 1);
               ?>
 
               <br/><br/>
+            </div>
+
+<!--Sumbissions starts-->
+            <hr style=" border-top: 1px solid purple;">
+            <div class="container" style="border: solid 5px mediumpurple; background: purple">
               <div class="row">
                   <div class="col-xs-12">
-                    <h4 class="text-left price-headline" style="color:purple;font-weight:bold;">My Submissions (<?php echo $totalPapers; ?>)</h4>
+                    <h4 class="text-center price-headline" style="color:white;font-weight:bold;">My Submissions (<?php echo $totalPapers; ?>)</h4>
                 </div>
 
               </div>
               <div class="row" >
-                  <div class="col-xs-4">
+                  <div class="col-xs-4" style="color: white">
                         <strong><big>Project</big></strong>
                   </div>
-                  <div class="col-xs-4">
+                  <div class="col-xs-4" style="color: white">
                         <strong><big>Paper Title</big></strong>
                   </div>
-                  <div class="col-xs-4">
+                  <div class="col-xs-4" style="color: white">
                       <strong><big>File</big></strong>
                   </div>
 
@@ -215,21 +225,21 @@ ini_set('display_errors', 1);
                     $datesubmitted = $datesubmitted->format('l jS F, Y');
 
               ?>
-              <div class="row" >
+              <div class="row" style="color: white" >
                   <div class="col-xs-4">
                         <?php
-                            echo "<i class='fa fa-folder-o'></i> <a href='createAndManageProject.php'>" .$row['name']."</a><br/>";
+                            echo "<i class='fa fa-folder-open-o'></i> <a style='color: white' href='createAndManageProject.php'>" .$row['name']."</a><br/>";
                             echo "<small>Submitted on ".$datesubmitted."</small>";
                         ?>
                   </div>
                   <div class="col-xs-4">
                         <?php
-                            echo "<i class='fa fa-comment-o'></i> <a href='submited_paper_info.php?pid=".$row['id']."'>".$row['title']."</a>";
+                            echo "<i class='fa fa-comments-o'></i> <a style='color: white' href='submited_paper_info.php?pid=".$row['id']."'>".$row['title']."</a>";
                         ?>
                   </div>
                   <div class="col-xs-4">
                       <?php
-                            echo "<i class='fa fa-file-o'></i> <a target='_blank' href='uploads/".$row['file']."'>".$row['file']."</a>";
+                            echo "<i class='fa fa-file-pdf-o'></i> <a style='color: white' target='_blank' href='uploads/".$row['file']."'>".$row['file']."</a>";
                       ?>
                   </div>
 
@@ -243,10 +253,14 @@ ini_set('display_errors', 1);
               ?>
 
     </div><!-- end of container //-->
+        </div><!--end of container 2-->
+<br>
+<br>
+<br>
+    <br>
+    <br>
 
-
-
-
+</div><!--background ends-->
 
 
 <?php

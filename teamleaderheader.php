@@ -18,15 +18,10 @@
 
               <li><a style='color:#ffffff;' href="browsepapers.php"><span class="fa fa-home" ></span><strong> Back To Main</strong></a></li>
 
-<!--              <li><a style='color:#ffffff;' href="createAndManageProject.php"><span class="fa fa-folder-open" ></span><strong> Views Projects</strong></a></li>-->
-<!---->
-<!--              <li><a style='color:#ffffff;' href="manageusers.php"><span class="fa fa-user-o" ></span><strong> View Users</strong></a></li>-->
-
               <li><a style='color:#ffffff;' href="submitpaper.php"><span class="fa fa-paper-plane" ></span><strong> Sumbit Paper</strong></a></li>
 
-              <li><a style='color:#ffffff;' href="submissions.php"><span class="fa fa-paperclip" ></span><strong> Submissions</strong></a></li>
-
               <li><a style='color:#ffffff;' href="papers_in_review.php"><span class="fa fa-search" ></span><strong> In Review</strong></a></li>
+              <li><a  style='color:white; 'href="my_papers_reviewed.php"><span class="fa fa-search-plus" ></span><strong> Papers Reviewed</strong></a></li>
 
 
               <!--profile-->

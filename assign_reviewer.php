@@ -60,8 +60,10 @@ ini_set('display_errors', 1);
 
 ?>  
         <br/>
-  
-        <div class="container">
+
+  <div style="background-image: url('images/background7.jpeg')">
+      <br>
+        <div class="container" style="border: solid 5px mediumpurple;  background: purple;">
             <div class="col-xs-12 text-right">
                   <?php
                            $userRole = '';
@@ -78,22 +80,17 @@ ini_set('display_errors', 1);
                               $userRole = 'Member';
                            }
 
-                           echo "<strong>Welcome ".$_SESSION['myLastname'].' '.$_SESSION['myFirstname']."</strong>,<br>";
-                           echo $userRole;
                     ?>
                 </div>
 
-            <div class="row">
+            <div class="row" >
                 <div class="col-xs-12">
-                    <h3 class="text-left price-headline" style="color:purple;">Assign Reviewer  <small>(Paper Title: <?php echo $paperTitle; ?>)</small></h3>
+                    <h3 class="text-center price-headline" style="color:white;">Assign Reviewer </h3>
                 </div>
 
                 
             </div>
-                  
-                  <!-- row 1 //-->
-                  <hr>
-             
+            <br>
             <?php
                   require_once("functions/Alert.php");
 
@@ -102,11 +99,11 @@ ini_set('display_errors', 1);
 
              <form name="uploadpaper" action="<?php echo $pageLink; ?>" method="post" enctype="multipart/form-data">     
               
-              <div class="form-group row">
+              <div class="form-group row" style="color: white; margin-left:250px" >
                   
                   <label for="Project Name"  class="col-xs-12 col-sm-2 col-form-label text-right">Select Reviewer</label>
                   
-                  <div class="form-group col-xs-12 col-sm-5">
+                  <div class="form-group col-xs-12 col-sm-4">
                       <select class="form-control" name="user">
                             <option></option>
 
@@ -133,7 +130,7 @@ ini_set('display_errors', 1);
                   </div>
               </div>
 
-              <div class="form-group row">
+              <div class="form-group row" style="color: white; margin-left: 250px" >
             
                    <label for="Project Name" class="col-xs-12 col-sm-2 col-form-label text-right">Duration (in days)</label>
                       
@@ -149,20 +146,22 @@ ini_set('display_errors', 1);
                   
                   <div class="col-xs-2 col-sm-2">&nbsp;</div>
                   <div class="col-xs-10 col-sm-10">
-                      <input  class="btn btn-primary" type="submit" name="submitForm" value="Assign Reviewer"/>
+                      <input  class="btn btn-primary" type="submit" name="submitForm" value="Assign Reviewer" style="background: white; color: purple; margin-left: 450px"/>
                   </div>
               </div>
 
               </form>
 
               <br/>
-               <hr>
-              
-              
-              
-              <div class="row">
+
+
+        </div><!-- end of container //-->
+      <hr  style="border-top: 1px solid mediumpurple;">
+
+              <div class="container" style="border: solid 5px mediumpurple; background: purple">
+              <div class="row" style="color: white">
                   <div class="col-xs-12">
-                    <h4 class="text-left price-headline" style="color:purple;font-weight:bold;">Assigned Reviewers</h4>
+                    <h4 class="text-left price-headline" style="color:white;font-weight:bold;">Assigned Reviewers</h4>
                 </div>
                   <ol>
                 <?php
@@ -172,7 +171,7 @@ ini_set('display_errors', 1);
                     {
                         $dateassigned = new DateTime($row['dateassigned']);
                         $dateassigned = $dateassigned->format('l jS F, Y');
-                        echo "<li>".$row['lastname'].' '.$row['firstname']."  - <small>assigned on ".$dateassigned." &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#'>Remove</a></small></li>";
+                        echo "<li>".$row['lastname'].' '.$row['firstname']."  - <small>assigned on ".$dateassigned." &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#' style='color: white'>Remove</a></small></li>";
 
 
                     }
@@ -181,53 +180,53 @@ ini_set('display_errors', 1);
                   </ol>
               </div>
               <br/>
-              <hr>
+              <hr  style="border-top: 1px solid mediumpurple;">
 
 
-              <div class="row">
+              <div class="row" style="color: white">
                   <div class="col-xs-12">
-                    <h4 class="text-left price-headline" style="color:purple;font-weight:bold;">Paper Details</h4>
+                    <h4 class="text-left price-headline" style="color:white;font-weight:bold;">Paper Details</h4>
                 </div>
 
               </div>
               <br/>
-              <div class="row" >
+              <div class="row" style="color: white" >
                   <div class="col-xs-12">
-                      <strong>Project Group</strong>
+                      <strong style="color: white">Project Group</strong>
                         <?php 
-                            echo "<br/><i class='fa fa-folder-o'></i> <a href='createAndManageProject.php'>" .$paperProject."</a><br/></br>";
+                            echo "<br/><i class='fa fa-folder-o'></i> <a href='createAndManageProject.php' style='color: white'>" .$paperProject."</a><br/></br>";
                            
                         ?>
                   </div>
 
                   <div class="col-xs-12">
-                      <strong>Paper Title</strong>
+                      <strong style="color: white">Paper Title</strong>
                         <?php 
-                            echo "<br/><i class='fa fa-file-o'></i> <a href='submissions.php'>".$paperTitle."</a><br/><br/>"; 
+                            echo "<br/><i class='fa fa-file-o'></i> <a href='submissions.php' style='color: white'>".$paperTitle."</a><br/><br/>";
                            
                         ?>
                   </div>
                   <div class="col-xs-12">
-                        <strong>Description</strong>
+                        <strong style="color: white">Description</strong>
                         <?php  
-                            echo "<br/><i class='fa fa-comment-o'></i> ".$paperDesc."<br/><br/>";
+                            echo "<br/><i class='fa fa-comment-o' style='color: white'></i>  ".$paperDesc."<br/><br/>";
                         ?>
                   </div>
                   <div class="col-xs-12">
-                      <Strong>File</Strong>
+                      <Strong style="color: white">File</Strong>
                       <?php
-                            echo "<br/><i class='fa fa-file-o'></i> <a target='_blank' href='uploads/".$paperFile."'>".$paperFile."</a><br/><br/>";              
+                            echo "<br/><i class='fa fa-file-o'></i> <a style='color: white' target='_blank' href='uploads/".$paperFile."'>".$paperFile."</a><br/><br/>";
                       ?>
                   </div>
 
                   <div class="col-xs-12">
-                      <Strong>Submitted By</Strong>
+                      <strong style="color: white">Submitted By</strong>
                       <?php
-                            echo "<br/><i class='fa fa-user-o'></i> <a target='_blank' href='member.php?mp=".$paperUserId."'>".$paperSubmitedby."</a><br/><br/>";              
+                            echo "<br/><i class='fa fa-user-o'></i> <a style='color: white' target='_blank' href='member.php?mp=".$paperUserId."'>".$paperSubmitedby."</a><br/><br/>";
                       ?>
                   </div>
 
-                  <div class="col-xs-12">
+                  <div class="col-xs-12" style="color: white">
                       <Strong>Date Submitted</Strong>
                       <?php
                             echo "<br/><i class='fa fa-calendar-o'></i> ".$paperDate."</a>";              
@@ -236,16 +235,22 @@ ini_set('display_errors', 1);
 
 
               </div>
-             
 
 
 
-              
-                          
-    </div><!-- end of container //--> 
 
-     
-  
+
+              </div><!--end of container-->
+
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+  </div><!--Background ends-->
+
+
+
 
     
 

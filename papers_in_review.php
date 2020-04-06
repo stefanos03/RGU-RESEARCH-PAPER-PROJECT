@@ -16,13 +16,13 @@ ini_set('display_errors', 1);
    $numInReview = $reviews->num_rows;
 
 
-   
 
-    
+
+
 
 ?>  
         <br/>
-  
+  <div  style="background-image: url('images/background9.jpeg')"  >
         <div class="container">
             <div class="col-xs-12 text-right">
                   <?php
@@ -40,16 +40,21 @@ ini_set('display_errors', 1);
                               $userRole = 'Member';
                            }
 
-                           echo "<strong>Welcome ".$_SESSION['myLastname'].' '.$_SESSION['myFirstname']."</strong>,<br>";
-                           echo $userRole;
+                  echo "<strong style='margin-right: 350px; font-size: 40px; color: purple '>Welcome ".$userRole."</strong>,<br>";
+                  echo "<h4 style='margin-right: 350px; font-size: 40px; color: purple '>Manage Papers in Review</h4>";
                     ?>
                 </div>
-
-            
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="container" style="border: solid 3px mediumpurple;background: purple ; padding: 10px">
            
-              <div class="row">
-                <div class="col-xs-12">
-                    <h3 class="text-left price-headline" style="color:purple;">Papers in Review (<?php echo $numInReview;  ?>)</h3>
+              <div class="row" style="color: white">
+                <div class="col-xs-12" style="color: white">
+                    <h3 class="text-center price-headline" style="color:white;">Papers in Review (<?php echo $numInReview;  ?>)</h3>
                 </div>                
               </div>
               
@@ -57,8 +62,8 @@ ini_set('display_errors', 1);
 
 
               
-              <div class="row">
-                        <div class="col-xs-4">
+              <div class="row" style="color: white">
+                        <div class="col-xs-4" style="color: white">
                               <strong><big>Project Group</big></strong>
                         </div>
                         <div class="col-xs-5">
@@ -76,18 +81,18 @@ ini_set('display_errors', 1);
                         $paperid = $res['id'];
 
               ?>
-                    <div class="row">
-                        <div class="col-xs-4">
-                              <i class='fa fa-folder-o'></i>
-                              <?php echo "<a href='projects.php'>".$res['name']."</a>";  ?>
+                    <div class="row" style="color: white">
+                        <div class="col-xs-4" style="color: white">
+                              <i class='fa fa-folder'></i>
+                              <?php echo "<a style='color: white' href='projects.php'>".$res['name']."</a>";  ?>
 
                         </div>
-                        <div class="col-xs-5">
+                        <div class="col-xs-5" style="color: white">
                                 <i class='fa fa-file-o'></i>
-                                <?php echo "<a href='submited_paper_info.php?pid=".$res['id']."'>".$res['title']."</a>";
+                                <?php echo "<a style='color:white' href='submited_paper_info.php?pid=".$res['id']."'>".$res['title']."</a>";
                                 ?>
                         </div>
-                        <div class="col-xs-12">
+                        <div class="col-xs-12" style="color: white">
                                   <h5><strong>Assigned Reviewers</strong></h5>
                                   <ol>
                                       <?php
@@ -122,9 +127,15 @@ ini_set('display_errors', 1);
 
 
               
-                          
-    </div><!-- end of container //--> 
 
+    </div><!-- end of container //-->
+        </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+  </div><!--Background ends-->
      
   
 

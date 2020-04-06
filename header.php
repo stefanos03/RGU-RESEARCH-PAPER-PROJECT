@@ -89,10 +89,11 @@
           background-color:rebeccapurple ;
           color: rebeccapurple;
       }
-      /*#color  a:hover:not(.active) {*/
-      /*    background-color: yellow;*/
-      /*    color: white;*/
-      /*}*/
+
+        #color>ul>li a:focus{
+            background-color: mediumpurple;
+            color: white;
+        }
 </style>
 
   </head>

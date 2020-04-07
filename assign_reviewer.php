@@ -202,7 +202,7 @@ ini_set('display_errors', 1);
                   <div class="col-xs-12">
                       <strong style="color: white">Paper Title</strong>
                         <?php 
-                            echo "<br/><i class='fa fa-file-o'></i> <a href='submissions.php' style='color: white'>".$paperTitle."</a><br/><br/>";
+                            echo "<br/><i class='fa fa-file-o'></i> <a href='submitpaper.php' style='color: white'>".$paperTitle."</a><br/><br/>";
                            
                         ?>
                   </div>

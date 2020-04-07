@@ -165,7 +165,7 @@ if (isset($_POST['submitForm']))
 
     <hr>
 
-    <div class="row">
+    <div class="row" style="color: white">
         <div class="col-xs-12">
             <h4 class="text-left price-headline" style="color:white;font-weight:bold;">Assigned Reviewers</h4>
         </div>
@@ -178,7 +178,7 @@ if (isset($_POST['submitForm']))
                 $removeAssign = '';
                 if ($_SESSION['myRole']=='teamleader')
                 {
-                    $removeAssign = "<a href='#'>Remove</a>";
+                    $removeAssign = "<a href='#' style='color: white'>Remove</a>";
                 }
                 $dateassigned = new DateTime($row['dateassigned']);
                 $dateassigned = $dateassigned->format('l jS F, Y');
@@ -188,15 +188,50 @@ if (isset($_POST['submitForm']))
             }
 
             ?>
-        </ol>
+
     </div>
-    <br/>
-    <hr>
+
+    <hr style=" border-top: 1px dotted white;">
 
 
 
 
 </div><!-- end of container //-->
+
+    <hr style=" border-top: 1px solid purple;">
+<!--Manage Project starts -->
+    <div class="container" style="border: solid 3px purple; padding: 30px; background: purple;">
+        <h3 class="text-left price-headline container-fixed-top" style="color:white; margin-left: 500px;">All The  Project</h3>
+        <?php
+        $project = new Project();
+        $allProjects = $project->getAllProject();
+        foreach($allProjects as $row)
+        {
+            $id = $row['id'];
+            $name = $row['name'];
+            $code = $row['code'];
+            $datecreated = new DateTime($row['datecreated']);
+            $datecreated = $datecreated->format('l jS F, Y');
+            $deleteUrl = "<a href='deleteProject.php?id=".$id."'style='color: white'></a>";
+
+
+            ?>
+            <div class="row">
+                <div class="col-xs-12">
+                    <?php
+                    echo "<strong style='color: white'><i class='fa fa-folder-open' style='color: white'></i> ".$name."</strong>";
+
+                    ?>
+                </div>
+            </div>
+            <hr style=" border-top: 1px dotted white;">
+
+            <?php
+
+        }
+        ?>
+
+    </div>
     <br>
     <br>
     <br>

@@ -22,7 +22,7 @@
 
       
 
-      <div id="nav-menu" class="collapse navbar-collapse " style="margin-left: 600px; margin-top: 10px">
+      <div id="nav-menu" class="collapse navbar-collapse " style="margin-left: 700px; margin-top: 10px">
           <ul class="nav navbar-nav">
               <li class=" nav navbar-nav"><a class="w3-button w3-hover-yellow" style='color:white; 'href="browsepapers.php"><span class="fa fa-home" ></span><strong> Back To Main</strong></a></li>
 

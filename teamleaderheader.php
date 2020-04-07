@@ -13,7 +13,7 @@
 
 
 
-      <div id="nav-menu" class="collapse navbar-collapse" style="margin-left: 550px; margin-top: 10px">
+      <div id="nav-menu" class="collapse navbar-collapse" style="margin-left: 650px; margin-top: 10px">
           <ul class="nav navbar-nav">
 
               <li><a style='color:#ffffff;' href="browsepapers.php"><span class="fa fa-home" ></span><strong> Back To Main</strong></a></li>
@@ -21,6 +21,8 @@
               <li><a style='color:#ffffff;' href="submitpaper.php"><span class="fa fa-paper-plane" ></span><strong> Sumbit Paper</strong></a></li>
 
               <li><a style='color:#ffffff;' href="papers_in_review.php"><span class="fa fa-search" ></span><strong> In Review</strong></a></li>
+              <li class=" nav navbar-nav"><a class="w3-button w3-hover-yellow" style='color:white; 'href="papers_awaiting_review.php"><span class="fa fa-search" ></span><strong> Review Paper</strong></a></li>
+
               <li><a  style='color:white; 'href="my_papers_reviewed.php"><span class="fa fa-search-plus" ></span><strong> Papers Reviewed</strong></a></li>
 
 

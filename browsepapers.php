@@ -123,7 +123,7 @@ ini_set('display_errors', 1);
                                       <div class='row'>
                                           <div class='col-xs-4'>
                                               <?php 
-                                                  echo "<i class='fa fa-folder-open-o' style='color: white'></i> <a href='#' style='color: white'>".$row['name']."</a><br/>";
+                                                  echo "<i class='fa fa-folder-open-o' style='color: white'></i> <a href='submited_paper_info.php' style='color: white'>".$row['name']."</a><br/>";
                                                   echo "<small style='color: white;  '>Submitted on ".$datesubmitted."</small>"
                                               ?>
                                           </div>
@@ -175,7 +175,7 @@ ini_set('display_errors', 1);
                                       <div class="row">
                                           <div class="col-xs-4">
                                                 <i class='fa fa-folder-o'></i>
-                                                <?php echo "<a style='color: white' href='projects.php'>".$res['name']."</a>";  ?>
+                                                <?php echo "<a style='color: white' href='submited_paper_info.php'>".$res['name']."</a>";  ?>
 
                                           </div>
                                           <div class="col-xs-5">

@@ -51,6 +51,8 @@ if (isset($_POST['uploadFile']))
 
 ?>
 <br/>
+<br>
+
 <div style="background-image: url('images/background.jpeg')">
 <div class="container">
     <div class="col-xs-12 text-right">

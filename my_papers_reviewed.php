@@ -124,7 +124,7 @@ ini_set('display_errors', 1);
                   
 
               </div>
-              <hr>
+              <hr style=" border-top: 1px dashed mediumpurple;">
 
 
 

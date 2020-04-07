@@ -20,36 +20,41 @@ ini_set('display_errors', 1);
 
     
 
-?>  
-        <br/>
-  
-        <div class="container">
+?>
+<br/>
+
+
+
+<div  id="bg" style="background-image: url('images/background8.jpeg')">
+<div >
+      <?php
+      $userRole = '';
+      if ($_SESSION['myRole']=='admin')
+      {
+          $userRole = 'Administrator';
+      }
+      else if ($_SESSION['myRole']=='teamleader')
+      {
+          $userRole = 'Team Leader';
+
+      }else if ($_SESSION['myRole']=='member' || $_SESSION['myRole']=='')
+      {
+          $userRole = 'Member';
+      }
+
+      echo "<strong style='margin-left: 800px; font-size: 40px; color: purple '>Welcome ".$userRole."</strong>";
+      echo "<h4 style='margin-left: 800px; font-size: 40px; color: purple '>Awaiting to Review</h4>";
+      ?>
+        <div class="container" style="border: solid 5px mediumpurple; background: purple">
             <div class="col-xs-12 text-right">
-                  <?php
-                           $userRole = '';
-                           if ($_SESSION['myRole']=='admin')
-                           {
-                              $userRole = 'Administrator';
-                           }
-                           else if ($_SESSION['myRole']=='teamleader')
-                           {
-                              $userRole = 'Team Leader';
 
-                           }else if ($_SESSION['myRole']=='member' || $_SESSION['myRole']=='')
-                           {
-                              $userRole = 'Member';
-                           }
-
-                           echo "<strong>Welcome ".$_SESSION['myLastname'].' '.$_SESSION['myFirstname']."</strong>,<br>";
-                           echo $userRole;
-                    ?>
                 </div>
 
             
            
               <div class="row">
                 <div class="col-xs-12">
-                    <h3 class="text-left price-headline" style="color:purple;">Assigned Papers Awaiting Review (<?php echo $numInReview;  ?>)</h3>
+                    <h3 class="text-center price-headline" style="color:white;">Assigned Papers Awaiting Review (<?php echo $numInReview;  ?>)</h3>
                 </div>                
               </div>
               
@@ -57,7 +62,7 @@ ini_set('display_errors', 1);
 
 
               
-              <div class="row">
+              <div class="row" style="color: white">
                         <div class="col-xs-4">
                               <strong><big>Project Group</big></strong>
                         </div>
@@ -79,23 +84,23 @@ ini_set('display_errors', 1);
                     <div class="row">
                         <div class="col-xs-4">
                               <i class='fa fa-folder-o'></i>
-                              <?php echo "<a href='projects.php'>".$res['name']."</a>";  ?>
+                              <?php echo "<a style='color: white' href='#'>".$res['name']."</a>";  ?>
 
                         </div>
                         <div class="col-xs-5">
                                 <i class='fa fa-file-o'></i>
-                                <?php echo "<a href='submited_paper_info.php?pid=".$res['id']."'>".$res['title']."</a>";
+                                <?php echo "<a style='color:white' href='submited_paper_info.php?pid=".$res['id']."'>".$res['title']."</a>";
                                 ?>
                         </div>
-                        <div class="col-xs-3">
+                        <div class="col-xs-3" style="color: white">
                               
                                 <?php
                                    echo "<strong><big>
-                                            <a href='reviewpaper.php?pid=".$res['id']."'>Review this Paper</a>
+                                            <a style='color: white' href='reviewpaper.php?pid=".$res['id']."'>Review this Paper</a>
                                          </big></strong>";
                                 ?>
                         </div>
-                        <div class="col-xs-12">
+                        <div class="col-xs-12" style="color: white">
                                   <h5><strong>Assigned Reviewers</strong></h5>
                                   <ol>
                                       <?php
@@ -115,30 +120,27 @@ ini_set('display_errors', 1);
                         </div>
                     </div>
                     <hr>
+
+
               <?php 
 
                     }
 
               ?>
-              
-              
-
-
-              
-             
 
 
 
-              
-                          
-    </div><!-- end of container //--> 
+    </div><!-- end of container //-->
 
-     
-  
+  </div><!--Background ends-->
+
 
     
-
+<br/>
 <?php
    require_once("footer.php");
 
 ?>
+
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+</div>

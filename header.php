@@ -94,6 +94,7 @@
             background-color: mediumpurple;
             color: white;
         }
+
 </style>
 
   </head>

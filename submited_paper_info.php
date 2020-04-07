@@ -59,32 +59,33 @@ if (isset($_POST['submitForm']))
 
 ?>
 <br/>
+<div style="background-image: url('images/background6.jpeg')">
+    <?php
+    $userRole = '';
+    if ($_SESSION['myRole']=='admin')
+    {
+        $userRole = 'Administrator';
+    }
+    else if ($_SESSION['myRole']=='teamleader')
+    {
+        $userRole = 'Team Leader';
 
-<div class="container">
+    }else if ($_SESSION['myRole']=='member' || $_SESSION['myRole']=='')
+    {
+        $userRole = 'Member';
+    }
+
+    echo "<strong style='margin-left: 800px; font-size: 40px; color: purple '>Welcome ".$userRole."</strong>";
+    echo "<h4 style='margin-left: 800px; font-size: 40px; color: purple '>Awaiting to Review</h4>";
+    ?>
+<div class="container" style="border: solid 5px mediumpurple; background: purple; padding: 10px; color: white">
     <div class="col-xs-12 text-right">
-        <?php
-        $userRole = '';
-        if ($_SESSION['myRole']=='admin')
-        {
-            $userRole = 'Administrator';
-        }
-        else if ($_SESSION['myRole']=='teamleader')
-        {
-            $userRole = 'Team Leader';
 
-        }else if ($_SESSION['myRole']=='member' || $_SESSION['myRole']=='')
-        {
-            $userRole = 'Member';
-        }
-
-        echo "<strong>Welcome ".$_SESSION['myLastname'].' '.$_SESSION['myFirstname']."</strong>,<br>";
-        echo $userRole;
-        ?>
     </div>
 
     <div class="row">
         <div class="col-xs-12">
-            <h3 class="text-left price-headline" style="color:purple;">Paper Detailed Information  <small>(Paper Title: <?php echo $paperTitle; ?>)</small></h3>
+            <h3 class="text-center price-headline" style="color:white;">Paper Detailed Information </h3>
         </div>
 
 
@@ -118,7 +119,7 @@ if (isset($_POST['submitForm']))
         <div class="col-xs-12">
             <strong>Project Group</strong>
             <?php
-            echo "<br/><i class='fa fa-folder-o'></i> <a href='manageprojects.php'>".$paperProject."</a><br/></br>";
+            echo "<br/><i class='fa fa-folder-o'></i> <a href='#' style='color: white'>".$paperProject."</a><br/></br>";
 
             ?>
         </div>
@@ -126,11 +127,11 @@ if (isset($_POST['submitForm']))
         <div class="col-xs-12">
             <strong>Paper Title</strong>
             <?php
-            echo "<br/><i class='fa fa-file-o'></i> <a href='submissions.php'>".$paperTitle."</a><br/><br/>";
+            echo "<br/><i class='fa fa-file-o'></i> <a href='#' style='color: white'>".$paperTitle."</a><br/><br/>";
 
             ?>
         </div>
-        <div class="col-xs-12">
+        <div class="col-xs-12" style="color: white">
             <strong>Description</strong>
             <?php
             echo "<br/><i class='fa fa-comment-o'></i> ".$paperDesc."<br/><br/>";
@@ -139,7 +140,7 @@ if (isset($_POST['submitForm']))
         <div class="col-xs-12">
             <Strong>File</Strong>
             <?php
-            echo "<br/><i class='fa fa-file-o'></i> <a target='_blank' href='uploads/".$paperFile."'>".$paperFile."</a><br/><br/>";
+            echo "<br/><i class='fa fa-file-o'></i> <a style='color: white' target='_blank' href='uploads/".$paperFile."'>".$paperFile."</a><br/><br/>";
             ?>
         </div>
 
@@ -148,7 +149,7 @@ if (isset($_POST['submitForm']))
             <?php
             $code1= "oDdpnVaWwgdsjhMFiyIeLjJjSUCThpJUxfUVwTGnNSGeMLToTq";
             $code2 = "FoltjKlLKnBdPvQfPQi!oLU!lStPXzTyZomFgktMQluhRbCDHe";
-            echo "<br/><i class='fa fa-user-o'></i> <a target='_blank' href='member.php?mp=".$code1.'-'.$paperUserId.'-'.$code2."'>".$paperSubmitedby."</a><br/><br/>";
+            echo "<br/><i class='fa fa-user-o'></i> <a style='color: white' target='_blank' href='member.php?mp=".$code1.'-'.$paperUserId.'-'.$code2."'>".$paperSubmitedby."</a><br/><br/>";
             ?>
         </div>
 
@@ -166,7 +167,7 @@ if (isset($_POST['submitForm']))
 
     <div class="row">
         <div class="col-xs-12">
-            <h4 class="text-left price-headline" style="color:purple;font-weight:bold;">Assigned Reviewers</h4>
+            <h4 class="text-left price-headline" style="color:white;font-weight:bold;">Assigned Reviewers</h4>
         </div>
         <ol>
             <?php
@@ -181,7 +182,7 @@ if (isset($_POST['submitForm']))
                 }
                 $dateassigned = new DateTime($row['dateassigned']);
                 $dateassigned = $dateassigned->format('l jS F, Y');
-                echo "<li><a target='_blank' href='member.php?mp=".$code1.'-'.$row['userid'].'-'.$code2."'>".$row['lastname'].' '.$row['firstname']."</a>  - <small>assigned on ".$dateassigned." &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;".$removeAssign."</small></li>";
+                echo "<li><a style='color: white' target='_blank' href='member.php?mp=".$code1.'-'.$row['userid'].'-'.$code2."'>".$row['lastname'].' '.$row['firstname']."</a>  - <small>assigned on ".$dateassigned." &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;".$removeAssign."</small></li>";
 
 
             }
@@ -196,7 +197,11 @@ if (isset($_POST['submitForm']))
 
 
 </div><!-- end of container //-->
-
+    <br>
+    <br>
+    <br>
+    <br>
+</div><!--end of background-->
 
 
 

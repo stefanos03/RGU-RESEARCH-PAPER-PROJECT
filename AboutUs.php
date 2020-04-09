@@ -122,5 +122,5 @@ include("header.php");
     </section>
 <!--Foooter starts-->
 <?php
-   require_once("footer2.php");
+   require_once("indexFooter.php");
 ?>

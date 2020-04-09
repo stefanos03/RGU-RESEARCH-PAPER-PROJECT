@@ -143,9 +143,12 @@ ini_set('display_errors', 1);
               ?>
 
               <br/><br/>
-              <div class="row" style="border: solid 3px purple;  margin-right: 30px; margin-left: 2px">
+        </div>
+<!--Assigned user to project-->
+            <div class="container" style="border: solid 5px mediumpurple; background: purple; color: white">
+              <div class="row" style="  margin-right: 30px; margin-left: 2px">
                   <div class="col-xs-12">
-                    <h4 class="text-center " style="color:purple;"> <strong>Assigned  User to Project </strong>(<?php echo $NumberProjectUsers; ?>)</h4>
+                    <h4 class="text-center " style="color:white;"> <strong>Assigned  User to Project </strong>(<?php echo $NumberProjectUsers; ?>)</h4>
                 </div>
 
               </div>
@@ -163,25 +166,25 @@ ini_set('display_errors', 1);
               ?>
 
 
-              <div class="row" style="text-decoration:underline; margin-left: 150px; color: purple"  >
-                  <div class="col-xs-4" style="text-decoration: underline; color: purple">
-                        <?php echo "<i class='fa fa-folder-open'></i> <a href='createAndManageProject.php'>" .$type['name']."</a>"; ?>
+              <div class="row" style="text-decoration:underline; margin-left: 150px; color: white"  >
+                  <div class="col-xs-4" style="text-decoration: underline; color: white">
+                        <?php echo "<i class='fa fa-folder-open'></i> <a style='color: white' href='createAndManageProject.php'>" .$type['name']."</a>"; ?>
                   </div>
 
-                  <div class="col-xs-3" style="text-decoration: underline; color: purple">
+                  <div class="col-xs-3" style="text-decoration: underline; color: white">
                         <?php  
-                          echo "<i class='fa fa-user'></i> <a href='createAndManageProject.php'>" .$type['lastname'].' '.$type['firstname']."</a>";
+                          echo "<i class='fa fa-user'></i> <a style='color: white' href='createAndManageProject.php'>" .$type['lastname'].' '.$type['firstname']."</a>";
                         ?>
                   </div>
-                  <div class="col-x3-5" style="text-decoration: underline;color: purple">
+                  <div class="col-x3-5" style="text-decoration: underline;color: white">
                       <?php
-                          echo "<i class='fa fa-users'></i> <a href='createAndManageProject.php'>" .$role."</a>";
+                          echo "<i class='fa fa-users'></i> <a style='color: white' href='createAndManageProject.php'>" .$role."</a>";
                       ?>
                   </div>
 
 
               </div>
-                      <hr style=" border-top: 1px dotted purple;">
+                      <hr style=" border-top: 1px dotted mediumpurple;">
 
 
 

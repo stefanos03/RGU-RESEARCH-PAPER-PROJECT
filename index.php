@@ -173,7 +173,7 @@ include("indexheader.php");
 <br>
 <br>
 <?php
-   require_once("footer2.php");
+   require_once("indexFooter.php");
 ?>
 <script type="text/javascript" src="js/datetimelibrary.js"></script>
 <script type="text/javascript" src="js/newsletter.js"></script>

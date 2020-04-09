@@ -2,7 +2,7 @@
 
 if (!isset($_GET['pid']) || $_GET['pid']=='')
 {
-    header("location: submissions.php");
+    header("location: submitpaper.php");
 }
 error_reporting(E_ALL);
 ini_set('display_errors', 1);

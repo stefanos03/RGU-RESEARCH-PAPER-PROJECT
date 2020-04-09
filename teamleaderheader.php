@@ -36,8 +36,6 @@
 
 
                   <ul class="dropdown-menu">
-                      <li><a style="padding-top:8px;padding-bottom:8px;color:purple;" href="profile.php">Profile</a></li>
-                      <li><a style="padding-top:8px;padding-bottom:8px;color:purple;" href="change_password.php">Change Password</a></li>
                       <li role="separator" class="divider"></li>
                       <li><a style="padding-top:8px;padding-bottom:8px;color:purple;" href="logout.php">Log out</a></li>
 

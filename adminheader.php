@@ -9,9 +9,7 @@
         <strong> RGU Research paper Project</strong></div>
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-menu" aria-expanded="false">
           <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
+
         </button>
 
       </div>
@@ -36,22 +34,7 @@
 
             </li>
 
-<!--users starts-->
-<!--            <li class="dropdown"><a style='color:#ffffff;' class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" href="#">-->
-<!--                      <span class="fa fa-user-o"></span><strong> User </strong><b class="caret"></b></a>-->
-<!--                  <ul class="dropdown-menu">-->
-<!--                      <li class="nav navbar-nav"><a style="padding-top:8px;padding-bottom:8px;color:#800080;" href="createuser.php"> <strong>Create User </strong></a></li>-->
-<!--                      <li class="nav navbar-nav"><a style="padding-top:8px;padding-bottom:8px;color:#800080;" href="manageusers.php"> <strong>Manage User </strong></a></li>-->
-<!--                      <li class="nav navbar-nav"><a style="padding-top:8px;padding-bottom:8px;color:#800080;" href="assignusertoproject.php"> <strong>Assign User </strong></a></li>-->
-<!---->
-<!--                  </ul>-->
-<!---->
-<!--              </li>-->
-            
-<!--            Users ends-->
-            
-            
-<!--  Menu of admin starts-->
+
               <li style="float: right; margin-top: 10px"> <?php  echo "<strong>Welcome ".$_SESSION['myLastname'].' '.$_SESSION['myFirstname']."</strong><br>";
                       ?>  </li>
             <li class="dropdown" style="margin-left: 350px; margin-top: -10px">
@@ -60,9 +43,7 @@
               </a>
 
 
-                <ul class="dropdown-menu">                  
-                  <li><a style="padding-top:8px;padding-bottom:8px;color:purple;" href="profile.php">Profile</a></li>
-                  <li><a style="padding-top:8px;padding-bottom:8px;color:purple;" href="change_password.php">Change Password</a></li>
+                <ul class="dropdown-menu">
                   <li role="separator" class="divider"></li>
                   <li><a style="padding-top:8px;padding-bottom:8px;color:purple;" href="logout.php">Log out</a></li>
                  

@@ -44,9 +44,6 @@
                   <img src="<?php echo $ProfilPic; ?>" class="img-rounded" width="40px" height="40px" hspace="2px" align="left" > <b class="caret"></b>
               </a>
                 <ul class="dropdown-menu">
-                  
-                  <li><a style="padding-top:8px;padding-bottom:8px;color:#800080;" href="profile.php">Profile</a></li>                 
-                  <li><a style="padding-top:8px;padding-bottom:8px;color:#800080;" href="change_password.php">Change Password</a></li> 
                   <li role="separator" class="divider"></li>
                   <li><a style="padding-top:8px;padding-bottom:8px;color:#800080;" href="logout.php">Log out</a></li>                
                  

@@ -82,7 +82,7 @@ function loginFunction($username,$password)
 }//end of loginFunction
 
 include("header.php");
-include("guestnavbar.php");
+include("indexheader.php");
 
 
 
@@ -134,8 +134,7 @@ include("guestnavbar.php");
         Review all your documents anytime
         </div>
     </div>
-<!--    <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>-->
-<!--    <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>-->
+
     </div>
 </div>
 </body>
@@ -160,53 +159,7 @@ include("guestnavbar.php");
 </body>
 </html>
 
-<!--                <br/>-->
-<!--                <h1>Welcome to PreshApp<br/><small>Project Research Sharing App</small></h1>-->
-<!---->
-<!--                <img src="" style='width:100%;'/>-->
-<!---->
-<!--                <br/><br/>-->
-<!--                This project is the design, development and implementation of a web application that will facilitate the upload, identification, review, monitoring and tracking of research papers among group members. Research activities; report writing, review, editing and other associated task can be daunting particularly with the need to monitor and track the editorial progress of a number of papers within a limited span of time.-->
-<!--                <br/><br/>-->
-<!--                <strong><big><a href='help.php'>Learn More</a></big></strong>-->
-<!---->
-<!---->
-<!--            </div>-->
-<!--            <div class="col-sm-5">-->
-<!--                <br/><br/>-->
-<!--                <h2>Sign In</h2>-->
-<!--                <br/>-->
-            <!-- Login form //-->
-            <?php
-                  require_once("functions/Alert.php");
 
-            ?>
-
-              <!-- Login form //-->
-<!--              <form id="signin" method="post" action="index.php">-->
-<!--                      <div class="form-group">-->
-<!--                        <label class="col-xs-12 control-label no-padding-right text-left" for="Username"> Username  </label>-->
-<!--                        <div class="input-group">-->
-<!--                          <div class="input-group-addon"><span class="fa fa-user-o"></span></div>-->
-<!--                          <input type="text" class="form-control" id="email" name="username" placeholder="Username">-->
-<!--                        </div>-->
-<!--                      </div>-->
-<!--                      <div class="form-group">-->
-<!--                        <label class="col-xs-12 control-label no-padding-right text-left" for="Password"> Password  </label>-->
-<!--                        <div class="input-group">-->
-<!--                          <div class="input-group-addon"><span class="fa fa-key"></div>-->
-<!--                          <input type="password" class="form-control" name="epassword" id="epassword" placeholder="Password">-->
-<!--                        </div>-->
-<!--                      </div>-->
-<!---->
-<!--                      <div class="text-right">-->
-<!--                          <input type="checkbox" name="remember_me"> Remember me &nbsp;&nbsp;&nbsp;<small></small>&nbsp;&nbsp;&nbsp;-->
-<!--                          <input type="submit" name="submitForm" class="btn btn-default" value="Login ">-->
-<!---->
-<!--                      </div>-->
-<!--                    </form>-->
-
-            <!-- end of Login form //-->
 
 
             </div>
@@ -216,10 +169,6 @@ include("guestnavbar.php");
   <!-- container //-->
     </section>
 
-
-    
-    
-<!---->
 <br>
 <br>
 <br>

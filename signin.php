@@ -50,7 +50,7 @@ if (isset($_POST['submitForm']))
 
 
 require_once("header.php");
-require_once("guestnavbar.php");
+require_once("indexheader.php");
 
 
     

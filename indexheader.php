@@ -25,29 +25,3 @@
       </div>
     </nav>
 
-
-<!-- Login form //-->
-<!--<form id="signin" method="post" action="index.php">-->
-<!--    <div class="form-group">-->
-<!--        <label class="col-xs-12 control-label no-padding-right text-left" for="Username"> Username  </label>-->
-<!--        <div class="input-group">-->
-<!--            <div class="input-group-addon"><span class="fa fa-user-o"></span></div>-->
-<!--            <input type="text" class="form-control" id="email" name="username" placeholder="Username">-->
-<!--        </div>-->
-<!--    </div>-->
-<!--    <div class="form-group">-->
-<!--        <label class="col-xs-12 control-label no-padding-right text-left" for="Password"> Password  </label>-->
-<!--        <div class="input-group">-->
-<!--            <div class="input-group-addon"><span class="fa fa-key"></div>-->
-<!--            <input type="password" class="form-control" name="epassword" id="epassword" placeholder="Password">-->
-<!--        </div>-->
-<!--    </div>-->
-<!---->
-<!--    <div class="text-right">-->
-<!--        <input type="checkbox" name="remember_me"> Remember me &nbsp;&nbsp;&nbsp;<small></small>&nbsp;&nbsp;&nbsp;-->
-<!--        <input type="submit" name="submitForm" class="btn btn-default" value="Login ">-->
-<!---->
-<!--    </div>-->
-<!--</form>-->
-
-<!-- end of Login form //-->

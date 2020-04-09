@@ -1,7 +1,16 @@
 <?php
-    require_once("includes/photoprofil.php");
-    
-    
+
+
+$ProfilPic = "";
+if ($_SESSION["myPhoto"] != "") {
+    $ProfilPic = $_SESSION["myPhoto"];
+} else {
+    $ProfilPic = "photoprofil.png";
+}
+
+$ProfilPic = "users photos/" . $ProfilPic;
+
+
 ?>
 <nav class="navbar navbar-default navbar-fixed-top" style="background-color:purple;color:white;">
     <div class="navbar-header">

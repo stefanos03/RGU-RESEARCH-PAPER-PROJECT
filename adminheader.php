@@ -1,6 +1,17 @@
 <?php
-    require_once("includes/avatar.php");
-    //Admin Navigation menu
+
+
+$ProfilPic = "";
+if ($_SESSION["myPhoto"] != "") {
+    $ProfilPic = $_SESSION["myPhoto"];
+} else {
+    $ProfilPic = "photoprofil.png";
+}
+
+$ProfilPic = "users photos/" . $ProfilPic;
+
+
+//Admin Navigation menu
 ?>
 <!--Nav starts-->
 <nav class="navbar navbar-default navbar-fixed-top" style="background-color:purple;color:white;">

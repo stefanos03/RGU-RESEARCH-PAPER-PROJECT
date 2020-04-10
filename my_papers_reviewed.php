@@ -67,7 +67,7 @@ ini_set('display_errors', 1);
                     $assign = '';
                     if ($row['status']=='c' || $row['status']=='r')
                     {
-                       $assign="<a href='assign_reviewer.php?pid=".$row['paperid']."'><strong>Assign reviewer</strong></a>";
+                       $assign="<a href='assign_reviewer1.php?pid=".$row['paperid']."'><strong>Assign reviewer</strong></a>";
                     }
                     
               ?>

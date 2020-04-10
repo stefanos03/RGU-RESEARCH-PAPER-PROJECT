@@ -15,7 +15,7 @@ require_once("header.php");
 $status='';
 
 $paperid = $_GET['pid'];
-$pageLink = "assign_reviewer.php?pid=".$paperid;
+$pageLink = "assign_reviewer1.php?pid=".$paperid;
 $paper = new Paper();
 $paperInfo  = $paper->getPaperById($paperid);
 
@@ -76,7 +76,7 @@ if (isset($_POST['submitForm']))
     }
 
     echo "<strong style='margin-left: 800px; font-size: 40px; color: purple '>Welcome ".$userRole."</strong>";
-    echo "<h4 style='margin-left: 800px; font-size: 40px; color: purple '>Awaiting to Review</h4>";
+    echo "<h4 style='margin-left: 600px; font-size: 40px; color: purple '>Information About the Papers & Projects</h4>";
     ?>
 <div class="container" style="border: solid 5px mediumpurple; background: purple; padding: 10px; color: white">
     <div class="col-xs-12 text-right">
@@ -91,16 +91,7 @@ if (isset($_POST['submitForm']))
 
     </div>
 
-    <!-- row 1 //-->
     <hr>
-
-
-
-
-
-
-
-
 
 
 

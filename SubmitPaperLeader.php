@@ -303,7 +303,7 @@ if (isset($_POST['uploadFile']))
         $assign = '';
         if ($row['status']=='s' || $row['status']=='r')
         {
-            $assign="<a href='assign_reviewer.php?pid=".$row['id']."'><strong>Assign reviewer</strong></a>";
+            $assign="<a href='assign_reviewer1.php?pid=".$row['id']."'><strong>Assign reviewer</strong></a>";
         }
 
         ?>

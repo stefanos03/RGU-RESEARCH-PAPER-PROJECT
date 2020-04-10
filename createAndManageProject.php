@@ -87,7 +87,7 @@ ini_set('display_errors', 1);
               </div>
               <div class="form-group row" style="margin-left: 200px">
                   
-                  <label for="Project Short Name"  class="col-xs-12 col-sm-2 col-form-label text-right" style="color: white">Project Short Name</label>
+                  <label for="Project Short Name"  class="col-xs-12 col-sm-2 col-form-label text-right" style="color: white">Project Code</label>
                   
                   <div class="col-xs-12 col-sm-5">
                       <input class="form-control" type="text" name="shortname"/>

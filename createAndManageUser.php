@@ -114,7 +114,7 @@ ini_set('display_errors', 1);
                   <div class="form-group col-xs-12 col-sm-5">
                       <select class="form-control" name="role"/>
                             <option></option>
-                            <option>Team Leader</option>
+                            <option>teamleader</option>
                             <option value='member'>Student</option>    
                       </div>
                   </div>

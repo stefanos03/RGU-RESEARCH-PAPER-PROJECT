@@ -38,7 +38,7 @@ include("header.php");
                </div>
 <div class="container" style=" width:1200px;border: 5px solid purple;padding: 10px;margin-left:-200px;background-color: lightgrey;">
                 <h2><a name="who" style="color: purple">Who we are</a></h2>
-               <div><img src="images/rgu.jfif" width="150" alt="logo"></div>
+               <div><img src="images/RGU.jpg" width="150" alt="logo"></div>
                 <br>
     <br>
                 RGU delivers a high quality vocational education and relevant curriculum which provides learners with the skills they require to thrive throughout their careers. As a result, the university has a reputation for producing graduates that are highly sought after by employers. Over the last decade RGU has consistently had one of the best records of any UK university for graduate level employment. Its reputation for teaching excellence is demonstrated further through its Gold award in the UK Teaching Excellence Framework. It celebrates a high quality student experience and is currently ranked in the top three universities in Scotland for student satisfaction.

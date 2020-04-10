@@ -11,12 +11,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title> research paper app <?php echo $pageTitle; ?></title>
 
-    <link rel="stylesheet" href="CSS1/css/bootstrap.css">
-    <link rel="stylesheet" href="CSS1/css/base.css">
+    <link rel="stylesheet" href="CSS/css/bootstrap.css">
+    <link rel="stylesheet" href="CSS/css/base.css">
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Muli|Nunito|PT+Sans|Source+Sans+Pro|Ubuntu|Pacifico" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker3.min.css">
-    <link rel="stylesheet" type="text/css" href="CSS1/css/bootstrap-clockpicker.min.css">
+    <link rel="stylesheet" type="text/css" href="CSS/css/bootstrap-clockpicker.min.css">
     <link rel=icon" type="image/png" href="images/favicon.png"/>
 
 

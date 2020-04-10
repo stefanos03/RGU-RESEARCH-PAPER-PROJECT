@@ -1,0 +1,28 @@
+Pizzas (ID, name and chef)
+
+P01	Hawaiian	C01
+P02	Stromboli	C02
+P03	Meat Feast	C01
+
+
+
+Chefs (ID, title and name)
+
+C01	Mr	Cesare
+C02	Ms	Lucrezia
+C03	Mr	Paolo
+C04	Mrs	Francesca
+
+
+Toppings (ID, name, price and vegetarian flag)
+
+T01	Chilli	        0.5	1
+T02	Jalapeno	0.6	1
+T03	Onion	        0.2	1
+T04	Pepper	        0.4	1
+T05	Ham	        1.0	0
+T06	Pepperoni	0.5	0
+T07	Mushroom	0.3	1
+T08	Pineapple	1.0	1
+T09	Sausage	        0.5	0
+T10	Olive	        0.5	1

@@ -2,7 +2,7 @@
 
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
-   include("includes/login_module.php");
+   include("Login_Request/login_module.php");
    $pageTitle = "Manage Users";
   include("classes/Config.php");
   include("header.php");
@@ -246,7 +246,7 @@ ini_set('display_errors', 1);
                                             <?php
                                                 echo "<div ><strong><i class='fa fa-file-pdf-o'></i> <a style='color: white' href='submited_paper_info.php?pid=".$row['paperid']."'>".$row['title']."</a></strong><div style='padding-top:10px;'>".nl2br($row['comment'])."</div></div>";
                                                 echo "<div><i class='fa fa-upload'></i> <a style='color: white' href='uploads/".$row['reviewedfile']."'>".$row['reviewedfile']."</a></div>";
-                                                echo "<div style='text-align:right;'><a style='color: white' href='member.php?mp=".$code1.'-'.$row['memberid'].'-'.$code2."'>".$row['lastname'].' '.$row['firstname']."</a> <img class='img-rounded' style='width:50px;height:50px;' src='".$photo."'><br/></div>"
+                                                echo "<div style='text-align:right;'><a style='color: white' href='#".$code1.'-'.$row['memberid'].'-'.$code2."'>".$row['lastname'].' '.$row['firstname']."</a> <img class='img-rounded' style='width:50px;height:50px;' src='".$photo."'><br/></div>"
                                              ?>
 
 

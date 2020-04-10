@@ -2,7 +2,7 @@
 
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
-   require_once("includes/login_module.php");
+   require_once("Login_Request/login_module.php");
    $pageTitle = "Create User";  
    require_once("classes/Config.php");
    require_once("header.php");    
@@ -191,7 +191,7 @@ ini_set('display_errors', 1);
                     $role = 'member';
                 }
 
-                $memberLink = "<a href='member.php?mp=aHR0cHM6Ly9haXJ2aWV3c3RvcmFnZS5ibG9iLmNvcmUud2luZG93cy5uZX-".$id."-QvYXZhdGFycy9hYzE4ZWNiNjZkN2ZiYTE4YzY3MTUxYzM3MDhiMmMzZQ'>".$name."</a>"
+                $memberLink = "<a href='#?mp=aHR0cHM6Ly9haXJ2aWV3c3RvcmFnZS5ibG9iLmNvcmUud2luZG93cy5uZX-".$id."-QvYXZhdGFycy9hYzE4ZWNiNjZkN2ZiYTE4YzY3MTUxYzM3MDhiMmMzZQ'>".$name."</a>"
 
                 ?>
                 <div class="row">

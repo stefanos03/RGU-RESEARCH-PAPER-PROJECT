@@ -6,7 +6,7 @@ if (!isset($_GET['pid']) || $_GET['pid']=='')
 }
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
-require_once("includes/login_module.php");
+require_once("Login_Request/login_module.php");
 $pageTitle = "Assign User to Project";
 require_once("classes/Config.php");
 require_once("header.php");
@@ -145,7 +145,7 @@ if (isset($_POST['submitForm']))
             <?php
             $code1= "oDdpnVaWwgdsjhMFiyIeLjJjSUCThpJUxfUVwTGnNSGeMLToTq";
             $code2 = "FoltjKlLKnBdPvQfPQi!oLU!lStPXzTyZomFgktMQluhRbCDHe";
-            echo "<br/><i class='fa fa-user-o'></i> <a style='color: white' target='_blank' href='member.php?mp=".$code1.'-'.$paperUserId.'-'.$code2."'>".$paperSubmitedby."</a><br/><br/>";
+            echo "<br/><i class='fa fa-user-o'></i> <a style='color: white' href='#".$code1.'-'.$paperUserId.'-'.$code2."'>".$paperSubmitedby."</a><br/><br/>";
             ?>
         </div>
 
@@ -178,7 +178,7 @@ if (isset($_POST['submitForm']))
                 }
                 $dateassigned = new DateTime($row['dateassigned']);
                 $dateassigned = $dateassigned->format('l jS F, Y');
-                echo "<li><a style='color: white' target='_blank' href='member.php?mp=".$code1.'-'.$row['userid'].'-'.$code2."'>".$row['lastname'].' '.$row['firstname']."</a>  - <small>assigned on ".$dateassigned." &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;".$removeAssign."</small></li>";
+                echo "<li><a style='color: white'  href='#".$code1.'-'.$row['userid'].'-'.$code2."'>".$row['lastname'].' '.$row['firstname']."</a>  - <small>assigned on ".$dateassigned." &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;".$removeAssign."</small></li>";
 
 
             }

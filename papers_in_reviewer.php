@@ -6,7 +6,7 @@ if (!isset($_GET['pid']) || $_GET['pid']=='')
 }
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
-   require_once("includes/login_module.php");
+   require_once("Login_Request/login_module.php");
    $pageTitle = "Assign User to Project";  
    require_once("classes/Config.php");
    require_once("header.php");    
@@ -219,7 +219,7 @@ ini_set('display_errors', 1);
                   <div class="col-xs-12">
                       <Strong>Submitted By</Strong>
                       <?php
-                            echo "<br/><i class='fa fa-user-o'></i> <a target='_blank' href='member.php?mp=".$paperUserId."'>".$paperSubmitedby."</a><br/><br/>";              
+                            echo "<br/><i class='fa fa-user-o'></i> <a target='_blank' href='#".$paperUserId."'>".$paperSubmitedby."</a><br/><br/>";
                       ?>
                   </div>
 

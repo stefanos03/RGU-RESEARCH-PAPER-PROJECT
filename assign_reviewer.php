@@ -6,7 +6,7 @@ if (!isset($_GET['pid']) || $_GET['pid']=='')
 }
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
-   require_once("includes/login_module.php");
+   require_once("Login_Request/login_module.php");
    $pageTitle = "Assign User to Project";  
    require_once("classes/Config.php");
    require_once("header.php");    
@@ -168,7 +168,7 @@ ini_set('display_errors', 1);
                         $dateassigned = new DateTime($row['dateassigned']);
                         $dateassigned = $dateassigned->format('l jS F, Y');
                         $deleteUrl = "<a href='deletePaper.php?id=".$id."' style='color: white'>Delete</a>";
-                        echo "<li>".$row['lastname'].' '.$row['firstname']."  - <small>assigned on ".$dateassigned." &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#' style='color: white'>Remove</a></small></li>";
+                        echo "<li>".$row['lastname'].' '.$row['firstname']."  - <small>assigned on ".$dateassigned." &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='' style='color: white'>Remove</a></small></li>";
 
 
                     }
@@ -219,7 +219,7 @@ ini_set('display_errors', 1);
                   <div class="col-xs-12">
                       <strong style="color: white">Submitted By</strong>
                       <?php
-                            echo "<br/><i class='fa fa-user-o'></i> <a style='color: white' target='_blank' href='member.php?mp=".$paperUserId."'>".$paperSubmitedby."</a><br/><br/>";
+                            echo "<br/><i class='fa fa-user-o'></i> <a style='color: white'  href='#'".$paperUserId."'>".$paperSubmitedby."</a><br/><br/>";
                       ?>
                   </div>
 

@@ -27,7 +27,7 @@ $ProfilPic = "users photos/" . $ProfilPic;
 
               <li><a style='color:#ffffff;' href="browsepapers.php"><span class="fa fa-home" ></span><strong> Back To Main</strong></a></li>
 
-              <li><a style='color:#ffffff;' href="submitpaper.php"><span class="fa fa-paper-plane" ></span><strong> Sumbit Paper</strong></a></li>
+              <li><a style='color:#ffffff;' href="SubmitPaperLeader.php"><span class="fa fa-paper-plane" ></span><strong> Sumbit Paper</strong></a></li>
 
               <li><a style='color:#ffffff;' href="papers_in_review.php"><span class="fa fa-search" ></span><strong> In Review</strong></a></li>
               <li class=" nav navbar-nav"><a class="w3-button w3-hover-yellow" style='color:white; 'href="papers_awaiting_review.php"><span class="fa fa-search" ></span><strong> Review Paper</strong></a></li>
@@ -46,7 +46,7 @@ $ProfilPic = "users photos/" . $ProfilPic;
 
                   <ul class="dropdown-menu">
                       <li role="separator" class="divider"></li>
-                      <li><a style="padding-top:8px;padding-bottom:8px;color:purple;" href="logout.php">Log out</a></li>
+                      <li><a style="padding-top:8px;padding-bottom:8px;color:purple;" href="Log_out.php">Log out</a></li>
 
                   </ul>
 

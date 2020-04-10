@@ -2,7 +2,7 @@
 
 if (!isset($_GET['pid']) || $_GET['pid']=='')
 {
-    header("location: submitpaper.php");
+    header("location: SubmitPaperLeader.php");
 }
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
@@ -106,7 +106,7 @@ if (isset($_POST['submitForm']))
 
     <div class="row">
         <div class="col-xs-12">
-            <h4 class="text-left price-headline" style="color:purple;font-weight:bold;">Paper Details</h4>
+            <h4 class="text-center price-headline" style="color:white;font-weight:bold;">Paper Details</h4>
         </div>
 
     </div>
@@ -196,7 +196,7 @@ if (isset($_POST['submitForm']))
 
     <hr style=" border-top: 1px solid purple;">
 <!--Manage Project starts -->
-    <div class="container" style="border: solid 3px purple; padding: 30px; background: purple;">
+    <div class="container" style="border: solid 3px purple; padding: 30px; background: purple; color: white">
         <h3 class="text-left price-headline container-fixed-top" style="color:white; margin-left: 500px;">All The  Project</h3>
         <?php
         $project = new Project();

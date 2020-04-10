@@ -88,7 +88,7 @@ if (isset($_POST['uploadFile']))
 
 
 
-    <form name="uploadpaper" action="submitpaper.php" method="post" enctype="multipart/form-data" style="border: solid 5px mediumpurple;background: purple; padding: 10px; margin-right:-15px; margin-left:-15px;">
+    <form name="uploadpaper" action="SubmitPaperLeader.php" method="post" enctype="multipart/form-data" style="border: solid 5px mediumpurple;background: purple; padding: 10px; margin-right:-15px; margin-left:-15px;">
         <h3 class="text-left price-headline" style="color:white; margin-left: 400px">Paper Submission</h3>
         <div class="form-group row" style="margin-left: 150px">
 

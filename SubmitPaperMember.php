@@ -91,7 +91,7 @@ ini_set('display_errors', 1);
 
 
 
-             <form name="uploadpaper" action="submitpaper_by_member1.php" method="post" enctype="multipart/form-data">
+             <form name="uploadpaper" action="SubmitPaperMember.php" method="post" enctype="multipart/form-data">
 
               <div class="form-group row" style="margin-left: 200px; color: white">
 

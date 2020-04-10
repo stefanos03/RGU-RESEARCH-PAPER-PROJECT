@@ -31,7 +31,7 @@ $ProfilPic = "users photos/" . $ProfilPic;
           <ul class="nav navbar-nav">
               <li class=" nav navbar-nav"><a class="w3-button w3-hover-yellow" style='color:white; 'href="browsepapers.php"><span class="fa fa-home" ></span><strong> Back To Main</strong></a></li>
 
-              <li class=" nav navbar-nav"><a class="w3-button w3-hover-yellow" style='color:white; 'href="submitpaper_by_member1.php"><span class="fa fa-paper-plane" ></span><strong> Submit Paper</strong></a></li>
+              <li class=" nav navbar-nav"><a class="w3-button w3-hover-yellow" style='color:white; 'href="SubmitPaperMember.php"><span class="fa fa-paper-plane" ></span><strong> Submit Paper</strong></a></li>
               <li class=" nav navbar-nav"><a class="w3-button w3-hover-yellow" style='color:white; 'href="papers_awaiting_review.php"><span class="fa fa-search" ></span><strong> Review Paper</strong></a></li>
               <li class=" nav navbar-nav"><a class="w3-button w3-hover-yellow" style='color:white; 'href="my_papers_reviewed.php"><span class="fa fa-search-plus" ></span><strong> Papers Reviewed</strong></a></li>
 
@@ -50,7 +50,7 @@ $ProfilPic = "users photos/" . $ProfilPic;
               </a>
                 <ul class="dropdown-menu">
                   <li role="separator" class="divider"></li>
-                  <li><a style="padding-top:8px;padding-bottom:8px;color:#800080;" href="logout.php">Log out</a></li>                
+                  <li><a style="padding-top:8px;padding-bottom:8px;color:#800080;" href="Log_out.php">Log out</a></li>
                  
                 </ul>
 

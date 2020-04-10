@@ -56,7 +56,7 @@ $ProfilPic = "users photos/" . $ProfilPic;
 
                 <ul class="dropdown-menu">
                   <li role="separator" class="divider"></li>
-                  <li><a style="padding-top:8px;padding-bottom:8px;color:purple;" href="logout.php">Log out</a></li>
+                  <li><a style="padding-top:8px;padding-bottom:8px;color:purple;" href="Log_out.php">Log out</a></li>
                  
                 </ul>
 

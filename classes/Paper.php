@@ -199,6 +199,15 @@ class Paper
 
         return $result;
     }
+
+    //      delete paper functionality
+    public function deletePaper($paperid)
+    {
+        $sqlQuery = "Delete from paper_assigned where id=".$paperid;
+        $QueryExecutor = new ExecuteQuery();
+        $result = $QueryExecutor::customQuery($sqlQuery);
+
+    }
 }
 
 

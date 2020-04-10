@@ -88,10 +88,7 @@ ini_set('display_errors', 1);
 
                 <br>
 
-            <?php
-                  require_once("functions/Alert.php");
 
-            ?>
 
 
              <form name="uploadpaper" action="submitpaper_by_member1.php" method="post" enctype="multipart/form-data">

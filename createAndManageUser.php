@@ -67,11 +67,7 @@ ini_set('display_errors', 1);
             <br>
             <br>
 
-             
-            <?php
-                  require_once("functions/Alert.php");
 
-            ?>
            
 
              <form name="create_user" action="createAndManageUser.php" method="post" style="border: solid 3px purple;padding: 10px; background: purple; margin-left: -15px; margin-right: -15px">

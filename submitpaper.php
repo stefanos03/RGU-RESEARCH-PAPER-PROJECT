@@ -85,10 +85,7 @@ if (isset($_POST['uploadFile']))
 
 
 
-    <?php
-    require_once("functions/Alert.php");
 
-    ?>
 
 
     <form name="uploadpaper" action="submitpaper.php" method="post" enctype="multipart/form-data" style="border: solid 5px mediumpurple;background: purple; padding: 10px; margin-right:-15px; margin-left:-15px;">

@@ -94,10 +94,6 @@ if (isset($_POST['submitForm']))
     <!-- row 1 //-->
     <hr>
 
-    <?php
-    require_once("functions/Alert.php");
-
-    ?>
 
 
 

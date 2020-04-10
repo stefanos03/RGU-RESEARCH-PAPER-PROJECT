@@ -93,10 +93,7 @@ ini_set('display_errors', 1);
                   <!-- row 1 //-->
                   <hr>
              
-            <?php
-                  require_once("functions/Alert.php");
 
-            ?>
            
 
              <form name="uploadpaper" action="<?php echo $pageLink; ?>" method="post" enctype="multipart/form-data">     

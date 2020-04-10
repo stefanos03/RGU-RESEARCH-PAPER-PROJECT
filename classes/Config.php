@@ -1,4 +1,8 @@
 <?php
+
+spl_autoload_register(function($class){
+    require_once 'classes/'. $class .'.php';
+});
 //SanitizeField
 class SanitizeField
 {
@@ -9,9 +13,5 @@ class SanitizeField
         return $result;
     }
 }
-//init.php
-spl_autoload_register(function($class){
-    require_once 'classes/'. $class .'.php';
-});
-
+	
 ?>

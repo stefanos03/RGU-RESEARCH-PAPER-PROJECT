@@ -91,11 +91,7 @@ ini_set('display_errors', 1);
                 
             </div>
             <br>
-            <?php
-                  require_once("functions/Alert.php");
 
-            ?>
-           
 
              <form name="uploadpaper" action="<?php echo $pageLink; ?>" method="post" enctype="multipart/form-data">     
               
@@ -171,6 +167,7 @@ ini_set('display_errors', 1);
                     {
                         $dateassigned = new DateTime($row['dateassigned']);
                         $dateassigned = $dateassigned->format('l jS F, Y');
+                        $deleteUrl = "<a href='deletePaper.php?id=".$id."' style='color: white'>Delete</a>";
                         echo "<li>".$row['lastname'].' '.$row['firstname']."  - <small>assigned on ".$dateassigned." &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#' style='color: white'>Remove</a></small></li>";
 
 

@@ -106,10 +106,7 @@ echo "<h4 style='margin-left: 800px; font-size: 40px; color: purple '> Review th
             </div>
                   
 
-            <?php
-                  require_once("functions/Alert.php");
 
-            ?>
            
 
              <form name="uploadpaper" action="<?php echo $pageLink; ?>" method="post" enctype="multipart/form-data" >

@@ -70,7 +70,7 @@ function loginFunction($username,$password)
 //            $_SESSION['myAboutme'] = $Results['aboutme'];
             $_SESSION['myRole'] = $Results['role'];
 
-            header("location:browsepapers.php");
+            header("location:infoPage.php");
         }
         else
         {
@@ -175,5 +175,5 @@ include("indexheader.php");
 <?php
    require_once("indexFooter.php");
 ?>
-<script type="text/javascript" src="JavaScript/datetimelibrary.js"></script>
-<script type="text/javascript" src="JavaScript/newsletter.js"></script>
+<script type="text/javascript" src="js/datetimelibrary.js"></script>
+<script type="text/javascript" src="js/newsletter.js"></script>

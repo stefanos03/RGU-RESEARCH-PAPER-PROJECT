@@ -66,11 +66,11 @@ ini_set('display_errors', 1);
             <br>
 
 
-             <form name="assign_user_toproject" action="assignUsertoProject.php" method="post" style="border: 4px solid purple;padding: 80px; margin-right: 30px; background: purple">
+             <form name="assign_user_toproject" action="assignUsertoProject.php" method="post" style="border: 5px solid mediumpurple;padding: 50px; margin-right: 30px; background: purple">
                  <h3 class="text-center price-headline w3-display-topmiddle" style="color:white;">Assign User to Project</h3>
                  <br> <br>
               <div class="form-group row">
-                  <label for="Project Short Name"  class="col-xs-12 col-sm-2 col-form-label text-center" style="border: 2px solid white; padding:3px; margin-right: 10px;color: white">Project</label>
+                  <label for="Project Short Name"  class="col-xs-12 col-sm-2 col-form-label text-center" style="aq`border: 2px solid white; padding:3px; margin-right: 10px;color: white">Project</label>
                   <div class="form-group col-xs-12 col-sm-5">
                       <select class="form-control" name="project" style="margin-left: 150px">
                             <option></option>
@@ -145,7 +145,7 @@ ini_set('display_errors', 1);
               <br/><br/>
         </div>
 <!--Assigned user to project-->
-            <div class="container" style="border: solid 5px mediumpurple; background: purple; color: white">
+            <div class="container" style="border: solid 5px mediumpurple;padding: 10px; background: purple; color: white">
               <div class="row" style="  margin-right: 30px; margin-left: 2px">
                   <div class="col-xs-12">
                     <h4 class="text-center " style="color:white;"> <strong>Assigned  User to Project </strong>(<?php echo $NumberProjectUsers; ?>)</h4>

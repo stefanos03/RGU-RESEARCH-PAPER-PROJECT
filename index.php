@@ -5,7 +5,7 @@ ini_set('display_errors', 1);
 session_start();
 session_destroy();
 $pageTitle = "Home_Page";
-require_once("classes/Config.php");
+require_once("myPhpFunctionalities/Config.php");
 
 $message = "";
 $status = "";
@@ -175,5 +175,5 @@ include("indexheader.php");
 <?php
    require_once("indexFooter.php");
 ?>
-<script type="text/javascript" src="js/datetimelibrary.js"></script>
-<script type="text/javascript" src="js/newsletter.js"></script>
+<script type="text/javascript" src="JavaScript/datetimelibrary.js"></script>
+<script type="text/javascript" src="JavaScript/newsletter.js"></script>

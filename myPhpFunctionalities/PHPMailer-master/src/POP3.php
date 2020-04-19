@@ -31,7 +31,7 @@ namespace PHPMailer\PHPMailer;
  * 3) This is really ancient technology; you should only need to use it to talk to very old systems.
  * 4) This POP3 class is deliberately lightweight and incomplete, and implements just
  *   enough to do authentication.
- *   If you want a more complete class there are other POP3 classes for PHP available.
+ *   If you want a more complete class there are other POP3 myPhpFunctionalities for PHP available.
  *
  * @author  Richard Davey (original author) <rich@corephp.co.uk>
  * @author  Marcus Bointon (Synchro/coolbru) <phpmailer@synchromedia.co.uk>

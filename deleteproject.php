@@ -1,5 +1,5 @@
 <?php
-require_once("classes/Config.php");
+require_once("myPhpFunctionalities/Config.php");
 
 if (!isset($_GET['id']) || $_GET['id']=='')
 {

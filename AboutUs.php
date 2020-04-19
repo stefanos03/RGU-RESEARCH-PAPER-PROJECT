@@ -1,6 +1,6 @@
 <?php
 $pageTitle = "AboutUs";
-include("classes/Config.php");
+include("myPhpFunctionalities/Config.php");
 include("header.php");
 ?>
 <header>

@@ -2,9 +2,9 @@
 
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
-   include("Login_Request/login_module.php");
+   include("LoginRequirement/login_module.php");
    $pageTitle = "Manage Users";
-  include("classes/Config.php");
+  include("myPhpFunctionalities/Config.php");
   include("header.php");
 
 

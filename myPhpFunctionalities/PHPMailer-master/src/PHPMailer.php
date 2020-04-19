@@ -136,7 +136,7 @@ class PHPMailer
     /**
      * An iCal message part body.
      * Only supported in simple alt or alt_inline message types
-     * To generate iCal event structures, use classes like EasyPeasyICS or iCalcreator.
+     * To generate iCal event structures, use myPhpFunctionalities like EasyPeasyICS or iCalcreator.
      *
      * @see http://sprain.ch/blog/downloads/php-class-easypeasyics-create-ical-files-with-php/
      * @see http://kigkonsult.se/iCalcreator/
@@ -3052,7 +3052,7 @@ class PHPMailer
 
     /**
      * Encode a header value (not including its label) optimally.
-     * Picks shortest of Q, B, or none. Result Login_Request folding if needed.
+     * Picks shortest of Q, B, or none. Result LoginRequirement folding if needed.
      * See RFC822 definitions for phrase, comment and text positions.
      *
      * @param string $str      The header value to encode
@@ -3871,7 +3871,7 @@ class PHPMailer
     {
         $mimes = [
             'xl' => 'application/excel',
-            'js' => 'application/javascript',
+            'JavaScript' => 'application/javascript',
             'hqx' => 'application/mac-binhex40',
             'cpt' => 'application/mac-compactpro',
             'bin' => 'application/macbinary',

@@ -8,7 +8,7 @@
 
  $activationcode  = trim(stripslashes(htmlspecialchars($_GET['activationcode'])));
  
-  require_once("classes/Config.php");
+  require_once("myPhpFunctionalities/Config.php");
 
  $member = new Member();
  $result = $member->activateMembershipAccount($activationcode);

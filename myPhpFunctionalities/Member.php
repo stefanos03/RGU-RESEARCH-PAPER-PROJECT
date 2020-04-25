@@ -40,12 +40,12 @@
               $result = $this->executeNewMemberFunc();
                     if ($result>0)
                     {
-                        $this->_errmsg = "You have been successfully registered. Please try to login or contact the administrator should you have difficulty logging in.";
-                        $this->_status = "success";
-                        $this->_subject = "PreshApp membership registration";
+                        $this->_errmsg = "";
+                        $this->_status = "";
+                        $this->_subject = "";
                         $this->createActivation();
 
-                        $this->_mailbody = "Thank you for registering on Preshapp. Below are your username and password to access your membership account. <br>You are advised to change your password when logged in to one you can easily remember.<br/><br/>
+                        $this->_mailbody = " <br><br/><br/>
 
                               <strong>Username: </strong>&nbsp;&nbsp;&nbsp; ".$this->_email."<br/>
                               <strong>Password: </strong>&nbsp;&nbsp;&nbsp; ".$this->_password."
@@ -66,14 +66,14 @@
                     }
                     else
                     {
-                        $this->_errmsg = "An error occurred. Please try again or contact the administrator.";
-                        $this->_status = "error";
+                        $this->_errmsg = "";
+                        $this->_status = "";
                     }
           }
           else
           {
-              $this->_errmsg = "That email address is already in use.";
-              $this->_status = "error";
+              $this->_errmsg = "";
+              $this->_status = "";
           }
       
 
@@ -86,7 +86,7 @@
       private function createActivation()
       {
 
-            //check if activation account has been created already, if yes, delete and recreate a new one before sending to member.
+            //check if activation account has been created already
 
             $sqlQuery = "Delete from activate_account where email='".$this->_email."'";
             $QueryExecutor = new ExecuteQuery();
@@ -208,11 +208,11 @@
                       $status = 'expired';
                       $nextPage = '505.php';
 
-                      //generate a new activation code and send it to the user's email                 
+
                       
                     
                       $this->createActivation();
-                      $this->_subject = "Activate your membership account";
+                      $this->_subject = "";
 
                       $this->_mailbody = "Thank you for registering on Covenear. Your account has been created with the credentials given below. <br>You are advised to change your password when logged in to one you can easily remember. Follow the link below to activate your account.<br/><br/>
 
@@ -357,7 +357,7 @@
                 else
                 {
                           $status = "error";
-                          $response =  array("status"=>$status,"message"=>"An account has been created with that email but not yet activated. An email has been resent to activate your account.");
+                          $response =  array("status"=>$status,"message"=>"");
                 }
 
 
@@ -367,7 +367,7 @@
           else
           {   
               $status = "error";
-              $response = array("status"=>$status,"message"=>"Invalid login credentials.");
+              $response = array("status"=>$status,"message"=>"");
 
           }//end of check of user records.
           
@@ -396,12 +396,12 @@
            $response = "";
            if ($result>0)
            {
-                 $response = array("status"=>"success","message"=>"Profile has been successfully updated.");
+                 $response = array("status"=>"success","message"=>"");
                  $this->setUserSessionData($memberid);
            }
            else
            {
-                 $response = array("status"=>"error","message"=>"An error has occurred updating the profile.");
+                 $response = array("status"=>"error","message"=>"");
            }
 
            return $response;

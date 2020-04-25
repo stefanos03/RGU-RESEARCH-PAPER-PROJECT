@@ -75,7 +75,7 @@ class Paper
 
                 $response = array("status"=>"success","msg"=>"The paper has been successfully assigned to the selected reviewer.");
 
-                //set paper statust to 'r' for review
+
                 $parameter='r';
                 $this->updatePaperStatus($paperid,$parameter);
             }else{
@@ -209,8 +209,5 @@ class Paper
 
     }
 }
-
-
-
 
 ?>

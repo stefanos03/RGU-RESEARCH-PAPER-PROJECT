@@ -1,14 +1,14 @@
 <?php
 
 
-$ProfilPic = "";
+$Picture_Profile = "";
 if ($_SESSION["myPhoto"] != "") {
-    $ProfilPic = $_SESSION["myPhoto"];
+    $Picture_Profile = $_SESSION["myPhoto"];
 } else {
-    $ProfilPic = "photoprofil.png";
+    $Picture_Profile = "photoprofil.png";
 }
 
-$ProfilPic = "users photos/" . $ProfilPic;
+$Picture_Profile = "users photos/" . $Picture_Profile;
 
 
 //Admin Navigation menu
@@ -50,7 +50,7 @@ $ProfilPic = "users photos/" . $ProfilPic;
                       ?>  </li>
             <li class="dropdown" style="margin-left: 350px; margin-top: -10px">
               <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" href="AboutUs.php"  >
-                  <img src="<?php echo $ProfilPic; ?>" class="img-rounded" width="40px" height="40px" hspace="1px" align="left" > <b class="caret"></b>
+                  <img src="<?php echo $Picture_Profile; ?>" class="img-rounded" width="40px" height="40px" hspace="1px" align="left" > <b class="caret"></b>
               </a>
 
 

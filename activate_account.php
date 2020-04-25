@@ -1,6 +1,6 @@
 <?php
  
- //activate membership registration
+ //activate account
  if (!isset($_GET['activationcode']))
  {
    header("location:index.php");
@@ -8,28 +8,28 @@
 
  $activationcode  = trim(stripslashes(htmlspecialchars($_GET['activationcode'])));
  
-  require_once("myPhpFunctionalities/Config.php");
+  require_once("myPhpFunctionalities/Configuration.php");
 
  $member = new Member();
  $result = $member->activateMembershipAccount($activationcode);
 
- $status = $result["status"];
+ $statusfinal = $result["status"];
  $nextPage = $result["nextPage"];
 
- if ($status=="failed")
+ if ($statusfinal=="failed")
  {
  	//echo "<br>Inside failed block";
  	header("location:".$nextPage);
  }
- else if ($status=="expired")
+ else if ($statusfinal=="expired")
  {
- 	//echo "<br>Inside expired block.";
+
  	session_start();
- 	$_SESSION['505msg'] = "Dear User, <br/><br/>An email has been sent to your email to activate your account.<br/><br/>Thank you.";
+ 	$_SESSION['505msg'] = " <br/><br/><br/><br/>";
  	header("location:".$nextPage); 
 
  }
- else if ($status=="success")
+ else if ($statusfinal=="success")
  {
  	$_SESSION['memberLogin'] = 'stefanos2021';
  	header("location:".$nextPage);

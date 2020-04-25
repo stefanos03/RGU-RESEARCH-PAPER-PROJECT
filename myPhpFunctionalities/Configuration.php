@@ -1,9 +1,9 @@
 <?php
-
+//config starts
 spl_autoload_register(function($class){
     require_once 'myPhpFunctionalities/'. $class .'.php';
 });
-//SanitizeField
+//SanitizeField starts
 class SanitizeField
 {
     static function clean($field)

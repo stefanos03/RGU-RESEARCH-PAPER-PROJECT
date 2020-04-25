@@ -8,7 +8,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
    require_once("LoginRequirement/Login_Request.php");
    $pageTitle = "Assign User to Project";  
-   require_once("myPhpFunctionalities/Config.php");
+   require_once("myPhpFunctionalities/Configuration.php");
    require_once("header.php");    
    
    

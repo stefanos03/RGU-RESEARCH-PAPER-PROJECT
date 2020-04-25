@@ -1,6 +1,5 @@
 <?php
-$pageTitle = "AboutUs";
-include("myPhpFunctionalities/Config.php");
+include("myPhpFunctionalities/Configuration.php");
 include("header.php");
 ?>
 <header>
@@ -53,7 +52,7 @@ include("header.php");
 <!--Our Strategy Section Starts here-->
                 <div  class="container" style=" width:1200px;border: 5px solid purple;padding: 10px;margin-left:-200px; background-color: lightgrey;">
                 <h2><a name="Strategy" style="color: purple">Our Strategy</a></h2>
-                <div><img src="images/uni.jfif" width="300" alt="uni"></div>
+                <div><img src="images/building.jpg" width="300" alt="uni"></div>
                 <br>
                 RGU has a strategic mission to transform individuals and communities by providing demand-led teaching and research to contribute to economic, social and cultural development. To achieve this the university has established a strategy map which reflects its significant strengths in higher education.
                 <br>

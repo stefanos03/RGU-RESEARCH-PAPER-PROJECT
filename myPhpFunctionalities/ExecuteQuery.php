@@ -1,5 +1,6 @@
 <?php
 
+
 class ExecuteQuery
 {
 	public static function customQuery($sqlQuery)
@@ -16,9 +17,5 @@ class ExecuteQuery
 
 	}
 }
-	
-
-
-
 
 ?>

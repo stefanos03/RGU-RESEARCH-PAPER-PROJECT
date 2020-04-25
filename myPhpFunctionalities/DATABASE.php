@@ -16,9 +16,9 @@ class DATABASE{
 
 	public function connect()
 	{
-		$mysqli = new mysqli($this->server,$this->username,$this->password,$this->dbname);
+		$mysql = new mysqli($this->server,$this->username,$this->password,$this->dbname);
 
-		return $mysqli;		
+		return $mysql;
 	}
 
 //hi test

@@ -10,10 +10,10 @@ class User
         $response = '';
         if ($result>0)
         {
-            $response = array("status"=>"success","msg"=>"User [".$lastname." ".$firstname."] has been successfully created.");
+            $response = array("status"=>"success","msg"=>"User [".$lastname." ".$firstname."] ");
             $this->sendMail($email,$password,$lastname,$firstname);
         }else{
-            $response = array("status"=>"error","msg"=>"An error occurred creating the user.");
+            $response = array("status"=>"error","msg"=>"");
         }
 
         return $response;
@@ -21,16 +21,11 @@ class User
 
     private function sendMail($email,$password,$lastname,$firstname)
     {
-        $errmsg = "You have been successfully registered. Please try to login or contact the administrator should you have difficulty logging in.";
+        $errmsg = "";
 
-        $subject = "PreshApp membership registration";
+        $subject = "";
 
-        $mailbody = "Thank you for registering on Preshapp. Below are your username and password to access your membership account. <br>You are advised to change your password when logged in to one you can easily remember.<br/><br/>
-
-                              <strong>Username: </strong>&nbsp;&nbsp;&nbsp; ".$email."<br/>
-                              <strong>Password: </strong>&nbsp;&nbsp;&nbsp; ".$password."
-
-                              <br/><br/>
+        $mailbody = " 
                           ";
 
 
@@ -65,14 +60,14 @@ class User
 
             if ($result>0)
             {
-                $response = array("status"=>"success","msg"=>"Your password has been successfully updated.");
+                $response = array("status"=>"success","msg"=>"");
             }else{
-                $response = array("status"=>"error","msg"=>"An error occurred updating your password. Please contact the administrator.");
+                $response = array("status"=>"error","msg"=>"");
             }
 
         }else
         {
-            $response = array("status"=>"error","msg"=>"The current password supplied is wrong.");
+            $response = array("status"=>"error","msg"=>"");
         }
 
         return $response;

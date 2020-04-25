@@ -16,7 +16,7 @@ include("header.php");
     </div>
     </nav>
 </header>
-
+<!--Main container starts here-->
     <section id="header">
       <div class="container">
 
@@ -36,6 +36,7 @@ include("header.php");
 
                 <br/><br/>
                </div>
+<!--Second container with text-->
 <div class="container" style=" width:1200px;border: 5px solid purple;padding: 10px;margin-left:-200px;background-color: lightgrey;">
                 <h2><a name="who" style="color: purple">Who we are</a></h2>
                <div><img src="images/RGU.jpg" width="150" alt="logo"></div>
@@ -49,7 +50,7 @@ include("header.php");
 </div>
                 <br>
                 <br>
-<!--end Section-->
+<!--Our Strategy Section Starts here-->
                 <div  class="container" style=" width:1200px;border: 5px solid purple;padding: 10px;margin-left:-200px; background-color: lightgrey;">
                 <h2><a name="Strategy" style="color: purple">Our Strategy</a></h2>
                 <div><img src="images/uni.jfif" width="300" alt="uni"></div>
@@ -61,10 +62,10 @@ include("header.php");
                 <br>
                 <br>
                 </div>
-<!--end Section zero-->
-                <br>
-                <br>
 
+                <br>
+                <br>
+<!--Web Application Section Starts here-->
                 <div class="container" style=" width:1200px;border: 5px solid purple;padding: 10px;margin-left:-200px;background-color: lightgrey;">
                 <h2><a name="introduction" style="color: purple">1) Web Application Description</a></h2>
                     <div><img src="images/logop.png" width="150" alt="logo"></div>
@@ -75,7 +76,7 @@ include("header.php");
                 </div>
                 <br>
                 <br>
-<!--End Section one-->
+<!--Project Constraints Section here-->
                 <div class="container" style=" width:1200px;border: 5px solid purple;padding: 10px;margin-left:-200px;background-color: lightgrey;">
                 <h2><a name="project_constraints" style="color: purple">2) Project Constraints</a></h2>
                 <ol>
@@ -115,10 +116,12 @@ include("header.php");
 
                 </ol>
                 </div>
-<!--End Section two-->
+
             </div>
         </div>
+<!-- row ends-->
       </div>
+<!-- Container ends-->
     </section>
 <!--Foooter starts-->
 <?php

@@ -51,33 +51,36 @@ class Email
 				try 
 				{
 				    //Server settings
-				    $mail->SMTPDebug = 2;                                 // Enable verbose debug output
+				    $mail->SMTPDebug = 1;                                 // Enable verbose debug output
 				    $mail->isSMTP();                                      // Set mailer to use SMTP
 				    $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
 				    $mail->SMTPAuth = true;                               // Enable SMTP authentication
-				    $mail->Username = 'kuso.onwuka@gmail.com';                 // SMTP username
-				    $mail->Password = 'niger2013ia!';                           // SMTP password
+				    $mail->Username = 'stefanoschatz13@gmail.com';                 // SMTP username
+				    $mail->Password = 'panatha';                           // SMTP password
 				    $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
 				    $mail->Port = 587;                                    // TCP port to connect to
 
 				    //Recipients
-				    $mail->setFrom('info@preshapp.com', 'PreshApp');
+				    $mail->setFrom('rguresearchpaper@mail.com', 'RGU-RESEARCH-PAPER');
 				    $mail->addAddress($this->_email, $this->_fullname);     // Add a recipient
-				    
 
-				    //Content
-				    $mail->isHTML(true);                                  // Set email format to HTML
-				    $mail->Subject = $this->_subject;
-				    $mail->Body    = $this->_message;
-				    //$mail->Body    = 'This is the HTML message body <b>in bold!</b>';
-				    
-				    ob_start();
-				     $mail->send();
-				    ob_end_clean();
-				     //echo 'Message has been sent';
-				} catch (Exception $e) {
-				    echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
-				}
+
+                    $mail->IsHTML(true);
+                    $mail->AddAddress("bazzytube@gmail.com", "recipient-name");
+                    $mail->SetFrom("bazzykhil@gmail.com", "from-name");
+                    $mail->AddReplyTo("Bazzytube@gmail.com", "reply-to-name");
+                    $mail->AddCC("Charnamdesign@gmail.com", "cc-recipient-name");
+                    $mail->Subject = "Test is Test Email sent via Gmail SMTP Server using PHP Mailer";
+                    $content = "<b>This is a Test Email sent via Gmail SMTP Server using PHP mailer class.</b>";
+                    ob_start();
+                    $mail->send();
+                    ob_end_clean();
+                    echo 'Message has been sent';
+                } catch (Exception $e) {
+
+
+//                echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
+                }
 
 	}//end of send mail
 

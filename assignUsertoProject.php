@@ -70,7 +70,7 @@ ini_set('display_errors', 1);
                  <h3 class="text-center price-headline w3-display-topmiddle" style="color:white;">Assign User to Project</h3>
                  <br> <br>
               <div class="form-group row">
-                  <label for="Project Short Name"  class="col-xs-12 col-sm-2 col-form-label text-center" style="aq`border: 2px solid white; padding:3px; margin-right: 10px;color: white">Project</label>
+                  <label for="Project Short Name"  class="col-xs-12 col-sm-2 col-form-label text-center" style="border: 2px solid white; padding:3px; margin-right: 10px;color: white">Project</label>
                   <div class="form-group col-xs-12 col-sm-5">
                       <select class="form-control" name="project" style="margin-left: 150px">
                             <option></option>

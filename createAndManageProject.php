@@ -3,7 +3,7 @@
 
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
-   require_once("LoginRequirement/login_module.php");
+   require_once("LoginRequirement/Login_Request.php");
    $pageTitle = "Create Project";  
    require_once("myPhpFunctionalities/Config.php");
    require_once("header.php");    
@@ -109,7 +109,7 @@ ini_set('display_errors', 1);
 
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
-require_once("LoginRequirement/login_module.php");
+require_once("LoginRequirement/Login_Request.php");
 $pageTitle = "Manage Project";
 require_once("myPhpFunctionalities/Config.php");
 require_once("header.php");
@@ -119,7 +119,7 @@ require_once("header.php");
 
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
-require_once("LoginRequirement/login_module.php");
+require_once("LoginRequirement/Login_Request.php");
 
 require_once("myPhpFunctionalities/Config.php");
 require_once("header.php");

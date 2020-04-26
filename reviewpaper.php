@@ -14,7 +14,7 @@ ini_set('display_errors', 1);
    
    
 
-   $status='';
+   $messagestatus='';
 
    $paperid = $_GET['pid'];
    $pageLink = "reviewpaper.php?pid=".$paperid;
@@ -33,30 +33,30 @@ ini_set('display_errors', 1);
    }
 
 
-   $projectid = '';
-   $comment = '';
+   $Id_Project = '';
+   $comments = '';
    $title = '';
 
 
    if (isset($_POST['submitForm']))
    {
         
-        $comment = $_POST['comment'];
+        $comments = $_POST['comment'];
 
         
-        if ($comment=='')
+        if ($comments=='')
         {
-           $status='warning';
+           $messagestatus='warning';
            $msg = "Comment is required to submit a review.";
         }else
         {
-            $dataArray = array("paperid"=>$paperid,"comment"=>$comment,"file"=>$_SESSION['uploadedFile'],"submitedby"=>$_SESSION['myUserId']);
+            $dataArray = array("paperid"=>$paperid,"comment"=>$comments,"file"=>$_SESSION['uploadedFile'],"submitedby"=>$_SESSION['myUserId']);
             $paper = new Paper();            
             $result = $paper->submitReview($dataArray);
-            $status = $result["status"];
+            $messagestatus = $result["status"];
             $msg = $result["msg"];
 
-            $comment = '';
+            $comments = '';
             unset($_SESSION['uploadedFile']);
         }
    }
@@ -65,7 +65,7 @@ ini_set('display_errors', 1);
    if (isset($_POST['uploadFile']))
    {
         $userid = $_SESSION['myUserId'];
-        $comment = $_POST['comment'];        
+        $comments = $_POST['comment'];
        
    }
 
@@ -75,21 +75,21 @@ ini_set('display_errors', 1);
         <br/>
 <div style="background-image: url('images/background9.jpeg')">
 <?php
-$userRole = '';
+$User_roles = '';
 if ($_SESSION['myRole']=='admin')
 {
-    $userRole = 'Administrator';
+    $User_roles = 'Administrator';
 }
 else if ($_SESSION['myRole']=='teamleader')
 {
-    $userRole = 'Team Leader';
+    $User_roles = 'Team Leader';
 
 }else if ($_SESSION['myRole']=='member' || $_SESSION['myRole']=='')
 {
-    $userRole = 'Member';
+    $User_roles = 'Member';
 }
 
-echo "<strong style='margin-left: 800px; font-size: 40px; color: purple '>Welcome ".$userRole."</strong>";
+echo "<strong style='margin-left: 800px; font-size: 40px; color: purple '>Welcome ".$User_roles."</strong>";
 echo "<h4 style='margin-left: 800px; font-size: 40px; color: purple '> Review the Paper</h4>";
 ?>
         <div class="container" style="border: solid 5px mediumpurple; background: purple;  padding: 10px">
@@ -129,7 +129,7 @@ echo "<h4 style='margin-left: 800px; font-size: 40px; color: purple '> Review th
                   <label for="Project Short Name"  class="col-xs-12 col-sm-2 col-form-label text-right" style="color: white">Comment</label>
                   
                   <div class="col-xs-12 col-sm-8">
-                      <textarea class="form-control" cols="80" rows="5" name="comment"><?php echo  $comment; ?></textarea>
+                      <textarea class="form-control" cols="80" rows="5" name="comment"><?php echo  $comments; ?></textarea>
                   </div>
               </div>
 

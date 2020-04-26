@@ -58,7 +58,8 @@ ini_set('display_errors', 1);
 
     
 
-?>  
+?>
+<!--team leader can assing a user to a project-->
         <br/>
 
   <div style="background-image: url('images/background7.jpeg')">
@@ -66,18 +67,18 @@ ini_set('display_errors', 1);
         <div class="container" style="border: solid 5px mediumpurple;  background: purple;">
             <div class="col-xs-12 text-right">
                   <?php
-                           $userRole = '';
+                           $User_roles = '';
                            if ($_SESSION['myRole']=='admin')
                            {
-                              $userRole = 'Administrator';
+                              $User_roles = 'Administrator';
                            }
                            else if ($_SESSION['myRole']=='teamleader')
                            {
-                              $userRole = 'Team Leader';
+                              $User_roles = 'Team Leader';
 
                            }else if ($_SESSION['myRole']=='member' || $_SESSION['myRole']=='')
                            {
-                              $userRole = 'Member';
+                              $User_roles = 'Member';
                            }
 
                     ?>

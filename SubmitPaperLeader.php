@@ -8,31 +8,31 @@ require_once("myPhpFunctionalities/Configuration.php");
 require_once("header.php");
 
 
-$status='';
+$messagestatus='';
 $title = '';
-$description = '';
-$projectid = '';
+$descr = '';
+$Id_Project = '';
 
 
 
 
 if (isset($_POST['submitForm']))
 {
-    $projectid = $_POST['project'];
+    $Id_Project = $_POST['project'];
     $title = $_POST['title'];
-    $description = $_POST['description'];
+    $descr = $_POST['description'];
 
 
-    if ($projectid=='' || $title=='' || $description=='' || $_SESSION['fileUpload']=='')
+    if ($Id_Project=='' || $title=='' || $descr=='' || $_SESSION['fileUpload']=='')
     {
-        $status='warning';
+        $messagestatus='warning';
         $msg = "All fields are required to be filled before continuing.";
     }else
     {
-        $dataArray = array("projectid"=>$projectid,"title"=>$title,"description"=>$description,"file"=>$_SESSION['uploadedFile'],"submitedby"=>$_SESSION['myUserId']);
+        $dataArray = array("projectid"=>$Id_Project,"title"=>$title,"description"=>$descr,"file"=>$_SESSION['uploadedFile'],"submitedby"=>$_SESSION['myUserId']);
         $paper = new Paper();
         $result = $paper->submitPaper($dataArray);
-        $status = $result["status"];
+        $messagestatus = $result["status"];
         $msg = $result["msg"];
     }
 }
@@ -40,9 +40,9 @@ if (isset($_POST['submitForm']))
 
 if (isset($_POST['uploadFile']))
 {
-    $projectid = $_POST['project'];
+    $Id_Project = $_POST['project'];
     $title = $_POST['title'];
-    $description = $_POST['description'];
+    $descr = $_POST['description'];
 
 }
 
@@ -52,26 +52,26 @@ if (isset($_POST['uploadFile']))
 ?>
 <br/>
 <br>
-
+<!--Sumbit Paer for leader-->
 <div style="background-image: url('images/background.jpeg')">
 <div class="container">
     <div class="col-xs-12 text-right">
         <?php
-        $userRole = '';
+        $User_roles = '';
         if ($_SESSION['myRole']=='admin')
         {
-            $userRole = 'Administrator';
+            $User_roles = 'Administrator';
         }
         else if ($_SESSION['myRole']=='teamleader')
         {
-            $userRole = 'Team Leader';
+            $User_roles = 'Team Leader';
 
         }else if ($_SESSION['myRole']=='member' || $_SESSION['myRole']=='')
         {
-            $userRole = 'Member';
+            $User_roles = 'Member';
         }
 
-        echo "<strong style='margin-right: 350px; font-size: 40px; color: purple '>Welcome ".$userRole."</strong>";
+        echo "<strong style='margin-right: 350px; font-size: 40px; color: purple '>Welcome ".$User_roles."</strong>";
         echo "<h4 style='margin-right: 400px; font-size: 40px; color: purple '>Sumbit & Assign</h4>";
         ?>
     </div>
@@ -107,7 +107,7 @@ if (isset($_POST['uploadFile']))
                         $name =  $row['name'];
 
                         $selected = '';
-                        if ($projectid==$id)
+                        if ($Id_Project==$id)
                         {
                             $selected = 'selected';
                         }
@@ -139,7 +139,7 @@ if (isset($_POST['uploadFile']))
             <label for="Project Short Name"  class="col-xs-12 col-sm-2 col-form-label text-right" style="color: white">Description</label>
 
             <div class="col-xs-12 col-sm-5">
-                <textarea class="form-control" cols="80" rows="5" name="description"><?php echo $description; ?></textarea>
+                <textarea class="form-control" cols="80" rows="5" name="description"><?php echo $descr; ?></textarea>
             </div>
         </div>
 

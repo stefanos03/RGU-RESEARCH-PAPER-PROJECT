@@ -10,10 +10,10 @@ class User
         $response = '';
         if ($result>0)
         {
-            $response = array("status"=>"success","msg"=>"User [".$lastname." ".$firstname."] ");
+            $response = array("status"=>"success","msg"=>"User [".$lastname." ".$firstname."] has been successfully created.");
             $this->sendMail($email,$password,$lastname,$firstname);
         }else{
-            $response = array("status"=>"error","msg"=>"");
+            $response = array("status"=>"error","msg"=>"An error occurred creating the user.");
         }
 
         return $response;
@@ -21,11 +21,16 @@ class User
 
     private function sendMail($email,$password,$lastname,$firstname)
     {
-        $errmsg = "";
+        $errmsg = "You have been successfully registered. Please try to login or contact the administrator should you have difficulty logging in.";
 
-        $subject = "";
+        $subject = "PreshApp membership registration";
 
-        $mailbody = " 
+        $mailbody = "Thank you for registering on  RGU Research paper Below are your username and password to access your membership account. <br>You are advised to change your password when logged in to one you can easily remember.<br/><br/>
+
+                              <strong>Username: </strong>&nbsp;&nbsp;&nbsp; ".$email."<br/>
+                              <strong>Password: </strong>&nbsp;&nbsp;&nbsp; ".$password."
+
+                              <br/><br/>
                           ";
 
 
@@ -60,14 +65,14 @@ class User
 
             if ($result>0)
             {
-                $response = array("status"=>"success","msg"=>"");
+                $response = array("status"=>"success","msg"=>"Your password has been successfully updated.");
             }else{
-                $response = array("status"=>"error","msg"=>"");
+                $response = array("status"=>"error","msg"=>"An error occurred updating your password. Please contact the administrator.");
             }
 
         }else
         {
-            $response = array("status"=>"error","msg"=>"");
+            $response = array("status"=>"error","msg"=>"The current password supplied is wrong.");
         }
 
         return $response;
@@ -90,3 +95,8 @@ class User
 
 
 ?>
+
+
+
+
+}

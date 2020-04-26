@@ -13,7 +13,7 @@ $Picture_Profile = "users photos/" . $Picture_Profile;
 
 //Admin Navigation menu
 ?>
-<!--Nav starts-->
+<!--Nav starts for admin here-->
 <nav class="navbar navbar-default navbar-fixed-top" style="background-color:purple;color:white;">
       <div class="navbar-header">
           <a href="infoPage.php"> <img src="images/logop.png" alt="logo" width="70" height="70" ></a>

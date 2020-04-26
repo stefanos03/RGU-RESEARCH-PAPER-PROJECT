@@ -56,20 +56,20 @@ ini_set('display_errors', 1);
             <div class="row">
                 <div class="col-xs-12 text-right">
                   <?php
-                           $userRole = '';
+                           $User_roles = '';
                            if ($_SESSION['myRole']=='admin')
                            {
-                              $userRole = 'Administrator';
+                              $User_roles = 'Administrator';
                            }
                            else if ($_SESSION['myRole']=='teamleader')
                            {
-                              $userRole = 'Team Leader';
+                              $User_roles = 'Team Leader';
 
                            }else if ($_SESSION['myRole']=='member' || $_SESSION['myRole']=='')
                            {
-                              $userRole = 'Member';
+                              $User_roles = 'Member';
                            }
-                  echo "<strong style='margin-right: 350px; font-size: 40px; color: purple '>Welcome ".$userRole."</strong>,<br>";
+                  echo "<strong style='margin-right: 350px; font-size: 40px; color: purple '>Welcome ".$User_roles."</strong>,<br>";
                   echo "<strong style='margin-right: 400px;font-size: 40px;color: purple'>".$_SESSION['myLastname'].' '.$_SESSION['myFirstname']."</strong>,<br>";
                     ?>
                 </div>

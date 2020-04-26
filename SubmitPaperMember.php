@@ -8,31 +8,31 @@ ini_set('display_errors', 1);
    require_once("header.php");
 
 
-   $status='';
+   $messagestatus='';
 
 
-   $projectid = '';
-   $description = '';
+   $Id_Project = '';
+   $descrip = '';
    $title = '';
 
 
    if (isset($_POST['submitForm']))
    {
-        $projectid = $_POST['project'];
+        $Id_Project = $_POST['project'];
         $title = $_POST['title'];
-        $description = $_POST['description'];
+        $descrip = $_POST['description'];
 
 
-        if ($projectid=='' || $title=='' || $description=='' || $_SESSION['fileUpload']==0)
+        if ($Id_Project=='' || $title=='' || $descrip=='' || $_SESSION['fileUpload']==0)
         {
-           $status='warning';
+           $messagestatus='warning';
            $msg = "All fields are required to be filled before continuing.";
         }else
         {
-            $dataArray = array("projectid"=>$projectid,"title"=>$title,"description"=>$description,"file"=>$_SESSION['uploadedFile'],"submitedby"=>$_SESSION['myUserId']);
+            $dataArray = array("projectid"=>$Id_Project,"title"=>$title,"description"=>$descrip,"file"=>$_SESSION['uploadedFile'],"submitedby"=>$_SESSION['myUserId']);
             $paper = new Paper();
             $result = $paper->submitPaper($dataArray);
-            $status = $result["status"];
+            $messagestatus = $result["status"];
             $msg = $result["msg"];
         }
    }
@@ -40,9 +40,9 @@ ini_set('display_errors', 1);
 
    if (isset($_POST['uploadFile']))
    {
-        $projectid = $_POST['project'];
+        $Id_Project = $_POST['project'];
         $title = $_POST['title'];
-        $description = $_POST['description'];
+        $descrip = $_POST['description'];
    }
 
 
@@ -53,21 +53,21 @@ ini_set('display_errors', 1);
         <div class="container">
             <div class="col-xs-12 text-right">
                   <?php
-                           $userRole = '';
+                           $User_roles = '';
                            if ($_SESSION['myRole']=='admin')
                            {
-                              $userRole = 'Administrator';
+                              $User_roles = 'Administrator';
                            }
                            else if ($_SESSION['myRole']=='teamleader')
                            {
-                              $userRole = 'Team Leader';
+                              $User_roles = 'Team Leader';
 
                            }else if ($_SESSION['myRole']=='member' || $_SESSION['myRole']=='')
                            {
-                              $userRole = 'Student';
+                              $User_roles = 'Student';
                            }
 
-                  echo "<strong style='margin-right: 350px; font-size: 40px; color: purple '>Welcome ".$userRole."</strong>";
+                  echo "<strong style='margin-right: 350px; font-size: 40px; color: purple '>Welcome ".$User_roles."</strong>";
                   echo "<h4 style='margin-right: 350px; font-size: 40px; color: purple '>Submit Your Paper</h4>";
                     ?>
                 </div>
@@ -110,7 +110,7 @@ ini_set('display_errors', 1);
                                 $name =  $row['name'];
                                 $selected = '';
 
-                                if ($row['id']==$projectid)
+                                if ($row['id']==$Id_Project)
                                 {
                                   $selected = 'selected';
                                 }
@@ -143,7 +143,7 @@ ini_set('display_errors', 1);
                   <label for="Project Short Name"  class="col-xs-12 col-sm-2 col-form-label text-right">Description</label>
 
                   <div class="col-xs-12 col-sm-5">
-                      <textarea class="form-control" cols="80" rows="5" name="description"><?php echo  $description; ?></textarea>
+                      <textarea class="form-control" cols="80" rows="5" name="description"><?php echo  $descrip; ?></textarea>
                   </div>
               </div>
 
@@ -159,7 +159,7 @@ ini_set('display_errors', 1);
 
                               $uploadOk = 1;
                               $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
-// Check if image file is a actual image or fake image
+// if image file is a actual image
                               if(isset($_POST["submit"])) {
                                   $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
                                   if($check !== false) {
@@ -170,12 +170,12 @@ ini_set('display_errors', 1);
                                       $uploadOk = 0;
                                   }
                               }
-// Check if file already exists
+//  if file already exists
                               if (file_exists($target_file)) {
                                   echo "Sorry, file already exists. ";
                                   $uploadOk = 0;
                               }
-// Check file size
+//  file size
                               if ($_FILES["fileToUpload"]["size"] > 50000000) {
                                   echo "Sorry, your file is too large. ";
                                   $uploadOk = 0;
@@ -185,7 +185,7 @@ ini_set('display_errors', 1);
                                   echo "Sorry, only DOC, DOCX, TXT files are allowed. ";
                                   $uploadOk = 0;
                               }
-// Check if $uploadOk is set to 0 by an error
+//  if $uploadOk is set to 0 by an error
                               if ($uploadOk == 0) {
                                   echo "Sorry, your file was not uploaded. ";
                                   $_SESSION['fileUpload']=0;

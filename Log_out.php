@@ -1,5 +1,5 @@
 <?php
-//logout Session
+//logout Session here
 	session_start();
 	session_destroy();
 	setcookie("username",'');

@@ -1,6 +1,6 @@
 <?php
  
- //activate account
+ //activate account when the admin is create a new userr
  if (!isset($_GET['activationcode']))
  {
    header("location:index.php");

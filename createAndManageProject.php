@@ -35,7 +35,7 @@ ini_set('display_errors', 1);
 
 ?>
 
-
+<!--admin can create and manage a project-->
         <br/>
 <div style="background-image: url('images/background.jpeg')">
         <div class="container">
@@ -43,21 +43,21 @@ ini_set('display_errors', 1);
             <div class="row">
                 <div class="col-xs-12 text-right">
                   <?php
-                           $userRole = '';
+                           $User_roles = '';
                            if ($_SESSION['myRole']=='admin')
                            {
-                              $userRole = 'Administrator';
+                              $User_roles = 'Administrator';
                            }
                            else if ($_SESSION['myRole']=='teamleader')
                            {
-                              $userRole = 'Team Leader';
+                              $User_roles = 'Team Leader';
 
                            }else if ($_SESSION['myRole']=='member' || $_SESSION['myRole']=='')
                            {
-                              $userRole = 'Member';
+                              $User_roles = 'Member';
                            }
 
-                  echo "<strong style='margin-right: 350px; font-size: 40px; color: purple '>Welcome ".$userRole."</strong>";
+                  echo "<strong style='margin-right: 350px; font-size: 40px; color: purple '>Welcome ".$User_roles."</strong>";
                            echo "<h4 style='margin-right: 350px; font-size: 40px; color: purple '>Create & Manage Project</h4>";
                     ?>
                 </div>
@@ -127,18 +127,18 @@ require_once("header.php");
 ?>
 
 <?php
-$userRole = '';
+$User_roles = '';
 if ($_SESSION['myRole']=='admin')
 {
-    $userRole = 'Administrator';
+    $User_roles = 'Administrator';
 }
 else if ($_SESSION['myRole']=='teamleader')
 {
-    $userRole = 'Team Leader';
+    $User_roles = 'Team Leader';
 
 }else if ($_SESSION['myRole']=='member' || $_SESSION['myRole']=='')
 {
-    $userRole = 'Member';
+    $User_roles = 'Member';
 }
 
 
@@ -151,18 +151,18 @@ else if ($_SESSION['myRole']=='teamleader')
 <div class="container">
     <div class="col-xs-12 text-right">
         <?php
-        $userRole = '';
+        $User_roles = '';
         if ($_SESSION['myRole']=='admin')
         {
-            $userRole = 'Administrator';
+            $User_roles = 'Administrator';
         }
         else if ($_SESSION['myRole']=='teamleader')
         {
-            $userRole = 'Team Leader';
+            $User_roles = 'Team Leader';
 
         }else if ($_SESSION['myRole']=='member' || $_SESSION['myRole']=='')
         {
-            $userRole = 'Member';
+            $User_roles = 'Member';
         }
 
 

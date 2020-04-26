@@ -33,7 +33,7 @@ ini_set('display_errors', 1);
     
 
 ?>
-
+<!--admin can assign a user to a project-->
 
         <br/>
 <div style="background-image: url('images/background3.jpeg'); background-size: 2000px">
@@ -42,21 +42,21 @@ ini_set('display_errors', 1);
         <div class="container" >
             <div class="col-xs-12 text-right">
                   <?php
-                           $userRole = '';
+                           $User_roles = '';
                            if ($_SESSION['myRole']=='admin')
                            {
-                              $userRole = 'Administrator';
+                              $User_roles = 'Administrator';
                            }
                            else if ($_SESSION['myRole']=='teamleader')
                            {
-                              $userRole = 'Team Leader';
+                              $User_roles = 'Team Leader';
 
                            }else if ($_SESSION['myRole']=='member' || $_SESSION['myRole']=='')
                            {
-                              $userRole = 'Member';
+                              $User_roles = 'Member';
                            }
 
-                           echo "<strong style='margin-right: 350px; font-size: 40px; color: purple '>Welcome ".$userRole."</strong>";
+                           echo "<strong style='margin-right: 350px; font-size: 40px; color: purple '>Welcome ".$User_roles."</strong>";
 
 
                     ?>

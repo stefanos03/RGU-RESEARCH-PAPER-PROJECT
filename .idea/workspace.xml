@@ -19,10 +19,14 @@
   <component name="ProjectId" id="1b2Xz86Q6SWEvu5w9ezGaZKe4FK" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/myPhpFunctionalities" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\TestProject2\RGU-RESEARCJ-PAPER-FINAL\myPhpFunctionalities" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\TestProject2\RGU-RESEARCJ-PAPER-FINAL\CMM007-COURSWORK-PROJECT\font-awesome-4.7.0" />
     </key>
@@ -49,7 +53,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1587831421914</updated>
-      <workItem from="1587831423177" duration="10386000" />
+      <workItem from="1587831423177" duration="10681000" />
+      <workItem from="1587911427001" duration="2624000" />
     </task>
     <servers />
   </component>
@@ -61,7 +66,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

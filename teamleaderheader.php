@@ -12,6 +12,7 @@ $ProfilPic = "users photos/" . $ProfilPic;
 
 
 ?>
+<!--navbar starts here for team leader-->
 <nav class="navbar navbar-default navbar-fixed-top" style="background-color:purple;color:white;">
     <div class="navbar-header">
         <a href="infoPage.php"> <img src="images/logop.png" alt="logo" width="70" height="70" ></a>
@@ -35,7 +36,7 @@ $ProfilPic = "users photos/" . $ProfilPic;
               <li><a  style='color:white; 'href="my_papers_reviewed.php"><span class="fa fa-search-plus" ></span><strong> Papers Reviewed</strong></a></li>
 
 
-              <!--profile-->
+              <!--profile name and picture-->
               <li style="float: right; margin-top: 10px"> <?php  echo "<strong>Welcome ".$_SESSION['myLastname'].' '.$_SESSION['myFirstname']."</strong><br>";
                   ?>  </li>
               <li class="dropdown" style="margin-left: 350px; margin-top: -10px">

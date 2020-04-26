@@ -12,7 +12,7 @@ require_once("myPhpFunctionalities/Configuration.php");
 require_once("header.php");
 
 
-$status='';
+$messagestatus='';
 
 $paperid = $_GET['pid'];
 $pageLink = "assign_reviewer1.php?pid=".$paperid;
@@ -43,14 +43,14 @@ if (isset($_POST['submitForm']))
 
     if ($paperid=='' || $userid=='' || $duration=='' )
     {
-        $status='warning';
+        $messagestatus='warning';
         $msg = "All fields are required to be filled before continuing.";
     }else
     {
         $dataArray = array("paperid"=>$paperid,"userid"=>$userid,"duration"=>$duration);
         $paper = new Paper();
         $result = $paper->AssignReviewer($dataArray);
-        $status = $result["status"];
+        $messagestatus = $result["status"];
         $msg = $result["msg"];
     }
 }
@@ -61,21 +61,21 @@ if (isset($_POST['submitForm']))
 <br/>
 <div style="background-image: url('images/background6.jpeg')">
     <?php
-    $userRole = '';
+    $User_roles = '';
     if ($_SESSION['myRole']=='admin')
     {
-        $userRole = 'Administrator';
+        $User_roles = 'Administrator';
     }
     else if ($_SESSION['myRole']=='teamleader')
     {
-        $userRole = 'Team Leader';
+        $User_roles = 'Team Leader';
 
     }else if ($_SESSION['myRole']=='member' || $_SESSION['myRole']=='')
     {
-        $userRole = 'Member';
+        $User_roles = 'Member';
     }
 
-    echo "<strong style='margin-left: 800px; font-size: 40px; color: purple '>Welcome ".$userRole."</strong>";
+    echo "<strong style='margin-left: 800px; font-size: 40px; color: purple '>Welcome ".$User_roles."</strong>";
     echo "<h4 style='margin-left: 600px; font-size: 40px; color: purple '>Information About the Papers & Projects</h4>";
     ?>
 <div class="container" style="border: solid 5px mediumpurple; background: purple; padding: 10px; color: white">

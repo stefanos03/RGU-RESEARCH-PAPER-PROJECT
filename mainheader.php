@@ -1,4 +1,4 @@
-
+<!--Main Login nav bar when you want to login-->
 <!--Logo and title starts-->
 <nav class="navbar navbar-default navbar-fixed-top" style="background-color:purple;color:white;">
     <img src="images/logop.png" alt="logo" width="70" height="70">

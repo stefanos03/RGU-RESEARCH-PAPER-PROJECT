@@ -12,6 +12,7 @@ $ProfilPic = "users photos/" . $ProfilPic;
 
 
 ?>
+<!--Student header starts from here-->
 <nav class="navbar navbar-default navbar-fixed-top" style="background-color:purple;color:white;">
       <div class="navbar-header">
           <a href="infoPage.php"> <img src="images/logop.png" alt="logo" width="70" height="70" ></a>
@@ -22,7 +23,7 @@ $ProfilPic = "users photos/" . $ProfilPic;
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <!-- <a class="btn btn-primary navbar-btn pull-right" href="#" role="button">Sign up</a> -->
+
       </div>
 
       
@@ -41,7 +42,7 @@ $ProfilPic = "users photos/" . $ProfilPic;
 
 
 
-
+<!--Check name and profil picture-->
               <li style="float: right; margin-top: 10px"> <?php  echo "<strong>Welcome ".$_SESSION['myLastname'].' '.$_SESSION['myFirstname']."</strong><br>";
                   ?>  </li>
             <li class="dropdown" style="margin-left: 350px; margin-top: -10px">

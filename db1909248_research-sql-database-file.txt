@@ -1,0 +1,289 @@
+-- phpMyAdmin SQL Dump
+-- version 4.9.0.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Mar 17, 2020 at 07:07 PM
+-- Server version: 8.0.16
+-- PHP Version: 7.2.7
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `db1909248_research`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `activate_account`
+--
+
+CREATE TABLE `activate_account` (
+  `id` int(6) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `code` varchar(200) NOT NULL,
+  `date_created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `members`
+--
+
+CREATE TABLE `members` (
+  `id` int(9) NOT NULL,
+  `username` varchar(50) NOT NULL,
+  `password` varchar(50) NOT NULL,
+  `title` varchar(20) NOT NULL,
+  `lastname` varchar(50) NOT NULL,
+  `firstname` varchar(50) NOT NULL,
+  `location` varchar(20) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `address` varchar(200) NOT NULL,
+  `country` varchar(50) NOT NULL,
+  `photo` varchar(100) NOT NULL,
+  `aboutme` varchar(2000) NOT NULL,
+  `role` varchar(20) NOT NULL,
+  `activated` varchar(1) NOT NULL DEFAULT 'y',
+  `datecreated` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `members`
+--
+
+INSERT INTO `members` (`id`, `username`, `password`, `title`, `lastname`, `firstname`, `location`, `email`, `address`, `country`, `photo`, `aboutme`, `role`, `activated`) VALUES
+(1, 'admin@mail.com', 'password', 'I am the admin', 'CHATZILEFTHERIS', 'STEFANOS', 'Aberdeen', 'admin@mail.com', '', 'UK', '20200314_14_04_12492.jpg', '', 'admin', 'y'),
+(68, 'kuso.onwuka@gmail.com', 'testing', '', 'Onwuka', 'Winifred', '', 'kuso.onwuka@gmail.com', '', '', '', '', 'teamleader', 'y'),
+(69, 'peterokoro@gmail.com', 'testing', '', 'Kings', 'Peter', '', 'peterokoro@gmail.com', '', '', '20190416_15_24_33915.jpg', '', '', 'y'),
+(70, 'winifred.onwuka@gmail.com', 'testing', '', 'Onwuka', 'kuso', '', 'kuso.onwuka@gmail.com', '', '', '20190420_07_34_01544.jpg', '', 'teamleader', 'y');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `paper_assigned`
+--
+
+CREATE TABLE `paper_assigned` (
+  `id` int(9) NOT NULL,
+  `paperid` int(9) NOT NULL,
+  `userid` int(9) NOT NULL,
+  `duration` int(9) NOT NULL,
+  `status` varchar(1) NOT NULL,
+  `dateassigned` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `paper_assigned`
+--
+
+INSERT INTO `paper_assigned` (`id`, `paperid`, `userid`, `duration`, `status`) VALUES
+(1, 1, 69, 10, 'c'),
+(2, 4, 69, 15, ''),
+(3, 4, 68, 15, ''),
+(4, 8, 69, 10, 'c');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `projects`
+--
+
+CREATE TABLE `projects` (
+  `id` int(9) NOT NULL,
+  `name` varchar(150) NOT NULL,
+  `code` varchar(20) NOT NULL,
+  `datecreated` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `projects`
+--
+
+INSERT INTO `projects` (`id`, `name`, `code`) VALUES
+(1, 'Computer Projects', 'CP'),
+(2, 'AI and Machine Learning Project', 'AI & ML'),
+(3, 'Data Science and Visualization', 'DSV');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `projects_users`
+--
+
+CREATE TABLE `projects_users` (
+  `id` int(9) NOT NULL,
+  `projectid` int(9) NOT NULL,
+  `userid` int(9) NOT NULL,
+  `datecreated` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `projects_users`
+--
+
+INSERT INTO `projects_users` (`id`, `projectid`, `userid`) VALUES
+(1, 1, 68),
+(2, 1, 70);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `reviews`
+--
+
+CREATE TABLE `reviews` (
+  `id` int(9) NOT NULL,
+  `paperid` int(9) NOT NULL,
+  `submitedby` int(9) NOT NULL,
+  `comment` varchar(3000) NOT NULL,
+  `file` varchar(100) NOT NULL,
+  `datecreated` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `reviews`
+--
+
+INSERT INTO `reviews` (`id`, `paperid`, `submitedby`, `comment`, `file`) VALUES
+(1, 1, 69, 'It was a great work...I commend the author.', 'Project Work 1 - Research Paper Sharing App.docx'),
+(2, 8, 69, 'A well written article on the programmatic and analytic prowess of python in bioinformatics. This is explores intermediate and advance subject areas in bioinformatics.\r\n\r\nI will like to see more of the algorithms analysed to give people more clarity on the implementations.', 'My Review Comments.docx');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `submit_papers`
+--
+
+CREATE TABLE `submit_papers` (
+  `id` int(9) NOT NULL,
+  `projectid` int(9) NOT NULL,
+  `title` varchar(150) NOT NULL,
+  `description` varchar(2000) NOT NULL,
+  `file` varchar(100) NOT NULL,
+  `submitedby` int(9) NOT NULL,
+  `status` varchar(1) NOT NULL DEFAULT 's',
+  `datesubmitted` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `submit_papers`
+--
+
+INSERT INTO `submit_papers` (`id`, `projectid`, `title`, `description`, `file`, `submitedby`, `status`) VALUES
+(1, 1, 'Web 2.0: Tools and Applications in Academic Excellence', 'Web 2.0: Tools and Applications in Academic Excellence', 'The Web.doc', 68, 'r'),
+(2, 1, 'About the Project', 'About the project...', 'Educational proposal.docx', 68, 's'),
+(3, 1, 'About the Project', 'About the project...', 'Educational proposal.docx', 68, 's'),
+(4, 1, 'About the Project', 'About the project...', 'Educational proposal.docx', 68, 'r'),
+(5, 1, 'Configuration of Real time System which includes simple physical analog', 'Configuration of real time system which includes simple physical analog', 'configuration of realtime system which includes simple physical analog.doc', 69, 's'),
+(6, 1, 'Current Trend in Learning Technologies', 'Learning Technologies in the contemporary world. ', 'Current Trend in Learning Technologies2.docx', 69, 's'),
+(7, 3, 'Data Science and Visualization Applications', 'This article explores Data Science and Visualization and its application areas.', 'Data Science and Visualization Applications.docx', 70, 's'),
+(8, 3, 'Bioinformatics analysis with Python', 'This is data analysis of molecular biology using python programming.', 'Bioinformatics with Python Programming.doc', 69, 'r');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `activate_account`
+--
+ALTER TABLE `activate_account`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `members`
+--
+ALTER TABLE `members`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `paper_assigned`
+--
+ALTER TABLE `paper_assigned`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `projects`
+--
+ALTER TABLE `projects`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `projects_users`
+--
+ALTER TABLE `projects_users`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `reviews`
+--
+ALTER TABLE `reviews`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `submit_papers`
+--
+ALTER TABLE `submit_papers`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `activate_account`
+--
+ALTER TABLE `activate_account`
+  MODIFY `id` int(6) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `members`
+--
+ALTER TABLE `members`
+  MODIFY `id` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=71;
+
+--
+-- AUTO_INCREMENT for table `paper_assigned`
+--
+ALTER TABLE `paper_assigned`
+  MODIFY `id` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `projects`
+--
+ALTER TABLE `projects`
+  MODIFY `id` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `projects_users`
+--
+ALTER TABLE `projects_users`
+  MODIFY `id` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `reviews`
+--
+ALTER TABLE `reviews`
+  MODIFY `id` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `submit_papers`
+--
+ALTER TABLE `submit_papers`
+  MODIFY `id` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

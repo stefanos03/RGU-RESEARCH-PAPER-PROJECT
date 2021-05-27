@@ -1,10 +1,15 @@
-<!--Main Login nav bar when you want to login-->
+
 <!--Logo and title starts-->
 <nav class="navbar navbar-default navbar-fixed-top" style="background-color:purple;color:white;">
     <img src="images/logop.png" alt="logo" width="70" height="70">
         <strong>RGU Research Paper Project</strong>
 
 <!--Logo and title ends-->
+
+
+
+
+
       <div id="nav-menu" class="collapse navbar-collapse navbar-right"  style="margin-top: 15px; margin-right: 110px">
           <!-- Login form //-->
           <form class="form-inline my-2 my-lg-0" id="signin" method="post" action="index.php">
@@ -19,5 +24,4 @@
           <!-- end of Login form //-->
       </div>
     </nav>
-
 

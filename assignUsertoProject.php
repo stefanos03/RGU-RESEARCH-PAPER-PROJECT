@@ -2,9 +2,9 @@
 
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
-   require_once("includes/login_module.php");
+   require_once("LoginRequirement/Login_Request.php");
    $pageTitle = "Assign User to Project";  
-   require_once("classes/Config.php");
+   require_once("myPhpFunctionalities/Configuration.php");
    require_once("header.php");    
       
    $status='';
@@ -33,7 +33,7 @@ ini_set('display_errors', 1);
     
 
 ?>
-
+<!--admin can assign a user to a project-->
 
         <br/>
 <div style="background-image: url('images/background3.jpeg'); background-size: 2000px">
@@ -42,21 +42,21 @@ ini_set('display_errors', 1);
         <div class="container" >
             <div class="col-xs-12 text-right">
                   <?php
-                           $userRole = '';
+                           $User_roles = '';
                            if ($_SESSION['myRole']=='admin')
                            {
-                              $userRole = 'Administrator';
+                              $User_roles = 'Administrator';
                            }
                            else if ($_SESSION['myRole']=='teamleader')
                            {
-                              $userRole = 'Team Leader';
+                              $User_roles = 'Team Leader';
 
                            }else if ($_SESSION['myRole']=='member' || $_SESSION['myRole']=='')
                            {
-                              $userRole = 'Member';
+                              $User_roles = 'Member';
                            }
 
-                           echo "<strong style='margin-right: 350px; font-size: 40px; color: purple '>Welcome ".$userRole."</strong>";
+                           echo "<strong style='margin-right: 350px; font-size: 40px; color: purple '>Welcome ".$User_roles."</strong>";
 
 
                     ?>
@@ -66,7 +66,7 @@ ini_set('display_errors', 1);
             <br>
 
 
-             <form name="assign_user_toproject" action="assignUsertoProject.php" method="post" style="border: 4px solid purple;padding: 80px; margin-right: 30px; background: purple">
+             <form name="assign_user_toproject" action="assignUsertoProject.php" method="post" style="border: 5px solid mediumpurple;padding: 50px; margin-right: 30px; background: purple">
                  <h3 class="text-center price-headline w3-display-topmiddle" style="color:white;">Assign User to Project</h3>
                  <br> <br>
               <div class="form-group row">
@@ -143,9 +143,12 @@ ini_set('display_errors', 1);
               ?>
 
               <br/><br/>
-              <div class="row" style="border: solid 3px purple;  margin-right: 30px; margin-left: 2px">
+        </div>
+<!--Assigned user to project-->
+            <div class="container" style="border: solid 5px mediumpurple;padding: 10px; background: purple; color: white">
+              <div class="row" style="  margin-right: 30px; margin-left: 2px">
                   <div class="col-xs-12">
-                    <h4 class="text-center " style="color:purple;"> <strong>Assigned  User to Project </strong>(<?php echo $NumberProjectUsers; ?>)</h4>
+                    <h4 class="text-center " style="color:white;"> <strong>Assigned  User to Project </strong>(<?php echo $NumberProjectUsers; ?>)</h4>
                 </div>
 
               </div>
@@ -163,25 +166,25 @@ ini_set('display_errors', 1);
               ?>
 
 
-              <div class="row" style="text-decoration:underline; margin-left: 150px; color: purple"  >
-                  <div class="col-xs-4" style="text-decoration: underline; color: purple">
-                        <?php echo "<i class='fa fa-folder-open'></i> <a href='createAndManageProject.php'>" .$type['name']."</a>"; ?>
+              <div class="row" style="text-decoration:underline; margin-left: 150px; color: white"  >
+                  <div class="col-xs-4" style="text-decoration: underline; color: white">
+                        <?php echo "<i class='fa fa-folder-open'></i> <a style='color: white' href='createAndManageProject.php'>" .$type['name']."</a>"; ?>
                   </div>
 
-                  <div class="col-xs-3" style="text-decoration: underline; color: purple">
+                  <div class="col-xs-3" style="text-decoration: underline; color: white">
                         <?php  
-                          echo "<i class='fa fa-user'></i> <a href='createAndManageProject.php'>" .$type['lastname'].' '.$type['firstname']."</a>";
+                          echo "<i class='fa fa-user'></i> <a style='color: white' href='createAndManageProject.php'>" .$type['lastname'].' '.$type['firstname']."</a>";
                         ?>
                   </div>
-                  <div class="col-x3-5" style="text-decoration: underline;color: purple">
+                  <div class="col-x3-5" style="text-decoration: underline;color: white">
                       <?php
-                          echo "<i class='fa fa-users'></i> <a href='createAndManageProject.php'>" .$role."</a>";
+                          echo "<i class='fa fa-users'></i> <a style='color: white' href='createAndManageProject.php'>" .$role."</a>";
                       ?>
                   </div>
 
 
               </div>
-                      <hr style=" border-top: 1px dotted purple;">
+                      <hr style=" border-top: 1px dotted mediumpurple;">
 
 
 

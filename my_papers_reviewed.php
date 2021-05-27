@@ -2,13 +2,13 @@
 
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
-   require_once("includes/login_module.php");
+   require_once("LoginRequirement/Login_Request.php");
    $pageTitle = "Assign User to Project";  
-   require_once("classes/Config.php");
+   require_once("myPhpFunctionalities/Configuration.php");
    require_once("header.php");    
    
    
-   $status='';
+   $messagestatus='';
 
 
    
@@ -23,20 +23,20 @@ ini_set('display_errors', 1);
         <br/>
   <div style="background-image: url('images/background2.jpeg')">
       <?php
-      $userRole = '';
+      $User_roles = '';
       if ($_SESSION['myRole']=='admin')
       {
-          $userRole = 'Administrator';
+          $User_roles = 'Administrator';
       }
       else if ($_SESSION['myRole']=='teamleader')
       {
-          $userRole = 'Team Leader';
+          $User_roles = 'Team Leader';
 
       }else if ($_SESSION['myRole']=='member' || $_SESSION['myRole']=='')
       {
-          $userRole = 'Member';
+          $User_roles = 'Member';
       }
-      echo "<strong style='margin-left: 800px; font-size: 40px; color: purple '>Welcome ".$userRole."</strong>";
+      echo "<strong style='margin-left: 800px; font-size: 40px; color: purple '>Welcome ".$User_roles."</strong>";
       echo "<h4 style='margin-left: 800px; font-size: 40px; color: purple '>My Papers Reviewed</h4>";
       ?>
         <div class="container" style="border: solid 5px mediumpurple; background: purple">
@@ -55,7 +55,7 @@ ini_set('display_errors', 1);
 
            
                            
-              
+<!--              the time that was submitted-->
              
               <?php
                   
@@ -67,7 +67,7 @@ ini_set('display_errors', 1);
                     $assign = '';
                     if ($row['status']=='c' || $row['status']=='r')
                     {
-                       $assign="<a href='assign_reviewer.php?pid=".$row['paperid']."'><strong>Assign reviewer</strong></a>";
+                       $assign="<a href='assign_reviewer1.php?pid=".$row['paperid']."'><strong>Assign reviewer</strong></a>";
                     }
                     
               ?>
@@ -133,12 +133,17 @@ ini_set('display_errors', 1);
               ?>
                           
     </div><!-- end of container //-->
-
+<!--fixing the background picture-->
 <br>
 <br>
 <br>
       <br>
       <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
 
   </div><!--Background ends-->
 

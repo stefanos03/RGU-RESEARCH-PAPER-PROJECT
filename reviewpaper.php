@@ -7,14 +7,14 @@ if (!isset($_GET['pid']) || $_GET['pid']=='' )
 
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
-   require_once("includes/login_module.php");
+   require_once("LoginRequirement/Login_Request.php");
    $pageTitle = "Review Paper";  
-   require_once("classes/Config.php");
+   require_once("myPhpFunctionalities/Configuration.php");
    require_once("header.php");    
    
    
 
-   $status='';
+   $messagestatus='';
 
    $paperid = $_GET['pid'];
    $pageLink = "reviewpaper.php?pid=".$paperid;
@@ -33,30 +33,30 @@ ini_set('display_errors', 1);
    }
 
 
-   $projectid = '';
-   $comment = '';
+   $Id_Project = '';
+   $comments = '';
    $title = '';
 
 
    if (isset($_POST['submitForm']))
    {
         
-        $comment = $_POST['comment'];
+        $comments = $_POST['comment'];
 
         
-        if ($comment=='')
+        if ($comments=='')
         {
-           $status='warning';
+           $messagestatus='warning';
            $msg = "Comment is required to submit a review.";
         }else
         {
-            $dataArray = array("paperid"=>$paperid,"comment"=>$comment,"file"=>$_SESSION['uploadedFile'],"submitedby"=>$_SESSION['myUserId']);
+            $dataArray = array("paperid"=>$paperid,"comment"=>$comments,"file"=>$_SESSION['uploadedFile'],"submitedby"=>$_SESSION['myUserId']);
             $paper = new Paper();            
             $result = $paper->submitReview($dataArray);
-            $status = $result["status"];
+            $messagestatus = $result["status"];
             $msg = $result["msg"];
 
-            $comment = '';
+            $comments = '';
             unset($_SESSION['uploadedFile']);
         }
    }
@@ -65,7 +65,7 @@ ini_set('display_errors', 1);
    if (isset($_POST['uploadFile']))
    {
         $userid = $_SESSION['myUserId'];
-        $comment = $_POST['comment'];        
+        $comments = $_POST['comment'];
        
    }
 
@@ -75,21 +75,21 @@ ini_set('display_errors', 1);
         <br/>
 <div style="background-image: url('images/background9.jpeg')">
 <?php
-$userRole = '';
+$User_roles = '';
 if ($_SESSION['myRole']=='admin')
 {
-    $userRole = 'Administrator';
+    $User_roles = 'Administrator';
 }
 else if ($_SESSION['myRole']=='teamleader')
 {
-    $userRole = 'Team Leader';
+    $User_roles = 'Team Leader';
 
 }else if ($_SESSION['myRole']=='member' || $_SESSION['myRole']=='')
 {
-    $userRole = 'Member';
+    $User_roles = 'Member';
 }
 
-echo "<strong style='margin-left: 800px; font-size: 40px; color: purple '>Welcome ".$userRole."</strong>";
+echo "<strong style='margin-left: 800px; font-size: 40px; color: purple '>Welcome ".$User_roles."</strong>";
 echo "<h4 style='margin-left: 800px; font-size: 40px; color: purple '> Review the Paper</h4>";
 ?>
         <div class="container" style="border: solid 5px mediumpurple; background: purple;  padding: 10px">
@@ -106,10 +106,7 @@ echo "<h4 style='margin-left: 800px; font-size: 40px; color: purple '> Review th
             </div>
                   
 
-            <?php
-                  require_once("functions/Alert.php");
 
-            ?>
            
 
              <form name="uploadpaper" action="<?php echo $pageLink; ?>" method="post" enctype="multipart/form-data" >
@@ -132,19 +129,65 @@ echo "<h4 style='margin-left: 800px; font-size: 40px; color: purple '> Review th
                   <label for="Project Short Name"  class="col-xs-12 col-sm-2 col-form-label text-right" style="color: white">Comment</label>
                   
                   <div class="col-xs-12 col-sm-8">
-                      <textarea class="form-control" cols="80" rows="5" name="comment"><?php echo  $comment; ?></textarea>
+                      <textarea class="form-control" cols="80" rows="5" name="comment"><?php echo  $comments; ?></textarea>
                   </div>
               </div>
 
               <div class="row">
                   <div class="col-xs-3"></div>
-                  <div class="col-xs-9" style="color: purple">
+                  <div class="col-xs-9" style="color: white">
                       <?php
                           if (isset($_POST['uploadFile']))
                           {
                             echo "<strong>";
-                            require_once("uploadfile.php");
-                            echo "</strong><br/><br/>";
+                              $target_dir = "uploads/";
+                              $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+
+                              $uploadOk = 1;
+                              $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+// Check if image file is a actual image or fake image
+                              if(isset($_POST["submit"])) {
+                                  $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+                                  if($check !== false) {
+                                      echo "File is an editable document - " . $check["mime"] . ". ";
+                                      $uploadOk = 1;
+                                  } else {
+                                      echo "File is not an editable document. ";
+                                      $uploadOk = 0;
+                                  }
+                              }
+// Check if file already exists
+                              if (file_exists($target_file)) {
+                                  echo "Sorry, file already exists. ";
+                                  $uploadOk = 0;
+                              }
+// Check file size
+                              if ($_FILES["fileToUpload"]["size"] > 50000000) {
+                                  echo "Sorry, your file is too large. ";
+                                  $uploadOk = 0;
+                              }
+// Allow certain file formats
+                              if($imageFileType != "doc" && $imageFileType != "docx" && $imageFileType != "txt") {
+                                  echo "Sorry, only DOC, DOCX, TXT files are allowed. ";
+                                  $uploadOk = 0;
+                              }
+// Check if $uploadOk is set to 0 by an error
+                              if ($uploadOk == 0) {
+                                  echo "Sorry, your file was not uploaded. ";
+                                  $_SESSION['fileUpload']=0;
+// if everything is ok, try to upload file
+                              } else {
+                                  if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+                                      echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded. ";
+                                      $_SESSION['fileUpload']=1;
+                                      $_SESSION['uploadedFile'] = basename( $_FILES["fileToUpload"]["name"]);
+                                  } else {
+                                      echo "Sorry, there was an error uploading your file. ";
+                                      $_SESSION['fileUpload']=0;
+                                  }
+                              }
+
+                              echo "</strong><br/><br/>";
 
                           }                  
                       ?>

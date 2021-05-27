@@ -2,20 +2,20 @@
 
 if (!isset($_GET['pid']) || $_GET['pid']=='')
 {
-    header("location: submissions.php");
+    header("location: SubmitPaperLeader.php");
 }
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
-require_once("includes/login_module.php");
+require_once("LoginRequirement/Login_Request.php");
 $pageTitle = "Assign User to Project";
-require_once("classes/Config.php");
+require_once("myPhpFunctionalities/Configuration.php");
 require_once("header.php");
 
 
-$status='';
+$messagestatus='';
 
 $paperid = $_GET['pid'];
-$pageLink = "assign_reviewer.php?pid=".$paperid;
+$pageLink = "assign_reviewer1.php?pid=".$paperid;
 $paper = new Paper();
 $paperInfo  = $paper->getPaperById($paperid);
 
@@ -43,14 +43,14 @@ if (isset($_POST['submitForm']))
 
     if ($paperid=='' || $userid=='' || $duration=='' )
     {
-        $status='warning';
+        $messagestatus='warning';
         $msg = "All fields are required to be filled before continuing.";
     }else
     {
         $dataArray = array("paperid"=>$paperid,"userid"=>$userid,"duration"=>$duration);
         $paper = new Paper();
         $result = $paper->AssignReviewer($dataArray);
-        $status = $result["status"];
+        $messagestatus = $result["status"];
         $msg = $result["msg"];
     }
 }
@@ -61,22 +61,22 @@ if (isset($_POST['submitForm']))
 <br/>
 <div style="background-image: url('images/background6.jpeg')">
     <?php
-    $userRole = '';
+    $User_roles = '';
     if ($_SESSION['myRole']=='admin')
     {
-        $userRole = 'Administrator';
+        $User_roles = 'Administrator';
     }
     else if ($_SESSION['myRole']=='teamleader')
     {
-        $userRole = 'Team Leader';
+        $User_roles = 'Team Leader';
 
     }else if ($_SESSION['myRole']=='member' || $_SESSION['myRole']=='')
     {
-        $userRole = 'Member';
+        $User_roles = 'Member';
     }
 
-    echo "<strong style='margin-left: 800px; font-size: 40px; color: purple '>Welcome ".$userRole."</strong>";
-    echo "<h4 style='margin-left: 800px; font-size: 40px; color: purple '>Awaiting to Review</h4>";
+    echo "<strong style='margin-left: 800px; font-size: 40px; color: purple '>Welcome ".$User_roles."</strong>";
+    echo "<h4 style='margin-left: 600px; font-size: 40px; color: purple '>Information About the Papers & Projects</h4>";
     ?>
 <div class="container" style="border: solid 5px mediumpurple; background: purple; padding: 10px; color: white">
     <div class="col-xs-12 text-right">
@@ -91,26 +91,13 @@ if (isset($_POST['submitForm']))
 
     </div>
 
-    <!-- row 1 //-->
     <hr>
-
-    <?php
-    require_once("functions/Alert.php");
-
-    ?>
-
-
-
-
-
-
-
 
 
 
     <div class="row">
         <div class="col-xs-12">
-            <h4 class="text-left price-headline" style="color:purple;font-weight:bold;">Paper Details</h4>
+            <h4 class="text-center price-headline" style="color:white;font-weight:bold;">Paper Details</h4>
         </div>
 
     </div>
@@ -149,7 +136,7 @@ if (isset($_POST['submitForm']))
             <?php
             $code1= "oDdpnVaWwgdsjhMFiyIeLjJjSUCThpJUxfUVwTGnNSGeMLToTq";
             $code2 = "FoltjKlLKnBdPvQfPQi!oLU!lStPXzTyZomFgktMQluhRbCDHe";
-            echo "<br/><i class='fa fa-user-o'></i> <a style='color: white' target='_blank' href='member.php?mp=".$code1.'-'.$paperUserId.'-'.$code2."'>".$paperSubmitedby."</a><br/><br/>";
+            echo "<br/><i class='fa fa-user-o'></i> <a style='color: white' href='#".$code1.'-'.$paperUserId.'-'.$code2."'>".$paperSubmitedby."</a><br/><br/>";
             ?>
         </div>
 
@@ -165,7 +152,7 @@ if (isset($_POST['submitForm']))
 
     <hr>
 
-    <div class="row">
+    <div class="row" style="color: white">
         <div class="col-xs-12">
             <h4 class="text-left price-headline" style="color:white;font-weight:bold;">Assigned Reviewers</h4>
         </div>
@@ -178,25 +165,60 @@ if (isset($_POST['submitForm']))
                 $removeAssign = '';
                 if ($_SESSION['myRole']=='teamleader')
                 {
-                    $removeAssign = "<a href='#'>Remove</a>";
+                    $removeAssign = "<a href='#' style='color: white'>Remove</a>";
                 }
                 $dateassigned = new DateTime($row['dateassigned']);
                 $dateassigned = $dateassigned->format('l jS F, Y');
-                echo "<li><a style='color: white' target='_blank' href='member.php?mp=".$code1.'-'.$row['userid'].'-'.$code2."'>".$row['lastname'].' '.$row['firstname']."</a>  - <small>assigned on ".$dateassigned." &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;".$removeAssign."</small></li>";
+                echo "<li><a style='color: white'  href='#".$code1.'-'.$row['userid'].'-'.$code2."'>".$row['lastname'].' '.$row['firstname']."</a>  - <small>assigned on ".$dateassigned." &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;".$removeAssign."</small></li>";
 
 
             }
 
             ?>
-        </ol>
+
     </div>
-    <br/>
-    <hr>
+
+    <hr style=" border-top: 1px dotted white;">
 
 
 
 
 </div><!-- end of container //-->
+
+    <hr style=" border-top: 1px solid purple;">
+<!--Manage Project starts -->
+    <div class="container" style="border: solid 3px purple; padding: 30px; background: purple; color: white">
+        <h3 class="text-left price-headline container-fixed-top" style="color:white; margin-left: 500px;">All The  Project</h3>
+        <?php
+        $project = new Project();
+        $allProjects = $project->getAllProject();
+        foreach($allProjects as $row)
+        {
+            $id = $row['id'];
+            $name = $row['name'];
+            $code = $row['code'];
+            $datecreated = new DateTime($row['datecreated']);
+            $datecreated = $datecreated->format('l jS F, Y');
+            $deleteUrl = "<a href='deleteProject.php?id=".$id."'style='color: white'></a>";
+
+
+            ?>
+            <div class="row">
+                <div class="col-xs-12">
+                    <?php
+                    echo "<strong style='color: white'><i class='fa fa-folder-open' style='color: white'></i> ".$name."</strong>";
+
+                    ?>
+                </div>
+            </div>
+            <hr style=" border-top: 1px dotted white;">
+
+            <?php
+
+        }
+        ?>
+
+    </div>
     <br>
     <br>
     <br>

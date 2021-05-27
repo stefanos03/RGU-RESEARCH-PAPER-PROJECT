@@ -1,6 +1,5 @@
 <?php
-$pageTitle = "AboutUs";
-include("classes/Config.php");
+include("myPhpFunctionalities/Configuration.php");
 include("header.php");
 ?>
 <header>
@@ -16,7 +15,7 @@ include("header.php");
     </div>
     </nav>
 </header>
-
+<!--Main container starts here-->
     <section id="header">
       <div class="container">
 
@@ -36,9 +35,10 @@ include("header.php");
 
                 <br/><br/>
                </div>
+<!--Second container with text-->
 <div class="container" style=" width:1200px;border: 5px solid purple;padding: 10px;margin-left:-200px;background-color: lightgrey;">
                 <h2><a name="who" style="color: purple">Who we are</a></h2>
-               <div><img src="images/rgu.jfif" width="150" alt="logo"></div>
+               <div><img src="images/RGU.jpg" width="150" alt="logo"></div>
                 <br>
     <br>
                 RGU delivers a high quality vocational education and relevant curriculum which provides learners with the skills they require to thrive throughout their careers. As a result, the university has a reputation for producing graduates that are highly sought after by employers. Over the last decade RGU has consistently had one of the best records of any UK university for graduate level employment. Its reputation for teaching excellence is demonstrated further through its Gold award in the UK Teaching Excellence Framework. It celebrates a high quality student experience and is currently ranked in the top three universities in Scotland for student satisfaction.
@@ -49,10 +49,10 @@ include("header.php");
 </div>
                 <br>
                 <br>
-<!--end Section-->
+<!--Our Strategy Section Starts here-->
                 <div  class="container" style=" width:1200px;border: 5px solid purple;padding: 10px;margin-left:-200px; background-color: lightgrey;">
                 <h2><a name="Strategy" style="color: purple">Our Strategy</a></h2>
-                <div><img src="images/uni.jfif" width="300" alt="uni"></div>
+                <div><img src="images/building.jpg" width="300" alt="uni"></div>
                 <br>
                 RGU has a strategic mission to transform individuals and communities by providing demand-led teaching and research to contribute to economic, social and cultural development. To achieve this the university has established a strategy map which reflects its significant strengths in higher education.
                 <br>
@@ -61,21 +61,21 @@ include("header.php");
                 <br>
                 <br>
                 </div>
-<!--end Section zero-->
-                <br>
-                <br>
 
+                <br>
+                <br>
+<!--Web Application Section Starts here-->
                 <div class="container" style=" width:1200px;border: 5px solid purple;padding: 10px;margin-left:-200px;background-color: lightgrey;">
                 <h2><a name="introduction" style="color: purple">1) Web Application Description</a></h2>
                     <div><img src="images/logop.png" width="150" alt="logo"></div>
                     <br>
                 This project will be designing to implement a web application that will help group project to upload, identification, review, monitoring and following of research papers between the group members. The research activities will be report writing, review, editing and other similar tasks can be to monitor and track the editorial progress of a number of papers within a limited time. Furthermore, this project will give the opportunity for the user to create platform that will support group project teams.
                 <br/><br/>
-                In this system they will be three types of users: Administrator, Student Team Leader and Students. All users will have access to the register system i.e. members will be required to log in. The administrator has the highest role to manage the tools on the platform, and he will only has the access to create users, setup project groups, allocate team leader role and assign members to the project. The team leader is responsible for delivering papers to members for review and. Students will be able to upload research papers, this will be submitted to the Student team leader, who will allocate it to any members for review.
+                In this system they will be three types of users: Administrator, Student Team Leader and Students. All users will have access to the register system i.e. members will be required to log in. The administrator has the highest Roles to manage the tools on the platform, and he will only has the access to create users, setup project groups, allocate team leader role and assign members to the project. The team leader is responsible for delivering papers to members for review and. Students will be able to upload research papers, this will be submitted to the Student team leader, who will allocate it to any members for review.
                 </div>
                 <br>
                 <br>
-<!--End Section one-->
+<!--Project Constraints Section here-->
                 <div class="container" style=" width:1200px;border: 5px solid purple;padding: 10px;margin-left:-200px;background-color: lightgrey;">
                 <h2><a name="project_constraints" style="color: purple">2) Project Constraints</a></h2>
                 <ol>
@@ -115,12 +115,14 @@ include("header.php");
 
                 </ol>
                 </div>
-<!--End Section two-->
+
             </div>
         </div>
+<!-- row ends-->
       </div>
+<!-- Container ends-->
     </section>
 <!--Foooter starts-->
 <?php
-   require_once("footer2.php");
+   require_once("indexFooter.php");
 ?>

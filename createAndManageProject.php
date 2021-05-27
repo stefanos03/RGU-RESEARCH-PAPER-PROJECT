@@ -3,9 +3,9 @@
 
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
-   require_once("includes/login_module.php");
+   require_once("LoginRequirement/Login_Request.php");
    $pageTitle = "Create Project";  
-   require_once("classes/Config.php");
+   require_once("myPhpFunctionalities/Configuration.php");
    require_once("header.php");    
    //require_once("adminheader.php");
 
@@ -35,7 +35,7 @@ ini_set('display_errors', 1);
 
 ?>
 
-
+<!--admin can create and manage a project-->
         <br/>
 <div style="background-image: url('images/background.jpeg')">
         <div class="container">
@@ -43,21 +43,21 @@ ini_set('display_errors', 1);
             <div class="row">
                 <div class="col-xs-12 text-right">
                   <?php
-                           $userRole = '';
+                           $User_roles = '';
                            if ($_SESSION['myRole']=='admin')
                            {
-                              $userRole = 'Administrator';
+                              $User_roles = 'Administrator';
                            }
                            else if ($_SESSION['myRole']=='teamleader')
                            {
-                              $userRole = 'Team Leader';
+                              $User_roles = 'Team Leader';
 
                            }else if ($_SESSION['myRole']=='member' || $_SESSION['myRole']=='')
                            {
-                              $userRole = 'Member';
+                              $User_roles = 'Member';
                            }
 
-                  echo "<strong style='margin-right: 350px; font-size: 40px; color: purple '>Welcome ".$userRole."</strong>";
+                  echo "<strong style='margin-right: 350px; font-size: 40px; color: purple '>Welcome ".$User_roles."</strong>";
                            echo "<h4 style='margin-right: 350px; font-size: 40px; color: purple '>Create & Manage Project</h4>";
                     ?>
                 </div>
@@ -70,10 +70,7 @@ ini_set('display_errors', 1);
             </div>
 
              
-            <?php
-                  require_once("functions/Alert.php");
 
-            ?>
            
 
              <form name="create_project" action="createAndManageProject.php" method="post" style="border: solid 3px purple;padding: 10px; background: purple; margin-left: -15px; margin-right: -15px">
@@ -90,7 +87,7 @@ ini_set('display_errors', 1);
               </div>
               <div class="form-group row" style="margin-left: 200px">
                   
-                  <label for="Project Short Name"  class="col-xs-12 col-sm-2 col-form-label text-right" style="color: white">Project Short Name</label>
+                  <label for="Project Short Name"  class="col-xs-12 col-sm-2 col-form-label text-right" style="color: white">Project Code</label>
                   
                   <div class="col-xs-12 col-sm-5">
                       <input class="form-control" type="text" name="shortname"/>
@@ -112,9 +109,9 @@ ini_set('display_errors', 1);
 
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
-require_once("includes/login_module.php");
+require_once("LoginRequirement/Login_Request.php");
 $pageTitle = "Manage Project";
-require_once("classes/Config.php");
+require_once("myPhpFunctionalities/Configuration.php");
 require_once("header.php");
 
 ?>
@@ -122,53 +119,50 @@ require_once("header.php");
 
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
-require_once("includes/login_module.php");
+require_once("LoginRequirement/Login_Request.php");
 
-require_once("classes/Config.php");
+require_once("myPhpFunctionalities/Configuration.php");
 require_once("header.php");
 
 ?>
 
 <?php
-$userRole = '';
+$User_roles = '';
 if ($_SESSION['myRole']=='admin')
 {
-    $userRole = 'Administrator';
+    $User_roles = 'Administrator';
 }
 else if ($_SESSION['myRole']=='teamleader')
 {
-    $userRole = 'Team Leader';
+    $User_roles = 'Team Leader';
 
 }else if ($_SESSION['myRole']=='member' || $_SESSION['myRole']=='')
 {
-    $userRole = 'Member';
+    $User_roles = 'Member';
 }
 
 
 ?>
 
 
-<?php
-require_once("functions/Alert.php");
 
-?>
 <br/>
 
 <div class="container">
     <div class="col-xs-12 text-right">
         <?php
-        $userRole = '';
+        $User_roles = '';
         if ($_SESSION['myRole']=='admin')
         {
-            $userRole = 'Administrator';
+            $User_roles = 'Administrator';
         }
         else if ($_SESSION['myRole']=='teamleader')
         {
-            $userRole = 'Team Leader';
+            $User_roles = 'Team Leader';
 
         }else if ($_SESSION['myRole']=='member' || $_SESSION['myRole']=='')
         {
-            $userRole = 'Member';
+            $User_roles = 'Member';
         }
 
 
@@ -228,6 +222,8 @@ require_once("functions/Alert.php");
  <br>
  <br>
  <br>
+    <br>
+    <br>
 </div><!--Background image-->
 
  <?php
